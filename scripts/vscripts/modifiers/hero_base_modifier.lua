@@ -115,7 +115,7 @@ function public:OnIntervalThink()
     end
 
     local minorAbilities = {}
-    for i = 8, 11 do
+    for i = 0, 4 do
         local ability = parent:GetAbilityByIndex(i)
         if IsNull(ability) == false and string.find(ability:GetName(), "xxwar_empty_ability_") == nil then
             table.insert(minorAbilities, ability)

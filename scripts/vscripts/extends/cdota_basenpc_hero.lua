@@ -46,7 +46,7 @@ function CDOTA_BaseNPC_Hero:Respawn()
 
 	if(NotNull(self)) then
 		-- 刷新小技能
-	    for i = 8, 11 do
+	    for i = 0, 4 do
 	        local ability = self:GetAbilityByIndex(i)
 	        if(ability ~= nil and ability:GetLevel() > 0) then
 	            if(ability:IsCooldownReady() == false) then
@@ -98,7 +98,7 @@ function CDOTA_BaseNPC_Hero:DelayRespawn(delay, respawnPos)
 
             if(NotNull(hero)) then
                 -- 刷新小技能
-                for i = 8, 11 do
+                for i = 0, 4 do
                     local ability = hero:GetAbilityByIndex(i)
                     if(ability ~= nil and ability:GetLevel() > 0) then
                         if(ability:IsCooldownReady() == false) then

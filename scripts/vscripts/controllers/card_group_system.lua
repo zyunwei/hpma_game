@@ -183,7 +183,7 @@ function public:PlayerDrawCard(playerId)
     if hero:HasAbility(abilityName) then
         return false
     end
-    local isSuccess = hero:AppendMinorAbility(abilityName, true, 1, 4)
+    local isSuccess = hero:AppendMinorAbility(abilityName, true, 1, 5)
     self:UpdatePlayerCardGroupState(playerId)
 
     local max_crystal = hero:GetCustomAttribute("max_crystal")

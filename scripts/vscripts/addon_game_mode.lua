@@ -33,16 +33,6 @@ function Precache( context )
         PrecacheUnitByNameSync(v, context)
     end
 
-    PrecacheUnitByNameSync("npc_boss_skeleton_king", context)
-    PrecacheUnitByNameSync("npc_boss_elder_titan", context)
-    PrecacheUnitByNameSync("npc_boss_drow_ranger", context)
-    PrecacheUnitByNameSync("npc_boss_windrunner", context)
-    PrecacheUnitByNameSync("npc_boss_doom_bringer", context)
-    PrecacheUnitByNameSync("npc_boss_nevermore", context)
-    PrecacheUnitByNameSync("npc_boss_aghanim", context)
-    PrecacheUnitByNameSync("npc_boss_timbersaw", context)
-    PrecacheUnitByNameSync("npc_boss_sandking", context)
-
     for _, v in pairs(PreloadSounds) do
         PrecacheResource("soundfile", v, context)
     end

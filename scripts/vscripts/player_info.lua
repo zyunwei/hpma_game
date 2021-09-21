@@ -97,7 +97,7 @@ function PlayerInfo:PickHero(hero)
 
     self:CheckLoginGift()
     
-    -- 所有英雄：0-7主技能 8-11小技能 12-17物品 18-21固定技能 22物品栏快速施法 23-31空技能位
+    -- 所有英雄：0-4小技能 5预载小技能 6移动技能 7-11空技能位 12-17物品 18-31空技能位
     for i = 0, 31 do 
         local ability = hero:GetAbilityByIndex(i)
         -- if ability ~= nil and string.find(ability:GetName(), "special_bonus_") ~= nil then
@@ -118,28 +118,17 @@ function PlayerInfo:PickHero(hero)
         end
     end
 
-    for i = 18, 21 do
+    local ability = hero:GetAbilityByIndex(6)
+    if ability ~= nil then
+        hero:RemoveAbilityByHandle(ability)
+        hero:SetAbility("ability_xxwar_jump")
+    end
+
+    for i = 18, 31 do
         local ability = hero:GetAbilityByIndex(i)
         if ability ~= nil then
             hero:RemoveAbilityByHandle(ability)
         end
-    end
-
-    hero:SetAbility("ability_xxwar_jump")
-    hero:SetAbility("ability_xxwar_toggle_ai")
-    hero:SetAbility("ability_xxwar_collection")
-    hero:SetAbility("ability_xxwar_teleport")
-
-    for i = 23, 31 do
-        local ability = hero:GetAbilityByIndex(i)
-        if ability ~= nil then
-            hero:RemoveAbilityByHandle(ability)
-        end
-    end
-
-    local toggleAI = hero:FindAbilityByName("ability_xxwar_toggle_ai")
-    if toggleAI ~= nil and toggleAI:GetToggleState() == false then
-        toggleAI:ToggleAbility()
     end
 end
 

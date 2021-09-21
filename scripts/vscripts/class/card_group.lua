@@ -10,7 +10,7 @@ local public = CardGroup
 
 function public:constructor(ability_infos, card_group_name)
     self.__name = card_group_name
-    self.__maxHandsCard = 4
+    self.__maxHandsCard = 5
     self.__cards = {}
     self.__handCards = {}
     self.__candidateCardIndexs = Queue()

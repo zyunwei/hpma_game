@@ -153,7 +153,7 @@ end
 
 function CDOTA_BaseNPC:AppendMinorAbility(abilityName, activated, level, max_size)
     if max_size == nil then max_size = 4 end
-    local result = self:AppendAbilityInRange(abilityName, activated, level, 8, 8 + max_size - 1)
+    local result = self:AppendAbilityInRange(abilityName, activated, level, 0, max_size - 1)
     return result
 end
 
@@ -276,7 +276,7 @@ function CDOTA_BaseNPC:UpdateMinorAbilityState()
     if self.GetPlayerID == nil then return end
     local playerId = self:GetPlayerID()
     local abilities = {}
-    for i = 8, 11 do
+    for i = 0, 4 do
         local ability = self:GetAbilityByIndex(i)
         if NotNull(ability) and string.find(ability:GetName(), "xxwar_empty_ability_") == nil then
             table.insert(abilities, ability)
@@ -289,21 +289,6 @@ function CDOTA_BaseNPC:UpdateMinorAbilityState()
             CardGroupSystem:PlayerDrawCard(playerId)
         end
     end
-
-    -- for i = 8, 11 do
-    --     local ability = self:GetAbilityByIndex(i)
-    --     if NotNull(ability) and string.find(ability:GetName(), "xxwar_empty_ability_") == nil then
-    --         if ability:IsActivated() then
-    --             if ability:GetAutoCastState() == false then
-    --                 ability:ToggleAutoCast()
-    --             end
-    --         else
-    --             if ability:GetAutoCastState() == true then
-    --                 ability:ToggleAutoCast()
-    --             end
-    --         end
-    --     end
-    -- end
 end
 
 function CDOTA_BaseNPC:GetLifesteal()
