@@ -1,0 +1,21 @@
+autoload({
+	'gamerules',
+	'gamemode',
+	'itemconfig',
+	'currencies',
+	'compose_table',
+	'treasures',
+	"drop_item",
+	"drop_ability",
+	"teleports",
+	"collction_unit_name",
+	"supply",
+	"npc_config",
+	"store",
+	"default_pet_item",
+	"compensate",
+	"xinfa",
+	"minor_classify",
+	"new_comer_cardgroup",
+	"img_probability"
+},'config')

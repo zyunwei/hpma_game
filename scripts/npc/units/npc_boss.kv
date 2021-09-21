@@ -1,0 +1,2272 @@
+"DOTAUnits"
+{
+	"npc_boss_skeleton_king"
+	{
+		"Name"									"初代骷髅王"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/wraith_king/wraith_king.vmdl"
+		"ModelScale"							"1.5"
+		"SoundSet"								"Hero_SkeletonKing"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_skeleton_king.vsndevts"
+		"Ability1"								"skeleton_king_hellfire_blast"
+		"Ability2"								"skeleton_king_vampiric_aura"
+		"Ability3"								"skeleton_king_mortal_strike"
+		"Ability4"								"skeleton_king_split_earth"
+		"Ability5"								"skeleton_king_jump"
+		"Ability6"								"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"40000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"1"
+		"AttackAnimationPoint"					"0.560000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_skeletonking"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"75"			// Damage range min.
+		"AttackDamageMax"			"125"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"			// Experience earn.
+		"BountyGoldMin"				"200"			// Gold earned min.
+		"BountyGoldMax"				"400"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "483" }
+	            "2" { "ItemDef" "151" }
+	            "3" { "ItemDef" "150" }
+	            "4" { "ItemDef" "148" }
+	            "5" { "ItemDef" "500" }
+	            "6" { "ItemDef" "152" }
+	            "7" { "ItemDef" "149" }
+	        }
+		}
+	}
+
+	"npc_boss_skeleton_king_2"
+	{
+		"Name"									"二代骷髅王"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/wraith_king/wraith_king.vmdl"
+		"ModelScale"							"1.7"
+		"SoundSet"								"Hero_SkeletonKing"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_skeleton_king.vsndevts"
+		"Ability1"								"skeleton_king_hellfire_blast"
+		"Ability2"								"skeleton_king_vampiric_aura"
+		"Ability3"								"skeleton_king_mortal_strike"
+		"Ability4"								"skeleton_king_split_earth"
+		"Ability5"								"skeleton_king_jump"
+		"Ability6"								"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.8"
+		"AttackAnimationPoint"					"0.560000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_skeletonking"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"2"
+
+		"AttackDamageMin"			"300"			// Damage range min.
+		"AttackDamageMax"			"400"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+				"1" { "ItemDef" "6175" } // Shoulder of Eternal Reign
+	            "2" { "ItemDef" "6173" } // Blade of Eternal Reign
+	            "3" { "ItemDef" "6171" } // Arms of Eternal Reign
+	            "4" { "ItemDef" "6172" } // Cape of Eternal Reign
+	            "5" { "ItemDef" "6174" } // Crown of Eternal Reign
+	        }
+		}
+	}
+
+	"npc_boss_skeleton_king_3"
+	{
+		"Name"									"三代骷髅王"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/wraith_king/wraith_king.vmdl"
+		"ModelScale"							"2.0"
+		"SoundSet"								"Hero_SkeletonKing"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_skeleton_king.vsndevts"
+		"Ability1"								"skeleton_king_hellfire_blast"
+		"Ability2"								"skeleton_king_vampiric_aura"
+		"Ability3"								"skeleton_king_mortal_strike"
+		"Ability4"								"skeleton_king_split_earth"
+		"Ability5"								"skeleton_king_jump"
+		"Ability6"								"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"80000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.6"
+		"AttackAnimationPoint"					"0.560000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_skeletonking"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"3"
+
+		"AttackDamageMin"			"800"			// Damage range min.
+		"AttackDamageMax"			"1000"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+				"1" { "ItemDef" "6175" } // Shoulder of Eternal Reign
+	            "2" { "ItemDef" "6173" } // Blade of Eternal Reign
+	            "3" { "ItemDef" "6171" } // Arms of Eternal Reign
+	            "4" { "ItemDef" "6172" } // Cape of Eternal Reign
+	            "5" { "ItemDef" "6174" } // Crown of Eternal Reign
+	        }
+		}
+	}
+
+	"npc_boss_elder_titan"
+	{
+		"Name"									"初代牛头"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/elder_titan/elder_titan.vmdl"
+		"ModelScale"							"1.5"
+		"SoundSet"								"Hero_ElderTitan"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_elder_titan.vsndevts"
+		"Ability1"		"elder_titan_echo_stomp"
+		"Ability2"		"elder_titan_ancestral_spirit"
+		"Ability3"		"elder_titan_natural_order"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"elder_titan_earth_splitter"
+		"Ability7"		"elder_titan_return_spirit"
+		"Ability8"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"40000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"1"
+		"AttackAnimationPoint"					"0.350000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_elder_titan"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"75"			// Damage range min.
+		"AttackDamageMax"			"125"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"			// Experience earn.
+		"BountyGoldMin"				"200"			// Gold earned min.
+		"BountyGoldMax"				"400"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "430" }
+	            "2" { "ItemDef" "426" }
+	            "3" { "ItemDef" "428" }
+	            "4" { "ItemDef" "427" }
+	            "5" { "ItemDef" "429" }
+	        }
+		}
+	}
+
+	"npc_boss_elder_titan_2"
+	{
+		"Name"									"二代牛头"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/elder_titan/elder_titan.vmdl"
+		"ModelScale"							"1.7"
+		"SoundSet"								"Hero_ElderTitan"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_elder_titan.vsndevts"
+		"Ability1"		"elder_titan_echo_stomp"
+		"Ability2"		"elder_titan_ancestral_spirit"
+		"Ability3"		"elder_titan_natural_order"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"elder_titan_earth_splitter"
+		"Ability7"		"elder_titan_return_spirit"
+		"Ability8"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.8"
+		"AttackAnimationPoint"					"0.350000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_elder_titan"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"2"
+
+
+		"AttackDamageMin"			"300"			// Damage range min.
+		"AttackDamageMax"			"400"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "430" }
+	            "2" { "ItemDef" "426" }
+	            "3" { "ItemDef" "428" }
+	            "4" { "ItemDef" "427" }
+	            "5" { "ItemDef" "429" }
+	        }
+		}
+	}
+
+	"npc_boss_elder_titan_3"
+	{
+		"Name"									"三代牛头"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/elder_titan/elder_titan.vmdl"
+		"ModelScale"							"2.0"
+		"SoundSet"								"Hero_ElderTitan"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_elder_titan.vsndevts"
+		"Ability1"		"elder_titan_echo_stomp"
+		"Ability2"		"elder_titan_ancestral_spirit"
+		"Ability3"		"elder_titan_natural_order"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"elder_titan_earth_splitter"
+		"Ability7"		"elder_titan_return_spirit"
+		"Ability8"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"80000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.6"
+		"AttackAnimationPoint"					"0.350000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_elder_titan"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"3"
+
+		"AttackDamageMin"			"800"			// Damage range min.
+		"AttackDamageMax"			"1000"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "430" }
+	            "2" { "ItemDef" "426" }
+	            "3" { "ItemDef" "428" }
+	            "4" { "ItemDef" "427" }
+	            "5" { "ItemDef" "429" }
+	        }
+		}
+	}
+
+	"npc_boss_drow_ranger"
+	{
+		"Name"									"一代黑无常"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/drow/drow_base.vmdl"
+		"ModelScale"							"1.5"
+		"SoundSet"								"Hero_DrowRanger"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts"
+		"Ability1"		"drow_ranger_frost_arrows"
+		"Ability2"		"drow_ranger_wave_of_silence"
+		"Ability3"		"drow_ranger_multishot"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"drow_ranger_marksmanship"
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"30000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.6"
+		"AttackAnimationPoint"					"0.55"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"625"
+		"ProjectileModel"						"particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+		"ProjectileSpeed"						"1250"
+		"AttackAnimationPoint"					"0.55"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_drow"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"175"			// Damage range min.
+		"AttackDamageMax"			"225"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"			// Experience earn.
+		"BountyGoldMin"				"200"			// Gold earned min.
+		"BountyGoldMax"				"400"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "78" }
+	            "2" { "ItemDef" "77" }
+	            "3" { "ItemDef" "76" }
+	            "4" { "ItemDef" "75" }
+	            "5" { "ItemDef" "80" }
+	            "6" { "ItemDef" "267" }
+	            "7" { "ItemDef" "79" }
+	        }
+		}
+	}
+
+	"npc_boss_drow_ranger_2"
+	{
+		"Name"									"二代黑无常"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/drow/drow_base.vmdl"
+		"ModelScale"							"1.7"
+		"SoundSet"								"Hero_DrowRanger"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts"
+		"Ability1"		"drow_ranger_frost_arrows"
+		"Ability2"		"drow_ranger_wave_of_silence"
+		"Ability3"		"drow_ranger_multishot"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"drow_ranger_marksmanship"	
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"45000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.4"
+		"AttackAnimationPoint"					"0.55"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"625"
+		"ProjectileModel"						"particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+		"ProjectileSpeed"						"1250"
+		"AttackAnimationPoint"					"0.55"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_drow"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"2"
+
+		"AttackDamageMin"			"400"			// Damage range min.
+		"AttackDamageMax"			"600"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"18"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "78" }
+	            "2" { "ItemDef" "77" }
+	            "3" { "ItemDef" "76" }
+	            "4" { "ItemDef" "75" }
+	            "5" { "ItemDef" "80" }
+	            "6" { "ItemDef" "267" }
+	            "7" { "ItemDef" "79" }
+	        }
+		}
+	}
+
+	"npc_boss_drow_ranger_3"
+	{
+		"Name"									"三代黑无常"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/drow/drow_base.vmdl"
+		"ModelScale"							"2.0"
+		"SoundSet"								"Hero_DrowRanger"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_drowranger.vsndevts"
+		"Ability1"		"drow_ranger_frost_arrows"
+		"Ability2"		"drow_ranger_wave_of_silence"
+		"Ability3"		"drow_ranger_multishot"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"drow_ranger_marksmanship"	
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.3"
+		"AttackAnimationPoint"					"0.55"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"625"
+		"ProjectileModel"						"particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+		"ProjectileSpeed"						"1250"
+		"AttackAnimationPoint"					"0.55"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_drow"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"3"
+
+		"AttackDamageMin"			"900"			// Damage range min.
+		"AttackDamageMax"			"1100"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"24"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "78" }
+	            "2" { "ItemDef" "77" }
+	            "3" { "ItemDef" "76" }
+	            "4" { "ItemDef" "75" }
+	            "5" { "ItemDef" "80" }
+	            "6" { "ItemDef" "267" }
+	            "7" { "ItemDef" "79" }
+	        }
+		}
+	}
+
+	"npc_boss_windrunner"
+	{
+		"Name"									"一代白无常"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/windrunner/windrunner.vmdl"
+		"ModelScale"							"1.5"
+		"SoundSet"								"Hero_Windrunner"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_windrunner.vsndevts"
+		"Ability1"		"windrunner_shackleshot"
+		"Ability2"		"windrunner_powershot"
+		"Ability3"		"windrunner_windrun"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+        "Ability6"      "windrunner_focusfire"
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"30000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.3"
+		"AttackAnimationPoint"					"0.400000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"600"
+		"ProjectileModel"						"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
+		"ProjectileSpeed"						"1250"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_windrunner"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"50"			// Damage range min.
+		"AttackDamageMax"			"100"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"			// Experience earn.
+		"BountyGoldMin"				"200"			// Gold earned min.
+		"BountyGoldMax"				"400"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "22" }
+	            "2" { "ItemDef" "21" }
+	            "3" { "ItemDef" "23" }
+	            "4" { "ItemDef" "25" }
+	            "5" { "ItemDef" "24" }
+	        }
+		}
+	}
+
+	"npc_boss_windrunner_2"
+	{
+		"Name"									"二代白无常"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/windrunner/windrunner.vmdl"
+		"ModelScale"							"1.7"
+		"SoundSet"								"Hero_Windrunner"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_windrunner.vsndevts"
+		"Ability1"		"windrunner_shackleshot"
+		"Ability2"		"windrunner_powershot"
+		"Ability3"		"windrunner_windrun"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"windrunner_focusfire"
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"45000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.3"
+		"AttackAnimationPoint"					"0.400000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"600"
+		"ProjectileModel"						"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
+		"ProjectileSpeed"						"1250"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_windrunner"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"2"
+
+		"AttackDamageMin"			"150"			// Damage range min.
+		"AttackDamageMax"			"300"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "22" }
+	            "2" { "ItemDef" "21" }
+	            "3" { "ItemDef" "23" }
+	            "4" { "ItemDef" "25" }
+	            "5" { "ItemDef" "24" }
+	        }
+		}
+	}
+
+	"npc_boss_windrunner_3"
+	{
+		"Name"									"三代白无常"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/windrunner/windrunner.vmdl"
+		"ModelScale"							"2.0"
+		"SoundSet"								"Hero_Windrunner"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_windrunner.vsndevts"
+		"Ability1"		"windrunner_shackleshot"
+		"Ability2"		"windrunner_powershot"
+		"Ability3"		"windrunner_windrun"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"windrunner_focusfire"
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.3"
+		"AttackAnimationPoint"					"0.400000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"600"
+		"ProjectileModel"						"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
+		"ProjectileSpeed"						"1250"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_windrunner"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"3"
+
+		"AttackDamageMin"			"300"			// Damage range min.
+		"AttackDamageMax"			"500"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"16"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "22" }
+	            "2" { "ItemDef" "21" }
+	            "3" { "ItemDef" "23" }
+	            "4" { "ItemDef" "25" }
+	            "5" { "ItemDef" "24" }
+	        }
+		}
+	}
+
+	"npc_boss_doom_bringer"
+	{
+		"Name"									"一代哼将"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/doom/doom.vmdl"
+		"ModelScale"							"1.5"
+		"SoundSet"								"Hero_DoomBringer"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_doom_bringer.vsndevts"
+		"Ability1"		"doom_bringer_devour"
+		"Ability2"		"doom_bringer_scorched_earth"
+		"Ability3"		"doom_bringer_infernal_blade"
+		"Ability4"		"doom_bringer_empty1"
+		"Ability5"		"doom_bringer_empty2"
+		"Ability6"		"doom_bringer_doom"	
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"40000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"1"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_doom_bringer"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"75"			// Damage range min.
+		"AttackDamageMax"			"125"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"			// Experience earn.
+		"BountyGoldMin"				"200"			// Gold earned min.
+		"BountyGoldMax"				"400"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "237" }
+	            "2" { "ItemDef" "238" }
+	            "3" { "ItemDef" "236" }
+	            "4" { "ItemDef" "235" }
+	            "5" { "ItemDef" "232" }
+	            "6" { "ItemDef" "234" }
+	            "7" { "ItemDef" "233" }
+	        }
+		}
+	}
+
+	"npc_boss_doom_bringer_2"
+	{
+		"Name"									"二代哼将"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/doom/doom.vmdl"
+		"ModelScale"							"1.7"
+		"SoundSet"								"Hero_DoomBringer"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_doom_bringer.vsndevts"
+		"Ability1"		"doom_bringer_devour"
+		"Ability2"		"doom_bringer_scorched_earth"
+		"Ability3"		"doom_bringer_infernal_blade"
+		"Ability4"		"doom_bringer_empty1"
+		"Ability5"		"doom_bringer_empty2"
+		"Ability6"		"doom_bringer_doom"	
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.8"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_doom_bringer"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"2"
+
+		"AttackDamageMin"			"300"			// Damage range min.
+		"AttackDamageMax"			"400"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "237" }
+	            "2" { "ItemDef" "238" }
+	            "3" { "ItemDef" "236" }
+	            "4" { "ItemDef" "235" }
+	            "5" { "ItemDef" "232" }
+	            "6" { "ItemDef" "234" }
+	            "7" { "ItemDef" "233" }
+	        }
+		}
+	}
+
+	"npc_boss_doom_bringer_3"
+	{
+		"Name"									"三代哼将"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/doom/doom.vmdl"
+		"ModelScale"							"2.0"
+		"SoundSet"								"Hero_DoomBringer"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_doom_bringer.vsndevts"
+		"Ability1"		"doom_bringer_devour"
+		"Ability2"		"doom_bringer_scorched_earth"
+		"Ability3"		"doom_bringer_infernal_blade"
+		"Ability4"		"doom_bringer_empty1"
+		"Ability5"		"doom_bringer_empty2"
+		"Ability6"		"doom_bringer_doom"
+		"Ability7"		"boss_attack_landed"	
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"80000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.6"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"150"
+		"AttackAcquisitionRange"				"600"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_doom_bringer"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"3"
+
+		"AttackDamageMin"			"800"			// Damage range min.
+		"AttackDamageMax"			"1000"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"16"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "237" }
+	            "2" { "ItemDef" "238" }
+	            "3" { "ItemDef" "236" }
+	            "4" { "ItemDef" "235" }
+	            "5" { "ItemDef" "232" }
+	            "6" { "ItemDef" "234" }
+	            "7" { "ItemDef" "233" }
+	        }
+		}
+	}
+
+	"npc_boss_nevermore"
+	{
+		"Name"									"一代哈将"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/shadow_fiend/shadow_fiend.vmdl"
+		"ModelScale"							"1.5"
+		"SoundSet"								"Hero_Nevermore"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_nevermore.vsndevts"
+		"Ability1"		"nevermore_shadowraze1"
+		"Ability2"		"nevermore_shadowraze2"
+		"Ability3"		"nevermore_shadowraze3"
+		"Ability4"		"nevermore_necromastery"
+		"Ability5"		"nevermore_dark_lord"
+		"Ability6"		"nevermore_requiem"		
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"30000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.6"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"175"
+			"faster"	"275"
+			"fastest"	"360"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"500"
+		"ProjectileModel"						"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"
+		"ProjectileSpeed"						"1200"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_nevermore"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"125"			// Damage range min.
+		"AttackDamageMax"			"175"			// Damage range max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"			// Experience earn.
+		"BountyGoldMin"				"200"			// Gold earned min.
+		"BountyGoldMax"				"400"			// Gold earned max.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "387" }
+	            "2" { "ItemDef" "486" }
+	            "3" { "ItemDef" "509" }
+	            "4" { "ItemDef" "488" }
+	        }
+		}
+	}
+
+	"npc_boss_nevermore_2"
+	{
+		"Name"									"二代哈将"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/shadow_fiend/shadow_fiend.vmdl"
+		"ModelScale"							"1.7"
+		"SoundSet"								"Hero_Nevermore"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_nevermore.vsndevts"
+		"Ability1"		"nevermore_shadowraze1"
+		"Ability2"		"nevermore_shadowraze2"
+		"Ability3"		"nevermore_shadowraze3"
+		"Ability4"		"nevermore_necromastery"
+		"Ability5"		"nevermore_dark_lord"
+		"Ability6"		"nevermore_requiem"		
+		"Ability7"		"boss_attack_landed"
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"45000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.4"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"175"
+			"faster"	"275"
+			"fastest"	"360"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"500"
+		"ProjectileModel"						"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"
+		"ProjectileSpeed"						"1200"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_nevermore"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"2"
+
+		"AttackDamageMin"			"300"			// Damage range min.
+		"AttackDamageMax"			"500"			// Damage range max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"18"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "387" }
+	            "2" { "ItemDef" "486" }
+	            "3" { "ItemDef" "509" }
+	            "4" { "ItemDef" "488" }
+	        }
+		}
+	}
+
+	"npc_boss_nevermore_3"
+	{
+		"Name"									"三代哈将"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/shadow_fiend/shadow_fiend.vmdl"
+		"ModelScale"							"2.0"
+		"SoundSet"								"Hero_Nevermore"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_nevermore.vsndevts"
+		"Ability1"		"nevermore_shadowraze1"
+		"Ability2"		"nevermore_shadowraze2"
+		"Ability3"		"nevermore_shadowraze3"
+		"Ability4"		"nevermore_necromastery"
+		"Ability5"		"nevermore_dark_lord"
+		"Ability6"		"nevermore_requiem"	
+		"Ability7"		"boss_attack_landed"	
+		"HealthBarOffset"						"500"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"0.3"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"175"
+			"faster"	"275"
+			"fastest"	"360"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"500"
+		"ProjectileModel"						"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"
+		"ProjectileSpeed"						"1200"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_nevermore"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"3"
+
+		"AttackDamageMin"			"700"			// Damage range min.
+		"AttackDamageMax"			"900"			// Damage range max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"24"			// Physical protection.
+		"MagicalResistance"				"90"			// Magical protection.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "387" }
+	            "2" { "ItemDef" "486" }
+	            "3" { "ItemDef" "509" }
+	            "4" { "ItemDef" "488" }
+	        }
+		}
+	}
+
+	"npc_boss_aghanim"
+	{
+		"Name"									"一代法海"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/aghanim/aghanim_model.vmdl"
+		"ModelScale" 							"1.5"
+		"SoundSet"								"Hero_Oracle"
+		"IdleSoundLoop"							"Hero_Oracle.IdleLoop"
+		"Level"									"1"
+		"IdleExpression"						"scenes/aghanim/aghanim_exp_idle.vcd"
+		"Ability1"								"aghanim_crystal_attack"
+		"Ability2"								"aghanim_staff_beams"
+		"Ability3"								"aghanim_blink"
+		"Ability4"								"aghanim_shard_attack"
+		"Ability5"								"aghanim_passive"
+		"Ability6"								"aghanim_spear"
+		"Ability7"								"boss_attack_landed"
+		"IsAncient"								"1"
+		"HealthBarOffset"						"645"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"0.5"
+		"StatusHealth"							"40000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"250"
+		"AttackRate"							"1.7"
+
+		"ProjectileModel"			"particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"
+		"ProjectileSpeed"			"1000"
+
+
+		"AttackAnimationPoint"		"0.53"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"140"
+			"faster"	"180"
+			"fastest"	"230"
+			"super_fast"	"300"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"1000"
+		"AttackRangeActivityModifiers"
+		{
+			"attack_closest_range"	"0"
+			"attack_close_range"	"90"
+			"attack_medium_range"	"150"
+			"attack_long_range"		"250"
+		}
+		"AttackAcquisitionRange"				"1800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_HUGE"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"75"
+
+		"AttackDamageMin"			"125"			// Damage range min.
+		"AttackDamageMax"			"175"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"			// Experience earn.
+		"BountyGoldMin"				"400"			// Gold earned min.
+		"BountyGoldMax"				"600"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"40"
+		"MagicalResistance"				"90"			// Magical protection.
+
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+		"Creature"
+		{
+	        "AttachWearables"
+			{
+
+				"Wearable1"
+				{
+					"ItemDef"			"18379" // emblem
+				}
+			}
+
+			"HPGain"			"22500"
+			"MagicResistGain"	"5"
+		}
+	}
+
+	"npc_boss_aghanim_2"
+	{
+		"Name"									"二代法海"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/aghanim/aghanim_model.vmdl"
+		"ModelScale" 							"1.8"
+		"SoundSet"								"Hero_Oracle"
+		"IdleSoundLoop"							"Hero_Oracle.IdleLoop"
+		"Level"									"2"
+		"IdleExpression"						"scenes/aghanim/aghanim_exp_idle.vcd"
+		"Ability1"								"aghanim_crystal_attack"
+		"Ability2"								"aghanim_staff_beams"
+		"Ability3"								"aghanim_blink"
+		"Ability4"								"aghanim_shard_attack"
+		"Ability5"								"aghanim_passive"
+		"Ability6"								"aghanim_spear"
+		"Ability7"								"boss_attack_landed"
+		"IsAncient"								"1"
+		"HealthBarOffset"						"645"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"0.5"
+		"StatusHealth"							"60000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"250"
+		"AttackRate"							"1.7"
+
+		"ProjectileModel"			"particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"
+		"ProjectileSpeed"			"1000"
+
+
+		"AttackAnimationPoint"		"0.53"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"140"
+			"faster"	"180"
+			"fastest"	"230"
+			"super_fast"	"300"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"1000"
+		"AttackRangeActivityModifiers"
+		{
+			"attack_closest_range"	"0"
+			"attack_close_range"	"90"
+			"attack_medium_range"	"150"
+			"attack_long_range"		"250"
+		}
+		"AttackAcquisitionRange"				"1800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_HUGE"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"75"
+
+		"AttackDamageMin"			"125"			// Damage range min.
+		"AttackDamageMax"			"175"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"600"			// Experience earn.
+		"BountyGoldMin"				"600"			// Gold earned min.
+		"BountyGoldMax"				"800"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"60"
+		"MagicalResistance"				"90"			// Magical protection.
+
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+		"Creature"
+		{
+	        "AttachWearables"
+			{
+
+				"Wearable1"
+				{
+					"ItemDef"			"18379" // emblem
+				}
+			}
+
+			"HPGain"			"22500"
+			"MagicResistGain"	"5"
+		}
+	}
+
+	"npc_boss_aghanim_3"
+	{
+		"Name"									"三代法海"
+		"MinimapIcon"							"minimap_roshancamp"
+		"MinimapIconSize"						"500"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/aghanim/aghanim_model.vmdl"
+		"ModelScale" 							"2.0"
+		"SoundSet"								"Hero_Oracle"
+		"IdleSoundLoop"							"Hero_Oracle.IdleLoop"
+		"Level"									"3"
+		"IdleExpression"						"scenes/aghanim/aghanim_exp_idle.vcd"
+		"Ability1"								"aghanim_crystal_attack"
+		"Ability2"								"aghanim_staff_beams"
+		"Ability3"								"aghanim_blink"
+		"Ability4"								"aghanim_shard_attack"
+		"Ability5"								"aghanim_passive"
+		"Ability6"								"aghanim_spear"
+		"Ability7"								"boss_attack_landed"
+		"IsAncient"								"1"
+		"HealthBarOffset"						"645"
+		"MovementSpeed"							"340"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"0.5"
+		"StatusHealth"							"80000"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"10000"
+		"StatusManaRegen"						"250"
+		"AttackRate"							"1.7"
+
+		"ProjectileModel"			"particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"
+		"ProjectileSpeed"			"1000"
+
+
+		"AttackAnimationPoint"		"0.53"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"140"
+			"faster"	"180"
+			"fastest"	"230"
+			"super_fast"	"300"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"							"1000"
+		"AttackRangeActivityModifiers"
+		{
+			"attack_closest_range"	"0"
+			"attack_close_range"	"90"
+			"attack_medium_range"	"150"
+			"attack_long_range"		"250"
+		}
+		"AttackAcquisitionRange"				"1800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_HUGE"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"75"
+
+		"AttackDamageMin"			"125"			// Damage range min.
+		"AttackDamageMax"			"175"			// Damage range max.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"800"			// Experience earn.
+		"BountyGoldMin"				"800"			// Gold earned min.
+		"BountyGoldMax"				"1000"			// Gold earned max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"80"
+		"MagicalResistance"				"90"			// Magical protection.
+
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+		"Creature"
+		{
+	        "AttachWearables"
+			{
+
+				"Wearable1"
+				{
+					"ItemDef"			"18379" // emblem
+				}
+			}
+
+			"HPGain"			"22500"
+			"MagicResistGain"	"5"
+		}
+	}
+
+	"npc_boss_timbersaw"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/shredder/shredder.vmdl"
+		"IdleExpression"			"scenes/shredder/shredder_exp_idle_01.vcd"
+		"SoundSet"					"Hero_Shredder"
+		"IdleSoundLoop"				"Hero_Shredder.IdleLoop"
+		"Level"						"1"
+		"ModelScale" 				"2.0"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"boss_timbersaw_whirling_death"
+		"Ability2"					"boss_timbersaw_timber_chain"
+		"Ability3"					"shredder_reactive_armor"
+		"Ability4"					"shredder_chakram_2"
+		"Ability5"					"shredder_chakram"
+		"Ability6"					"shredder_return_chakram"
+		"Ability7"					"shredder_return_chakram_2"
+		"Ability9"					"boss_timbersaw_chakram_dance"
+		"Ability10"					"boss_attack_landed"
+		// "Ability10"					"status_resist_50"		
+		
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"12"
+		"MagicalResistance"				"90"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"125"
+		"AttackDamageMax"			"175"
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.53"
+		"AttackAcquisitionRange"	"1800"
+		"AttackRange"				"300"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"75"
+		"HealthBarOffset"			"250"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"
+		"BountyGoldMin"				"200"
+		"BountyGoldMax"				"400"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"400"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"40000"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"25000"
+		"StatusManaRegen"			"250"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableResistance"		"50"
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"7581" // Controlled Burn
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"14722" // 
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"14720" // Helm of 
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"14723" // Pauldrons of the
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"14725" // Hull of t
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"14724" // Armor of the 
+				}
+			}
+
+			"EquippedItems"
+			{
+				"Aghs"
+				{
+					"Item"					"item_ultimate_scepter"
+				}
+			}
+
+			"HPGain"			"2625"
+			"DamageGain"		"60"
+		}
+	}
+
+	"npc_boss_timbersaw_2"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/shredder/shredder.vmdl"
+		"IdleExpression"			"scenes/shredder/shredder_exp_idle_01.vcd"
+		"SoundSet"					"Hero_Shredder"
+		"IdleSoundLoop"				"Hero_Shredder.IdleLoop"
+		"Level"						"2"
+		"ModelScale" 				"2.5"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"boss_timbersaw_whirling_death"
+		"Ability2"					"boss_timbersaw_timber_chain"
+		"Ability3"					"shredder_reactive_armor"
+		"Ability4"					"shredder_chakram_2"
+		"Ability5"					"shredder_chakram"
+		"Ability6"					"shredder_return_chakram"
+		"Ability7"					"shredder_return_chakram_2"
+		"Ability9"					"boss_timbersaw_chakram_dance"
+		"Ability10"					"boss_attack_landed"
+		// "Ability10"					"status_resist_50"		
+		
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"18"
+		"MagicalResistance"				"90"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"250"
+		"AttackDamageMax"			"300"
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.53"
+		"AttackAcquisitionRange"	"1800"
+		"AttackRange"				"300"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"75"
+		"HealthBarOffset"			"250"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"
+		"BountyGoldMin"				"400"
+		"BountyGoldMax"				"600"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"400"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"60000"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"25000"
+		"StatusManaRegen"			"250"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableResistance"		"50"
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"7581" // Controlled Burn
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"14722" // 
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"14720" // Helm of 
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"14723" // Pauldrons of the
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"14725" // Hull of t
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"14724" // Armor of the 
+				}
+			}
+
+			"EquippedItems"
+			{
+				"Aghs"
+				{
+					"Item"					"item_ultimate_scepter"
+				}
+			}
+
+			"HPGain"			"2625"
+			"DamageGain"		"60"
+		}
+	}
+
+	"npc_boss_timbersaw_3"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/shredder/shredder.vmdl"
+		"IdleExpression"			"scenes/shredder/shredder_exp_idle_01.vcd"
+		"SoundSet"					"Hero_Shredder"
+		"IdleSoundLoop"				"Hero_Shredder.IdleLoop"
+		"Level"						"3"
+		"ModelScale" 				"3.0"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"boss_timbersaw_whirling_death"
+		"Ability2"					"boss_timbersaw_timber_chain"
+		"Ability3"					"shredder_reactive_armor"
+		"Ability4"					"shredder_chakram_2"
+		"Ability5"					"shredder_chakram"
+		"Ability6"					"shredder_return_chakram"
+		"Ability7"					"shredder_return_chakram_2"
+		"Ability9"					"boss_timbersaw_chakram_dance"
+		"Ability10"					"boss_attack_landed"
+		// "Ability10"					"status_resist_50"		
+		
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"24"
+		"MagicalResistance"				"90"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"800"
+		"AttackDamageMax"			"1000"
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.53"
+		"AttackAcquisitionRange"	"1800"
+		"AttackRange"				"300"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"75"
+		"HealthBarOffset"			"250"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"1000"
+		"BountyGoldMin"				"500"
+		"BountyGoldMax"				"1000"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"400"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"90000"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"25000"
+		"StatusManaRegen"			"250"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableResistance"		"50"
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"7581" // Controlled Burn
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"14722" // 
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"14720" // Helm of 
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"14723" // Pauldrons of the
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"14725" // Hull of t
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"14724" // Armor of the 
+				}
+			}
+
+			"EquippedItems"
+			{
+				"Aghs"
+				{
+					"Item"					"item_ultimate_scepter"
+				}
+			}
+
+			"HPGain"			"2625"
+			"DamageGain"		"60"
+		}
+	}
+
+	"npc_boss_sandking"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"					"Hero_SandKing"
+		"Level"						"1"
+		"ModelScale" 				"2.0"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sand_king_boss_passive"
+		"Ability2"					"sand_king_boss_burrowstrike"
+		"Ability3"					"sand_king_boss_sandstorm"
+		"Ability4"					"sand_king_boss_sandstorm_storm_passive"
+		"Ability5"					"boss_attack_landed"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"40"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"75"			// Damage range min.
+		"AttackDamageMax"			"125"			// Damage range max.
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.53"
+		"AttackAcquisitionRange"	"1800"
+		"AttackRange"				"300"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"75"
+		"HealthBarOffset"			"250"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"
+		"BountyGoldMin"				"200"
+		"BountyGoldMax"				"400"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"40000"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"25000"
+		"StatusManaRegen"			"250"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableResistance"			"100.0"
+			"DisableClumpingBehavior"	"1"
+
+			"AttachWearables" // The Ancient Sovereign Set
+	        {
+	            "1" { "ItemDef" "4939" } // Stinger of the Ancient Sovereign
+	            "2" { "ItemDef" "4943" } // Vestigial Wings of the Ancient Sovereign
+	            "3" { "ItemDef" "4941" } // Claw of the Ancient Sovereign
+	            "4" { "ItemDef" "4942" } // Crawlers of the Ancient Sovereign
+	            "5" { "ItemDef" "4940" } // Sandworn Visage of the Ancient Sovereign
+	        }
+		}
+	}
+
+	"npc_boss_sandking_2"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"					"Hero_SandKing"
+		"Level"						"2"
+		"ModelScale" 				"2.5"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sand_king_boss_passive"
+		"Ability2"					"sand_king_boss_burrowstrike"
+		"Ability3"					"sand_king_boss_sandstorm"
+		"Ability4"					"sand_king_boss_sandstorm_storm_passive"
+		"Ability5"					"boss_attack_landed"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"60"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"75"			// Damage range min.
+		"AttackDamageMax"			"125"			// Damage range max.
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.53"
+		"AttackAcquisitionRange"	"1800"
+		"AttackRange"				"300"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"75"
+		"HealthBarOffset"			"250"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"450"
+		"BountyGoldMin"				"400"
+		"BountyGoldMax"				"600"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"60000"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"25000"
+		"StatusManaRegen"			"250"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableResistance"			"100.0"
+			"DisableClumpingBehavior"	"1"
+
+			"AttachWearables" // The Ancient Sovereign Set
+	        {
+	            "1" { "ItemDef" "4939" } // Stinger of the Ancient Sovereign
+	            "2" { "ItemDef" "4943" } // Vestigial Wings of the Ancient Sovereign
+	            "3" { "ItemDef" "4941" } // Claw of the Ancient Sovereign
+	            "4" { "ItemDef" "4942" } // Crawlers of the Ancient Sovereign
+	            "5" { "ItemDef" "4940" } // Sandworn Visage of the Ancient Sovereign
+	        }
+		}
+	}
+
+	"npc_boss_sandking_3"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"					"Hero_SandKing"
+		"Level"						"3"
+		"ModelScale" 				"3.0"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"IsBossMonster"				"1"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sand_king_boss_passive"
+		"Ability2"					"sand_king_boss_burrowstrike"
+		"Ability3"					"sand_king_boss_sandstorm"
+		"Ability4"					"sand_king_boss_sandstorm_storm_passive"
+		"Ability5"					"boss_attack_landed"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"80"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"75"			// Damage range min.
+		"AttackDamageMax"			"125"			// Damage range max.
+		"AttackRate"				"1.7"
+		"AttackAnimationPoint"		"0.53"
+		"AttackAcquisitionRange"	"1800"
+		"AttackRange"				"300"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"75"
+		"HealthBarOffset"			"250"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"
+		
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"1000"
+		"BountyGoldMin"				"500"
+		"BountyGoldMax"				"1000"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"80000"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"25000"
+		"StatusManaRegen"			"250"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"HasInventory"				"1"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"DisableResistance"			"100.0"
+			"DisableClumpingBehavior"	"1"
+
+			"AttachWearables" // The Ancient Sovereign Set
+	        {
+	            "1" { "ItemDef" "4939" } // Stinger of the Ancient Sovereign
+	            "2" { "ItemDef" "4943" } // Vestigial Wings of the Ancient Sovereign
+	            "3" { "ItemDef" "4941" } // Claw of the Ancient Sovereign
+	            "4" { "ItemDef" "4942" } // Crawlers of the Ancient Sovereign
+	            "5" { "ItemDef" "4940" } // Sandworn Visage of the Ancient Sovereign
+	        }
+		}
+	}
+}

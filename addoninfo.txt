@@ -1,0 +1,144 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	HideInTools = false
+	IsPlayable = true
+	IsTemplate = false
+	maps = 
+	[
+		"1x2",
+	]
+	CheckAFKPlayers = false
+	DefaultMap = "1x2"
+	Default_Keys = [
+		{
+			Key = "Q"
+			Command = "CustomKey_Q"
+			Name = "CustomKey_Q"
+		},
+		{
+			Key = "W"
+			Command = "CustomKey_W"
+			Name = "CustomKey_W"
+		},
+		{
+			Key = "E"
+			Command = "CustomKey_E"
+			Name = "CustomKey_E"
+		},
+		{
+			Key = "R"
+			Command = "CustomKey_R"
+			Name = "CustomKey_R"
+		},
+		{
+			Key = "D"
+			Command = "CustomKey_D"
+			Name = "CustomKey_D"
+		},
+		{
+			Key = "F"
+			Command = "CustomKey_F"
+			Name = "CustomKey_F"
+		},
+		{
+			Key = "T"
+			Command = "CustomKey_T"
+			Name = "CustomKey_T"
+		},
+		{
+			Key = "M"
+			Command = "CustomKey_M"
+			Name = "CustomKey_M"
+		},
+		{
+			Key = "N"
+			Command = "CustomKey_N"
+			Name = "CustomKey_N"
+		},
+		{
+			Key = "L"
+			Command = "CustomKey_L"
+			Name = "CustomKey_L"
+		},
+		{
+			Key = "O"
+			Command = "CustomKey_O"
+			Name = "CustomKey_O"
+		},
+		{
+			Key = "P"
+			Command = "CustomKey_P"
+			Name = "CustomKey_P"
+		},
+		{
+			Key = "V"
+			Command = "CustomKey_V"
+			Name = "CustomKey_V"
+		},
+		{
+			Key = "F2"
+			Command = "CustomKey_F2"
+			Name = "CustomKey_F2"
+		},
+		{
+			Key = "F3"
+			Command = "CustomKey_F3"
+			Name = "CustomKey_F3"
+		},
+		{
+			Key = "F5"
+			Command = "CustomKey_F5"
+			Name = "CustomKey_F5"
+		},
+		{
+			Key = "Z"
+			Command = "CustomKey_Z"
+			Name = "CustomKey_Z"
+		},
+		{
+			Key = "F1"
+			Command = "CustomKey_F1"
+			Name = "CustomKey_F1"
+		},
+		{
+			Key = "B"
+			Command = "CustomKey_B"
+			Name = "CustomKey_B"
+		},
+		{
+			Key = "G"
+			Command = "CustomKey_G"
+			Name = "CustomKey_G"
+		},
+		{
+			Key = "TAB"
+			Command = "CustomKey_TAB"
+			Name = "CustomKey_TAB"
+		},
+		{
+			Key = "SPACE"
+			Command = "CustomKey_SPACE"
+			Name = "CustomKey_SPACE"
+		},
+	]
+	map_options = 
+	[
+		{
+			MaxPlayers = 2
+			map = "1x2"
+		},
+	]
+	DisableIK = false
+	EnablePickRules = false
+	EventGame = false
+	hero_picker = 
+	{
+	}
+	HeroGuidesSupported = true
+	ForceDefaultGuide = true
+	MinimalPrecache = false
+	MinPlayers = 1
+	MaxPlayers = 10
+	PenaltiesEnabled = false
+	TeamCount = -1
+}

@@ -1,0 +1,564 @@
+#base "units/npc_creeps.kv"
+#base "units/npc_task.kv"
+#base "units/npc_treasure.kv"
+#base "units/npc_collections.kv"
+#base "units/npc_animals.kv"
+#base "units/npc_boss.kv"
+
+"DOTAUnits"
+{
+    "Version"	"1"
+
+    "avalon_dummy"	
+    {
+        "Model"                     "models/items/wards/esl_wardchest_radling_ward/esl_wardchest_radling_ward.vmdl"
+        "BaseClass"                 "npc_dota_creature"
+        "Level"                     "1"
+        "ModelScale"                "0.1"
+        "ArmorPhysical"             "99"
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "270"	
+        "HasInventory"              "1"
+        "StatusHealth"              "99999"
+        "StatusHealthRegen"         "0.5"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0.0"
+        "VisionDaytimeRange"        "0"
+        "VisionNighttimeRange"      "0"
+    }
+
+    "npc_teleport"  
+    {
+        "Model"                     "models/teleport_station.vmdl"
+        "BaseClass"                 "npc_dota_techies_mines"
+        "ModelScale"                "1.0"
+        "Ability1"                  "ability_npc_teleport"
+        "ArmorPhysical"             "99"
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                "150"
+        "HealthBarOffset"           "170"
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"             "0" 
+        "StatusHealth"              "100"
+        "StatusHealthRegen"         "0.5"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0.0"
+        "VisionDaytimeRange"        "400"
+        "VisionNighttimeRange"      "400"
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+    }
+
+    "npc_dummy_unit_invisible"
+	{
+		"BaseClass"					"npc_dota_creep_neutral"
+		"Model"						"models/development/invisiblebox.vmdl"
+		"SoundSet"					"Creep_Good_Range"
+		"Level"						"0"
+		"UnitLabel"					"healing_ward"
+        "Ability1"                  "ability_dummy_unit"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability7"					""
+		"Ability8"					""
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1"
+		"AttackAnimationPoint"		"0.5"
+		"AttackAcquisitionRange"	"800"
+		"AttackRange"				"500"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"900"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"
+		"MovementTurnRate"			"1.0"
+		"FollowRange"				"250"
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"0"
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"AttackDesire"				"1.5"
+		"VisionDaytimeRange"		"1100"
+		"VisionNighttimeRange"		"1100"
+	}
+
+	"npc_tombstone"
+	{
+        "Model"                     "models/heroes/phantom_assassin/arcana_tombstone.vmdl"
+        "BaseClass"                 "npc_dota_techies_mines"
+        "ModelScale"                "2.0"
+        "Ability1"                  "ability_npc_tombstone"
+        "ArmorPhysical"             "99"
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                "75"
+        "HealthBarOffset"           "170"
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"             "0" 
+        "StatusHealth"              "100"
+        "StatusHealthRegen"         "0.5"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0.0"
+        "VisionDaytimeRange"        "400"
+        "VisionNighttimeRange"      "400"
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+	}	
+
+    "npc_dota_neutral_black_dragon"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "2400"
+        "ArmorPhysical"             "6"
+        "AttackDamageMin"           "24"        // Damage range min.
+        "AttackDamageMax"           "40"        // Damage range max.
+    }
+    "npc_dota_neutral_granite_golem"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "2000"
+        "ArmorPhysical"             "12"
+        "AttackDamageMin"           "40"        // Damage range min.
+        "AttackDamageMax"           "45"        // Damage range max.
+    }
+    "npc_dota_neutral_prowler_shaman"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1440"
+        "ArmorPhysical"             "18"
+        "AttackDamageMin"           "30"        // Damage range min.
+        "AttackDamageMax"           "35"        // Damage range max.
+    }
+    "npc_dota_neutral_elder_jungle_stalker"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "2400"
+        "ArmorPhysical"             "6"
+        "AttackDamageMin"           "28"        // Damage range min.
+        "AttackDamageMax"           "39"        // Damage range max.
+    }
+    "npc_dota_neutral_big_thunder_lizard"
+    {
+        "StatusHealth"              "1680"
+        "ArmorPhysical"             "5"
+        "AttackDamageMin"           "30"        // Damage range min.
+        "AttackDamageMax"           "35"        // Damage range max.
+    }
+    "npc_dota_neutral_black_drake"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1120"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "17"        // Damage range min.
+        "AttackDamageMax"           "22"        // Damage range max.
+    }
+    "npc_dota_neutral_prowler_acolyte"
+    {
+        "StatusHealth"              "720"
+        "ArmorPhysical"             "16"
+        "AttackDamageMin"           "16"        // Damage range min.
+        "AttackDamageMax"           "19"        // Damage range max.
+    }
+    "npc_dota_neutral_small_thunder_lizard"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "960"
+        "ArmorPhysical"             "5"
+        "AttackDamageMin"           "20"        // Damage range min.
+        "AttackDamageMax"           "24"        // Damage range max.
+    }
+    "npc_dota_neutral_jungle_stalker"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1920"
+        "ArmorPhysical"             "5"
+        "AttackDamageMin"           "23"        // Damage range min.
+        "AttackDamageMax"           "32"        // Damage range max.
+    }
+    "npc_dota_neutral_rock_golem"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "960"
+        "ArmorPhysical"             "6"
+        "AttackDamageMin"           "14"        // Damage range min.
+        "AttackDamageMax"           "16"        // Damage range max.
+    }
+    "npc_dota_neutral_centaur_khan"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1280"
+        "ArmorPhysical"             "6"
+        "AttackDamageMin"           "24"        // Damage range min.
+        "AttackDamageMax"           "27"        // Damage range max.
+    }
+    "npc_dota_neutral_dark_troll_warlord"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1280"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "20"        // Damage range min.
+        "AttackDamageMax"           "22"        // Damage range max.
+    }
+    "npc_dota_neutral_polar_furbolg_ursa_warrior"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1120"
+        "ArmorPhysical"             "4"
+        "AttackDamageMin"           "24"        // Damage range min.
+        "AttackDamageMax"           "27"        // Damage range max.
+    }
+    "npc_dota_neutral_satyr_hellcaller"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1280"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "24"        // Damage range min.
+        "AttackDamageMax"           "27"        // Damage range max.
+    }
+    "npc_dota_neutral_enraged_wildkin"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "1120"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "25"        // Damage range min.
+        "AttackDamageMax"           "28"        // Damage range max.
+    }
+    "npc_dota_neutral_alpha_wolf"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "720"
+        "ArmorPhysical"             "5"
+        "AttackDamageMin"           "15"        // Damage range min.
+        "AttackDamageMax"           "16"        // Damage range max.
+    }
+    "npc_dota_neutral_ghost"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "600"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "22"        // Damage range min.
+        "AttackDamageMax"           "25"        // Damage range max.
+    }
+    "npc_dota_neutral_mud_golem"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "960"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "14"        // Damage range min.
+        "AttackDamageMax"           "16"        // Damage range max.
+    }
+    "npc_dota_neutral_ogre_mauler"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "660"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "12"        // Damage range min.
+        "AttackDamageMax"           "14"        // Damage range max.
+    }
+    "npc_dota_neutral_ogre_magi"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "620"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "12"        // Damage range min.
+        "AttackDamageMax"           "14"        // Damage range max.
+    }
+    "npc_dota_neutral_harpy_storm"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "720"
+        "ArmorPhysical"             "3"
+        "AttackDamageMin"           "15"        // Damage range min.
+        "AttackDamageMax"           "18"        // Damage range max.
+    }
+    "npc_dota_neutral_satyr_soulstealer"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "720"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "12"        // Damage range min.
+        "AttackDamageMax"           "14"        // Damage range max.
+    }
+    "npc_dota_neutral_polar_furbolg_champion"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "840"
+        "ArmorPhysical"             "3"
+        "AttackDamageMin"           "20"        // Damage range min.
+        "AttackDamageMax"           "22"        // Damage range max.
+    }
+    "npc_dota_neutral_centaur_outrunner"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "420"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "9"        // Damage range min.
+        "AttackDamageMax"           "11"        // Damage range max.
+    }
+    "npc_dota_neutral_fel_beast"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "480"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "7"        // Damage range min.
+        "AttackDamageMax"           "8"        // Damage range max.
+    }
+    "npc_dota_neutral_giant_wolf"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "600"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "15"        // Damage range min.
+        "AttackDamageMax"           "16"        // Damage range max.
+    }
+    "npc_dota_neutral_harpy_scout"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "480"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "14"        // Damage range min.
+        "AttackDamageMax"           "18"        // Damage range max.
+    }
+    "npc_dota_neutral_dark_troll"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "600"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "12"        // Damage range min.
+        "AttackDamageMax"           "14"        // Damage range max.
+    }
+    "npc_dota_neutral_forest_troll_berserker"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "600"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "14"        // Damage range min.
+        "AttackDamageMax"           "18"        // Damage range max.
+    }
+    "npc_dota_neutral_forest_troll_high_priest"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "540"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "13"        // Damage range min.
+        "AttackDamageMax"           "16"        // Damage range max.
+    }
+    "npc_dota_neutral_kobold_tunneler"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "400"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "12"        // Damage range min.
+        "AttackDamageMax"           "14"        // Damage range max.
+    }
+    "npc_dota_neutral_kobold"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "288"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "5"        // Damage range min.
+        "AttackDamageMax"           "6"        // Damage range max.
+    }
+    "npc_dota_neutral_kobold_taskmaster"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "480"
+        "ArmorPhysical"             "2"
+        "AttackDamageMin"           "7"        // Damage range min.
+        "AttackDamageMax"           "8"        // Damage range max.
+    }
+    "npc_dota_neutral_satyr_trickster"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "360"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "4"        // Damage range min.
+        "AttackDamageMax"           "5"        // Damage range max.
+    }
+    "npc_dota_neutral_gnoll_assassin"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "444"
+        "ArmorPhysical"             "1"
+        "AttackDamageMin"           "15"        // Damage range min.
+        "AttackDamageMax"           "18"        // Damage range max.
+    }
+    "npc_dota_neutral_wildkin"
+    {
+        "ModelScale"                "0.7"
+        "StatusHealth"              "720"
+        "ArmorPhysical"             "0"
+        "AttackDamageMin"           "10"        // Damage range min.
+        "AttackDamageMax"           "13"        // Damage range max.
+    }
+
+    "npc_dota_sand_king_sandstorm"
+    {
+        // General
+        //
+        "BaseClass"                 "npc_dota_creature" // Class of entity of link to.
+        "Model"                     "models/heroes/attachto_ghost/attachto_ghost.vmdl"  // Model.
+        "SoundSet"                  "Creep_Good_Melee"                  // Name of sound set.
+        "ModelScale"                "16.0"
+        "Level"                     "4"
+        "IsSummoned"                "1"
+                
+        // Abilities
+        //----------------------------------------------------------------
+        
+        "Ability1"                  "sand_king_boss_sandstorm_storm_passive"            // Ability 1.
+        "Ability2"                  ""          // Ability 2.
+        "Ability3"                  ""          // Ability 3.
+        "Ability4"                  ""          // Ability 4.
+        "Ability5"                  ""          // Ability 5.
+        "Ability6"                  ""          // Ability 6 - Extra.
+        "Ability7"                  ""          // Ability 7 - Extra.
+        "Ability8"                  ""          // Ability 8 - Extra.
+
+        // Armor
+        //------------------------------------------e----------------------
+        "ArmorPhysical"             "0"         // Physical protection.
+        "MagicalResistance"             "0"         // Magical protection.
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "1"
+        "AttackDamageMax"           "1"
+        "AttackRate"                "1"
+        "AttackAnimationPoint"      "1"
+        "AttackAcquisitionRange"    "1"
+        "AttackRange"               "1"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"         // Experience earn.
+        "BountyGoldMin"             "0"         // Gold earned min.
+        "BountyGoldMax"             "0"         // Gold earned max.
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_REGULAR"            // Hull type used for navigation/locomotion.
+        "HealthBarOffset"           "140"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_FLY"            // Type of locomotion - ground, air
+        "MovementSpeed"             "650"       // Speed
+        "MovementTurnRate"          "0.5"       // Turning rate.
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "500"       // Base health.
+        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+        "StatusMana"                "0"         // Base mana.
+        "StatusManaRegen"           "0"         // Mana regeneration rate.
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_GOODGUYS"            // Team name.
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "300"       // Range of vision during day light.
+        "VisionNighttimeRange"      "300"       // Range of vision at night time.
+    }
+
+	"npc_custom_death_prophet_exorcism_spirit"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/death_prophet/death_prophet_ghost.vmdl"	// Model.
+		"wearable"					"8652"
+		"BaseClass"					"npc_dota_base_additive"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"0"
+		"ModelScale"				"0.8"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"			// Damage range min.
+		"AttackDamageMax"			"0"			// Damage range max.	
+		"AttackRate"				"1.0"		// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"0"			// Range within a target can be acquired.
+		"AttackRange"				"0"			// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_HUGE"			// Hull type used for navigation/locomotion.
+		"HealthBarOffset"			"120"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"16"			// Gold earned min.
+		"BountyGoldMax"				"20"			// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"700"			// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1600"			// Range of vision during day light.
+		"VisionNighttimeRange"		"600"			// Range of vision at night time.
+        "RingRadius"                "0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+	}
+}

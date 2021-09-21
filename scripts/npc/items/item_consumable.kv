@@ -1,0 +1,1261 @@
+//消耗品
+"DOTAAbilities"
+{
+    // 时空卷轴
+    "item_consumable_time_scroll"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/item_consumable_time_scroll"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+        "AbilityUnitTargetFlags"            "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+        "AbilityUnitTargetType"             "DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitTargetTeam"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityCooldown"                   "0"
+        
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "5"
+        "Composable"                        "0"
+    }
+
+    // 回城卷轴
+    "item_consumable_tp_scroll"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/item_consumable_tp_scroll"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+        
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "5"
+        "Composable"                        "0"
+    }
+
+    // 随机宝宝装备
+    "item_consumable_0001"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0001"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "4"
+        "Composable"                        "0"
+        "AutoUse"                           "1"
+    }
+
+    // 知我心法
+    "item_consumable_0003"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0003"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "4"
+        "Composable"                        "0"
+        "AutoUse"                           "1"
+    }
+
+    "item_consumable_0101"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0101"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "hp"                        "100"
+            }
+        }
+    } 
+
+    "item_consumable_0102"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0102"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "hp"                         "225"
+            }
+        }
+    } 
+
+    "item_consumable_0103"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0103"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "hp"                         "300"
+            }
+        }
+    } 
+
+    "item_consumable_0201"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0201"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "intelligence"               "1"
+            }
+        }
+    }
+
+    "item_consumable_0202"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0202"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "intelligence"               "2"
+            }
+        }
+    }
+
+    "item_consumable_0203"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0203"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "intelligence"               "4"
+            }
+        }
+    }
+
+    "item_consumable_0301"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0301"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "agility"                      "1"
+            }
+        }
+    }
+
+    "item_consumable_0302"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0302"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "agility"                      "2"
+            }
+        }
+    }
+
+    "item_consumable_0303"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0303"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "agility"                      "4"
+            }
+        }
+    }
+
+    "item_consumable_0401"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0401"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "strength"                   "1"
+            }
+        }
+    }  
+
+    "item_consumable_0402"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0402"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "strength"                   "2"
+            }
+        }
+    }  
+
+    "item_consumable_0403"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0403"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "strength"                   "4"
+            }
+        }
+    }   
+
+    "item_consumable_0501"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0501"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "move_speed"                 "3"
+            }
+        }
+    } 
+
+    "item_consumable_0502"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0502"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "move_speed"                 "6"
+            }
+        }
+    } 
+
+    "item_consumable_0503"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0503"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "move_speed"                 "15"
+            }
+        }
+    }
+
+    "item_consumable_0701"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0701"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana"                       "50"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "mana_regen_percentage"      "2"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana_regen"                 "0.1"
+            }
+        }
+    }
+
+    "item_consumable_0702"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0702"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana"                       "125"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "mana_regen_percentage"      "4"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana_regen"                 "0.3"
+            }
+        }
+    }
+
+    "item_consumable_0703"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0703"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana"                       "320"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "mana_regen_percentage"      "4"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana_regen"                 "0.9"
+            }
+        }
+    }
+
+    "item_consumable_0801"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0801"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "health_regen_pct"           "0.1"
+            }
+        }
+    }
+
+    "item_consumable_0802"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0802"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "health_regen_pct"           "0.2"
+            }
+        }
+    }
+
+    "item_consumable_0803"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/0803"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "health_regen_pct"           "0.6"
+            }
+        }
+    }
+
+    // "item_consumable_1004"
+    // {
+    //     "BaseClass"                         "item_datadriven"
+    //     "AbilityTextureName"                "custom_game/consume/1004"
+    //     "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    //     "AbilityCooldown"                   "0"
+
+    //     "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+    //     "ItemPermanent"                     "0"
+    //     "ItemStackable"                     "1"
+    //     "ItemKillable"                      "0"
+    //     "ItemInitialCharges"                "1"
+    //     "ItemRequiresCharges"               "1"
+
+    //     "Quality"                           "4"
+
+    //     "AbilitySpecial"
+    //     {
+    //         "01"
+    //         {
+    //             "var_type"                   "FIELD_FLOAT"
+    //             "incoming_damage"            "-12"
+    //         }
+    //     }
+    // }
+
+    "item_consumable_1101"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1101"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "spell_amp"                  "1"
+            }
+        }
+    }  
+
+    "item_consumable_1102"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1102"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "spell_amp"                  "2"
+            }
+        }
+    }  
+
+    "item_consumable_1103"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1103"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "spell_amp"                  "4"
+            }
+        }
+    }  
+
+    "item_consumable_1104"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1104"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "4"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "spell_amp"                  "10"
+            }
+        }
+    }   
+
+    "item_consumable_1201"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1201"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_damage"              "2"
+            }
+        }
+    }
+
+    "item_consumable_1202"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1202"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_damage"              "4"
+            }
+        }
+    }
+
+    "item_consumable_1203"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1203"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_damage"              "8"
+            }
+        }
+    }
+
+    "item_consumable_1204"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1204"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "4"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_damage"              "16"
+            }
+        }
+    }
+    
+    // 技能书
+    "item_consumable_ability"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/ability_book"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "5"
+        "Composable"                        "0"
+    }
+
+    "item_consumable_1301"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1301"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_speed"               "3"
+            }
+        }
+    }  
+
+    "item_consumable_1302"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1302"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_speed"               "6"
+            }
+        }
+    }
+
+    "item_consumable_1303"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/1303"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "attack_speed"               "12"
+            }
+        }
+    }
+
+    //全属性书
+    "item_consumable_3604"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/3604"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "4"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "strength"                   "7"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "agility"                    "7"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "intelligence"               "7"
+            }
+        }
+    }
+
+    //人参果
+    "item_consumable_3701"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/3701"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+        "Composable"                        "0"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "cooldown_reduction"         "1"
+            }
+        }
+    }
+
+    "item_consumable_3702"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/3702"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+        "Composable"                        "0"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "cooldown_reduction"         "2"
+            }
+        }
+    }
+
+    "item_consumable_3801"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/3801"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "health_regen_percentage"    "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+        }
+    } 
+
+    "item_consumable_3802"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/3802"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "2"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "health_regen_percentage"    "2"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+        }
+    } 
+
+    "item_consumable_3803"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "custom_game/consume/3803"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "3"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "health_regen_percentage"    "4"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+        }
+    }
+
+    //玩家A帐
+    "item_consumable_3905"
+    {
+        "BaseClass"                         "item_datadriven"
+        "AbilityTextureName"                "item_ultimate_scepter"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"                   "0"
+
+        "ItemShareability"                  "ITEM_PARTIALLY_SHAREABLE"
+        "ItemPermanent"                     "0"
+        "ItemStackable"                     "1"
+        "ItemKillable"                      "0"
+        "ItemInitialCharges"                "1"
+        "ItemRequiresCharges"               "1"
+
+        "Quality"                           "5"
+        "AutoUse"                           "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "strength"                   "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "agility"                    "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "intelligence"               "3"
+            }
+        }
+    }  
+}

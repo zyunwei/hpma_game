@@ -1,0 +1,1006 @@
+"DOTAAbilities"
+{
+    "skeleton_king_split_earth"
+    {
+        "BaseClass"              "ability_lua"
+        "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityTextureName"     "spellicon"
+        "ScriptFile"             "abilities/boss/skeleton_king_split_earth.lua"
+        "AbilityCooldown"        "10"
+        "AbilityCastAnimation"   "ACT_DOTA_ATTACK"
+
+        "AbilitySpecial"
+        {
+            "1"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "6"
+            }
+            "2"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "radius"                    "500"
+            }
+            "3"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage"                    "500"
+            }
+        }
+    }
+
+    "skeleton_king_jump"
+    {
+        "BaseClass"              "ability_lua"
+        "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityTextureName"     "spellicon"
+        "ScriptFile"             "abilities/boss/skeleton_king_jump.lua"
+        "AbilityCooldown"        "10"
+        "AbilityCastAnimation"   "ACT_DOTA_ATTACK"
+        "AbilityCastRange"       "1000"
+
+        "AbilitySpecial"
+        {
+            "1"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "6"
+            }
+            "2"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "radius"                    "500"
+            }
+            "3"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage"                    "500"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Aghanim Passive
+    //=================================================================================================================
+    "aghanim_passive"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "aghanim_passive"
+        "ScriptFile"                    "abilities/creatures/aghanim_passive"
+
+        "MaxLevel"                      "5"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "IsOnCastBar"                   "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "status_resist"         "10 20 30 40 50 75"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Aghanim: Portal Spear
+    //=================================================================================================================
+    "aghanim_spear"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityTextureName"            "aghanim_spear"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"     
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Mars.Spear.Cast"
+        "MaxLevel"                      "6"
+        "IsOnCastBar"                   "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "damage"            "220 264 308 352 396 440"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "spear_speed"       "1000 1100 1200 1300 1400 1500"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "spear_width"       "90"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "spear_vision"      "300"
+            }
+            "05"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "spear_range"       "10000"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "activity_duration"     "1.7"
+            }
+            "07"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "stun_duration"     "1.25 1.5 1.75 2.0 2.25 2.5"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "knockback_duration"    "0.25"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "knockback_distance"    "75"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_5"
+        "AbilityCastGestureSlot"        "DEFAULT"
+    }
+
+    //=================================================================================================================
+    // Aghanim Crystal Attack
+    //=================================================================================================================
+    "aghanim_crystal_attack"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel"               "1"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "ancient_apparition_ice_blast"
+        "ScriptFile"                    "abilities/creatures/aghanim_crystal_attack"
+        "MaxLevel"                      "6"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        "AnimationIgnoresModelScale"    "1"
+
+        "IsOnCastBar"                   "0"
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "10000"
+        "AbilityCastPoint"              "0.5"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0.6 0.5 0.4 0.3 0.2 0.1"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "attack_time"               "1.7 1.65 1.6 1.55 1.5 1.45"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "explosion_radius"          "250"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "attack_damage"             "500"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "knockback_duration"        "0.5 0.55 0.6 0.65 0.7 0.75"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "knockback_distance"        "80 90 100 110 120 130"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "knockback_height"          "80 90 100 110 120 130"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "heal_suppression_pct"      "50 55 60 65 70 75"
+            }
+            "08"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "debuff_duration"           "12.0"
+            }
+            "09"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "armor_reduction_pct"       "18 26 34 42 50 58"
+            }
+            "10"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "pulse_radius"              "400"
+            }
+            "11"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "pulse_damage"              "0"
+            }
+            "12"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "pulse_damage_pct"          "15 20 25 30 35 40"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Aghanim: Staff Beams
+    //=================================================================================================================
+    "aghanim_staff_beams"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "aghanim_staff_beams"
+        "ScriptFile"                    "abilities/creatures/aghanim_staff_beams"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+        "AbilityChannelAnimation"       "ACT_DOTA_CHANNEL_ABILITY_2"
+        "AnimationIgnoresModelScale"    "1"
+        "AbilityCastPoint"              "2.0"
+
+        "MaxLevel"                      "6"
+        "IsOnCastBar"                   "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+         "AbilityCastRange"              "10000"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "5"
+        "AbilityChannelTime"            "6.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "beam_speed"        "330 350 370 390 410 430"
+            }  
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "beam_radius"       "200"
+            }  
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "beam_dps"          "0"
+            } 
+            "04"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "linger_time"       "5.0 6.0 7.0 8.0 9.0 10.0"
+            } 
+            "05"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "linger_create_interval"       "0.5"
+            } 
+            "06"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "damage_interval"       "0.1"
+            }
+            "07"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "beam_dps_pct"      "15"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Aghanim: Blink
+    //=================================================================================================================
+    "aghanim_blink"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "aghanim_blink"
+        "ScriptFile"                    "abilities/creatures/aghanim_blink"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+        "AbilitySound"                  "Hero_QueenOfPain.Blink_in"
+
+        "IsOnCastBar"                   "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
+        "AbilityCastRange"              "99999"
+        "AbilityCastPoint"              "1.5"
+        "MaxLevel"                      "6"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "12.0"
+        
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "travel_speed"              "2500"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Aghanim: Shard Attack
+    //=================================================================================================================
+    "aghanim_shard_attack"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "aghanim_shard_attack"
+        "ScriptFile"                    "abilities/creatures/aghanim_shard_attack"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_6"
+        "AbilityChannelAnimation"       "ACT_DOTA_CHANNEL_ABILITY_6"
+        "AnimationIgnoresModelScale"    "1"
+        "AbilityCastPoint"              "2.0"
+        "MaxLevel"                      "6"
+        "IsOnCastBar"                   "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "10000"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "10.0"
+        "AbilityChannelTime"            "10.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "spiral_projectiles"        "12 12 13 14 15 16"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "spiral_projectile_waves"   "6"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "spiral_projectile_width"   "50"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "spiral_projectile_damage"  "300"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "spiral_projectile_speed"   "625"
+            }
+            "06"
+            {
+                "var_type"                           "FIELD_FLOAT"
+                "spiral_projectile_rotation_speed"   "1.2"
+            }
+            "07"
+            {
+                "var_type"                                  "FIELD_FLOAT"
+                "spiral_projectile_speed_change_interval"   "0.75"
+            }
+
+        }
+    }
+
+    //=================================================================================================================
+    // Boss Timbersaw: Whirling Death
+    //=================================================================================================================
+    "boss_timbersaw_whirling_death"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/creatures/boss_timbersaw_whirling_death"
+        "AbilityTextureName"            "shredder_whirling_death"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"  
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Shredder.WhirlingDeath.Cast"
+
+        "IsOnCastBar"                   "0"
+        "MaxLevel"                      "4"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "500"
+        "AbilityCastPoint"              "1.55 1.5 1.45 1.4"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "whirling_radius"           "500"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "whirling_damage"           "325 390 455 520"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "tree_damage_scale"         "15 20 25 30"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "whirling_tick"             "0.3"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "stat_loss_pct"             "15"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "10.0"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_GENERIC_CHANNEL_1"
+    }
+
+    //=================================================================================================================
+    // Boss Timbersaw: Timber Chain
+    //=================================================================================================================
+    "boss_timbersaw_timber_chain"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/creatures/boss_timbersaw_timber_chain"
+        "AbilityTextureName"            "shredder_timber_chain"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"  
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Shredder.TimberChain.Cast"
+
+        "IsOnCastBar"                   "0"
+        "MaxLevel"                      "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+        "AbilityCastRange"              "4800"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "7"
+        
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "chain_radius"      "90"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "range"             "3600"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "radius"            "225"
+            }
+            "04"
+            {   
+                "var_type"          "FIELD_INTEGER"
+                "speed"             "2400"
+            }
+            "05"
+            {   
+                "var_type"          "FIELD_INTEGER"
+                "damage"            "300"
+            }
+            "06"
+            {   
+                "var_type"          "FIELD_FLOAT"
+                "stun_duration"     "1.5"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    //=================================================================================================================
+    // Boss Timbersaw: Reactive Armor
+    //=================================================================================================================
+    "boss_timbersaw_reactive_armor"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/creatures/boss_timbersaw_reactive_armor"
+        "AbilityTextureName"            "shredder_reactive_armor"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "IsOnCastBar"                   "0"
+        "MaxLevel"                      "5"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "max_stacks"                        "24"
+            }
+            "02"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "armor_per_stack"                   "1"
+            }
+            "03"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "magic_resist_per_stack"            "1"
+            }
+            "04"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "regen_per_stack"                   "40"
+            }
+            "05"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "status_resist"                     "70"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    //=================================================================================================================
+    // Boss Timbersaw: Chakram Dance
+    //=================================================================================================================
+    "boss_timbersaw_chakram_dance"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "shredder_chakram"
+        "ScriptFile"                    "abilities/creatures/boss_timbersaw_chakram_dance"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4" 
+        "AbilityCastPoint"              "2.0 1.9 1.8 1.7 1.6"
+
+        "IsOnCastBar"                   "0"
+        "MaxLevel"                      "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "28"
+        "AbilityChannelTime"            "9.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "num_chakrams"      "9"
+            }  
+            "02"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "interval"          "3.0"
+            }  
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "short_range"       "900"
+            }  
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "long_range"          "1800"
+            }  
+        }
+    }
+
+     //=================================================================================================================
+    // Sand King Boss Passive
+    //=================================================================================================================
+    "sand_king_boss_passive"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "sandking_caustic_finale"
+        "ScriptFile"                    "abilities/creatures/sand_king_boss_passive"
+
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "IsOnCastBar"                   "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                                       "FIELD_INTEGER"
+                "caustic_armor_reduction_pct"                    "33"
+            }
+            "02"
+            {
+                "var_type"                                       "FIELD_FLOAT"
+                "caustic_duration"                               "3.0"
+            }
+            "03"
+            {
+                "var_type"                                       "FIELD_INTEGER"
+                "caustic_radius"                                 "400"
+            }
+            "04"
+            {
+                "var_type"                                       "FIELD_INTEGER"
+                "caustic_damage"                                 "1500"
+            }
+            "05"
+            {
+                "var_type"                                       "FIELD_INTEGER"
+                "accuracy_pct"                                     "50"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Sand King Boss: Burrow strike
+    //=================================================================================================================
+    "sand_king_boss_burrowstrike"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "sandking_burrowstrike"
+        "ScriptFile"                    "abilities/creatures/sand_king_boss_burrowstrike"
+
+        "AbilityCastAnimation"          "ACT_DOTA_SAND_KING_BURROW_IN"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"              "0.8"
+        "AbilityCooldown"               "10"
+
+        "IsOnCastBar"                   "0"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "3000"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "speed"                             "1000"
+            }
+            "02"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "damage"                            "1500"
+            }
+            "03"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "radius"                            "300"
+            }
+            "04"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "delay"                              "1.0"
+            }
+            "05"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "stun_duration"                     "1.0"
+            }
+            "06"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "knockback_distance"                "500"
+            }
+            "07"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "knockback_height"                  "150"
+            }
+            "08"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "scaling_speed"                     "900"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Sand King Boss: Sand Storm
+    //=================================================================================================================
+    "sand_king_boss_sandstorm"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "sandking_sand_storm"
+        "ScriptFile"                    "abilities/creatures/sand_king_boss_sandstorm"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Ability.SandKing_SandStorm.start"
+        "AbilityCastAnimation"           "ACT_DOTA_SPAWN" 
+        "AbilityCastPoint"              "2.0"
+
+        "IsOnCastBar"                   "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "0"
+        "AbilityDuration"               "50"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "40"
+        "AbilityChannelTime"            "15"
+
+       // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "500"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "60 50 40 30"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "sand_storm_invis_delay"    "0.5"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "sand_storm_radius"     "700"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "channel_time"           "15.0"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "storm_count_per_player"          "1"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "storm_angle_step"           "30"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "storm_speed"           "330"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "storm_speed_step"           "40"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "spiral_storm_count"          "12"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Sand King Boss: Sand Storm Passive
+    //=================================================================================================================
+    "sand_king_boss_sandstorm_storm_passive"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "sandking_sand_storm"
+        "ScriptFile"                    "abilities/creatures/sand_king_boss_sandstorm_storm_passive"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "IsOnCastBar"                   "0"
+      
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "sand_storm_radius"     "165"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage"                "500"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "movespeed_pct"         "33"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "storm_move_speed"      "330"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "blind_duration"        "5"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "storm_decreased_turn_rate"        "150"
+            }
+        }
+    }
+
+    "boss_attack_landed"
+    {
+        "BaseClass"              "ability_lua"
+        "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ScriptFile"             "abilities/boss/boss_attack_landed.lua"
+
+        "AbilitySpecial"
+        {
+            "1"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "max_health_damage_pct"     "2"
+            }
+        }
+    }
+}

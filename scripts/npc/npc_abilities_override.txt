@@ -1,0 +1,122 @@
+"DOTAAbilities"
+{
+	"Version"						"1"
+
+	"item_fallen_sky"
+	{
+		"ItemIsNeutralDrop"				"0"
+	}
+
+	"item_bloodstone"
+	{
+		"AbilitySpecial"
+		{
+			"1"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"0"
+			}
+		}
+	}
+
+	"ogre_magi_bloodlust"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityCooldown"				"6 5 4 3"
+	}
+
+	"keeper_of_the_light_chakra_magic"
+	{
+		"AbilityCooldown"				"10 9 8 7"
+	}
+
+	"morphling_waveform"
+	{
+		"AbilityCooldown"				"6 5 4 3"
+	}
+
+	"storm_spirit_ball_lightning"
+	{
+		"AbilityManaCost"				"30"
+		"AbilityDamage"					"12 24 48"
+	}
+
+	"storm_spirit_static_remnant"
+	{
+		"AbilityDuration"				"5.0"
+	}
+
+	"pudge_meat_hook"
+	{
+		"AbilityCastRange"				"2000"
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_distance"		"2000"
+			}
+		}
+	}
+
+	"batrider_flaming_lasso"
+	{
+		"AbilityCastRange"				"800"
+	}
+
+	"sven_gods_strength"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gods_strength_damage"		"60 80 100"	
+				"LinkedSpecialBonus"		"special_bonus_unique_sven_2"	
+			}
+		}	
+	}
+
+
+	"spirit_breaker_greater_bash"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_pct"			"10 10 10 10"
+				"LinkedSpecialBonus"	"special_bonus_unique_spirit_breaker_1"
+			}
+		}
+	}
+
+	"faceless_void_time_lock"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_pct"			"6 8 10 12"
+			}
+		}
+	}
+
+	"slardar_bash"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"0.7 0.8 0.9 1.0"
+			}
+		}
+	}
+
+
+
+
+
+}

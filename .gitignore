@@ -1,0 +1,16 @@
+tools_thumbnail_cache.bin
+tools_asset_info.bin
+resource/word_filter_cache_1.dat
+resource/custom_game_whitelist.txt
+panorama_debugger.cfg
+*.vxml_c
+*.vcss_c
+*.vjs_c
+*.vmdl_c
+*.vpcf_c
+*.vtex_c
+*.vmesh_c
+*.vagrp_c
+*.vmat_c
+*.vsnd_c
+*.vanim_c

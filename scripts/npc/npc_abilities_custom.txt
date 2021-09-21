@@ -1,0 +1,484 @@
+#base "abilities/custom_item_spell_system.kv"
+#base "abilities/custom_spell_items.kv"
+#base "abilities/custom_boss.kv"
+#base "abilities/custom_minor_abilities.kv"
+
+// Dota Heroes File
+"DOTAAbilities"
+{
+	// 传送技能
+	"ability_xxwar_teleport"
+	{
+		"BaseClass"					"ability_lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityChannelTime"		"3"
+		"AbilityTextureName"		"custom_game/ability_xxwar_teleport"
+		"MaxLevel"					"1"
+		"AbilityCooldown"			"1"
+		"ScriptFile"				"abilities/ability_xxwar_teleport.lua"
+		"AbilityCastAnimation"		"ACT_DOTA_GENERIC_CHANNEL_1"
+	}
+
+	// 跳跃技能
+	"ability_xxwar_jump"
+	{
+		"BaseClass"					"ability_lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName"		"custom_game/ability_xxwar_jump"
+		"ScriptFile"				"abilities/ability_xxwar_jump.lua"
+		"MaxLevel"					"1"
+		"AbilityCooldown"			"3.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	// 闪避技能
+	"ability_xxwar_evade"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"		"custom_game/ability_xxwar_evade"
+		"AbilityCooldown"			"0.5"
+		"MaxLevel"					"1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"abilities/common.lua"
+				"Function"			"HeroEvade"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_ability_xxwar_evade"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"50"
+				    "MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS" "high" 
+				}
+
+				"OnAttack"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_ability_xxwar_evade"
+						"Target" 		"CASTER"
+					}
+				}
+			}
+		}
+
+		"AbilitySpecial"
+        {
+            "1"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "crystal_cost_special"      "2"
+            }
+        }
+	}
+
+	//收集
+	"ability_xxwar_collection"
+	{
+		"BaseClass"					"ability_lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityTextureName"		"custom_game/ability_xxwar_collection"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityCharges"			"5"
+		"AbilityChargeRestoreTime"	"10"
+		"AbilityCooldown"			"0.0"
+		"AbilityChannelTime"		"1"
+		"MaxLevel"					"1"
+		"AbilityCastPoint"			"0.0"
+		"ScriptFile"                "abilities/ability_xxwar_collection.lua"
+		"AbilityCastRange"        	"150"
+		"AbilityCastAnimation"		"ACT_DOTA_GENERIC_CHANNEL_1"
+	}
+
+	//被收集对象
+	"ability_collection_unit"
+	{
+		"BaseClass"					"ability_lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ScriptFile"                "abilities/ability_collection_unit.lua"
+
+		"precache"
+		{
+			"particle"				"particles/econ/events/ti10/compendium_points_ti10_ambient.vpcf"
+		}
+	}
+
+	//切换召唤物AI
+	"ability_xxwar_toggle_ai"
+	{
+		"BaseClass"					"ability_lua"
+		"ScriptFile"                "abilities/ability_xxwar_toggle_ai.lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"		"custom_game/ability_xxwar_toggle_ai"
+		"AbilityCastPoint"			"0.1"
+		"AbilityCooldown"			"0"
+		"AbilityManaCost"			"0"
+		"MaxLevel"					"1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//NPC
+	"ability_npc_unit"
+	{
+		"BaseClass"					"ability_lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ScriptFile"                "abilities/ability_npc_unit.lua"
+	}
+
+	//传送点
+	"ability_npc_teleport"
+	{
+		"BaseClass"					"ability_lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ScriptFile"                "abilities/ability_npc_teleport.lua"
+	}
+
+	//墓碑
+	"ability_npc_tombstone"
+	{
+		"BaseClass"					"ability_lua"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ScriptFile"                "abilities/ability_npc_tombstone.lua"
+	}
+
+	// 辅助单位
+	"ability_dummy_unit"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"BaseClass" 					"ability_datadriven"
+		"MaxLevel"						"1"
+
+		"Modifiers"
+		{
+			"modifier_dummy_unit"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	// 野怪增强
+	"ability_creep_enhancement"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ScriptFile"                	"abilities/ability_creep_enhancement.lua"
+		"MaxLevel"						"5"
+
+		"AbilitySpecial"
+        {
+            "1"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "health_bouns"              "0 2 4 6 8"
+            }
+            "2"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "attack_damage"             "0 100 200 400 800"
+            }
+            "3"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "armor_bouns"               "0 2 4 6 8"
+            }
+            "4"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "magical_resistance_bouns"  "0 5 10 15 20"
+            }
+            "5"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "gold_bounty_bouns"        	"0 2 4 6 8"
+            }
+            "6"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "xp_bounty_bouns"           "0 2 4 6 8"
+            }
+        }
+	}
+
+	"xxwar_empty_ability_0"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_1"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_2"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_3"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_4"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_5"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_6"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_7"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_8"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_9"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_10"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_11"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_12"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_13"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_14"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_15"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_16"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_17"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_18"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_19"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_20"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_21"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_22"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_23"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_24"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_25"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_26"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_27"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_28"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_29"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_30"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+
+	"xxwar_empty_ability_31"
+	{
+		"BaseClass"    "special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"		"0"
+	}
+}

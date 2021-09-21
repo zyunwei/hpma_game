@@ -1,0 +1,5631 @@
+"DOTAAbilities"
+{
+    // 裂地穿刺
+    "ability_custom_lion_impale"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_lion_impale.lua"
+        "AbilityTextureName"        "lion_impale"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_YES_STRONG"
+        "AbilityCooldown"           "24"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "700"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "3"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "5"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "width"                     "125"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "stun_duration"             "3.6"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "300"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+            "particle"          "particles/units/heroes/hero_lion/lion_spell_impale.vpcf"
+            "particle"          "particles/units/heroes/hero_lion/lion_spell_impale_hit_spikes.vpcf"
+        }
+    }
+
+    // 妖术
+    "ability_custom_voodoo"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_voodoo.lua"
+        "AbilityTextureName"        "lion_voodoo"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_YES_STRONG"
+        "AbilityCooldown"           "24"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "700"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "voodoo_duration"            "4.0"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "move_speed"                 "100"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+            "particle"          "particles/units/heroes/hero_lion/lion_spell_voodoo.vpcf"
+        }
+    }
+
+    // 手里剑
+    "ability_custom_shuriken"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "custom_game/ability_custom_shuriken"
+        "ScriptFile"                "abilities/custom/ability_custom_shuriken.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "20"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "700"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "base_damage"               "150"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "stack_damage"              "50"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "stun_duration"             "0.1"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "init_count"                "6"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+            "particle"          "particles/units/heroes/hero_bounty_hunter/bounty_hunter_suriken_toss.vpcf"
+        }
+    }
+
+    // 火焰气息
+    "ability_custom_breathe_fire"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "dragon_knight_breathe_fire"
+        "ScriptFile"                "abilities/custom/ability_custom_breathe_fire.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "20"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "700"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "3"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "start_radius"              "150"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "end_radius"                "250"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "range"                     "650"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "speed"                     "1050"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage"                    "450"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+            "particle"          "particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+        }
+    }
+
+    // 战意高涨
+    "ability_custom_life_line"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "custom_game/ability_custom_life_line"
+        "ScriptFile"                "abilities/custom/ability_custom_life_line.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCooldown"           "16"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "4"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "5"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "attack_speed"              "100"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "lifesteal_percent"         "20"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "8"
+            }
+        }
+    }
+
+    // 撕裂大地
+    "ability_custom_split_earth"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "leshrac_split_earth"
+        "ScriptFile"                "abilities/custom/ability_custom_split_earth.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "18"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "700"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "3"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "3.5"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "radius"                    "300"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage"                    "250"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+            "particle"          "particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+        }
+    }
+    
+    // 震荡光弹
+    "ability_custom_concussive_shot"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "skywrath_mage_concussive_shot"
+        "ScriptFile"                "abilities/custom/ability_custom_concussive_shot.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "16"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "800"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_int"                "3"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "search_radius"             "800"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "base_damage"               "150"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts"
+            "particle"          "particles/units/heroes/hero_skywrath_mage/skywrath_mage_concussive_shot.vpcf"
+        }
+    }
+
+    // 死神镰刀
+    "ability_custom_reapers_scythe"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "necrolyte_reapers_scythe"
+        "ScriptFile"                "abilities/custom/ability_custom_reapers_scythe.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "30"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "800"
+        "MaxLevel"                  "1"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "trigger_health_percent"    "100"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_per_health"         "0.8"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_necrolyte.vsndevts"
+            "particle"          "particles/units/heroes/hero_necrolyte/necrolyte_scythe.vpcf"
+            "particle"          "particles/units/heroes/hero_necrolyte/necrolyte_scythe_model.vpcf"
+            "particle"          "particles/units/heroes/hero_necrolyte/necrolyte_scythe_orig.vpcf"
+        }
+    }
+
+    // 冰封禁制
+    "ability_custom_frostbite"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "crystal_maiden_frostbite"
+        "ScriptFile"                "abilities/custom/ability_custom_frostbite.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "30"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "4"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "5"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "3.0"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "stun_duration"             "0.1"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage"                    "100"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_interval"           "1"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "radius"                    "1000"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+            "particle"          "particles/units/heroes/hero_crystalmaiden/maiden_frostbite.vpcf"
+            "particle"          "particles/units/heroes/hero_crystalmaiden/maiden_frostbite_buff.vpcf"
+        }
+    }
+
+    // 缠绕攻击
+    "ability_custom_root_attack"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "custom_game/entangling_claws"
+        "ScriptFile"                "abilities/custom/ability_custom_root_attack.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "10"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "800"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "3"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "4"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "tick_interval"             "1"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_multipler"           "1"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts"
+            "particle"          "particles/units/heroes/hero_treant/treant_bramble_root.vpcf"
+        }
+    }
+
+    // 专注射击
+    "ability_custom_battle_trance"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_battle_trance.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_wildpower"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCooldown"           "16"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "9"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "bonus_attack_range"        "250"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_damage"               "60"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "proc_chance"                "100"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "stack_attack_speed"         "25"
+            }
+            "07"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "max_stack_level"            "5"
+            }
+            "08"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "buff_duration"              "6"
+            }
+            "09"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "battle_trance_attack_speed" "120"
+            }
+            "10"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "battle_trance_lifesteal"    "30"
+            }
+            "11"
+            {
+                "var_type"                                 "FIELD_FLOAT"
+                "battle_trance_move_speed_percentage"      "30"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
+            "particle"          "particles/units/heroes/hero_troll_warlord/troll_warlord_battletrance_buff.vpcf"
+        }
+    }
+
+    // 傲寒六决
+    "ability_custom_shivas_guard"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "custom_game/lich_frost_armor"
+        "ScriptFile"                "abilities/custom/ability_custom_shivas_guard.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "16"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "4"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "2"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_final_radius"            "900"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_debuff_duration"         "4"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_speed_per_second"        "350"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "blast_vision_radius"           "800"
+            }
+            "07"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_vision_duration"         "2"
+            }
+            "08"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_damage"                  "600"
+            }
+            "09"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_movement_speed_debuff"   "-80"
+            }
+            "10"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_attack_speed_debuff"     "-90"
+            }
+            "11"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "blast_attack_heal_debuff"      "-40"
+            }
+            "12"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "slow_duration"                 "2"
+            }
+            "13"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "slow_movement_speed"           "80"
+            }
+            "14"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "slow_attack_speed"             "60"
+            }
+            "15"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "duration"                      "15"
+            }
+            "16"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "armor_bonus"                   "30"
+            }
+            "17"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "magical_resistance"            "50"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/items2_fx/shivas_guard_active.vpcf"
+            "particle"          "particles/items2_fx/shivas_guard_impact.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+            "particle"          "particles/units/heroes/hero_lich/lich_frost_armor.vpcf"
+            "particle"          "particles/units/heroes/hero_lich/lich_slowed_cold.vpcf"
+            "particle"          "particles/status_fx/status_effect_frost_lich.vpcf"
+        }
+    }
+
+    // 冰刃冰心
+    "ability_custom_frost_armor"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "lich_frost_armor"
+        "ScriptFile"                "abilities/custom/ability_custom_frost_armor.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "24"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_YES"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "4"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "2"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "slow_duration"                 "2"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "slow_movement_speed"           "80"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "slow_attack_speed"             "60"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "duration"                      "15"
+            }
+            "07"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "armor_bonus"                   "30"
+            }
+            "08"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "magical_resistance"            "50"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+            "particle"          "particles/units/heroes/hero_lich/lich_frost_armor.vpcf"
+            "particle"          "particles/units/heroes/hero_lich/lich_slowed_cold.vpcf"
+            "particle"          "particles/status_fx/status_effect_frost_lich.vpcf"
+        }
+    }
+
+    // 火焰风衣
+    "ability_custom_burn_around"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "custom_game/ability_custom_ember_spirit_flame_guard"
+        "ScriptFile"                "abilities/custom/ability_custom_burn_around.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "40"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_YES"
+        "AbilityCastRange"          "500"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "4"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "1"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "radius"                        "500"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "int_damage_multiple"           "0.3"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "bonus_damage_pct"              "150"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "25"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
+            "particle"          "particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf"
+        }
+    }
+
+    // 狂战士之吼
+    "ability_custom_berserkers_call"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "axe_berserkers_call"
+        "ScriptFile"                "abilities/custom/ability_custom_berserkers_call.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastRange"          "500"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "4"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "1"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "radius"                        "500"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "duration"                      "4"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "bonus_armor"                   "20"
+            }
+            // "06"
+            // {
+            //     "var_type"                      "FIELD_INTEGER"
+            //     "attacked_by_hero"              "1"
+            // }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+            "particle"          "particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
+            "particle"          "particles/status_fx/status_effect_beserkers_call.vpcf"
+            "particle"          "particles/econ/items/axe/axe_helm_shoutmask/axe_beserkers_call_owner_shoutmask.vpcf"
+            "particle"          "particles/status_fx/status_effect_gods_strength.vpcf"
+        }
+    }
+
+    // 折光
+    "ability_custom_refraction"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "templar_assassin_refraction"
+        "ScriptFile"                "abilities/custom/ability_custom_refraction.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "1"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "6"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "instances"                     "5"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "duration"                      "30"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "bonus_damage"                  "50"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts"
+            "particle"          "particles/units/heroes/hero_templar_assassin/templar_assassin_refraction.vpcf"
+            "particle"          "particles/units/heroes/hero_templar_assassin/templar_assassin_refraction_dmg.vpcf"
+            "particle"          "particles/units/heroes/hero_templar_assassin/templar_assassin_refract_plasma_contact_warp.vpcf"
+            "particle"          "particles/units/heroes/hero_templar_assassin/templar_assassin_refract_hit.vpcf"
+        }
+    }
+
+    // 尖刺外壳
+    "ability_custom_spiked_carapace"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "nyx_assassin_spiked_carapace"
+        "ScriptFile"                "abilities/custom/ability_custom_spiked_carapace.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "4"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "4"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "spiked_carapace_duration"      "5"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "stun_duration"                 "1"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "trigger_interval"              "3"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts"
+            "particle"          "particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace.vpcf"
+            "particle"          "particles/units/heroes/hero_nyx_assassin/status_effect_nyx_assassin_spiked_carapace.vpcf"
+        }
+    }
+
+    // 召唤全能骑士
+    "ability_custom_call_summon_omniknight"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/omniknight"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_omniknight"
+            }
+        }
+    }
+
+    // 召唤猛犸宝宝
+    "ability_custom_call_summon_magnataur"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/magnataur"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_magnataur"
+            }
+        }
+    }
+
+    // 召唤马尔斯宝宝
+    "ability_custom_call_summon_mars"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/mars"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_mars"
+            }
+        }
+    }
+
+    // 召唤复魂宝宝
+    "ability_custom_call_summon_vengefulspirit"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/vengefulspirit"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_vengefulspirit"
+            }
+        }
+    }
+
+    // 召唤蓝胖宝宝
+    "ability_custom_call_summon_ogre_magi"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/ogre"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForStoreSell"              "0"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_ogre_magi"
+            }
+        }
+    }
+
+    // 召唤巫医宝宝
+    "ability_custom_call_summon_witch_doctor"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/witch_doctor"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_witch_doctor"
+            }
+        }
+    }
+
+    // 召唤光之守卫
+    "ability_custom_call_summon_keeper_of_the_light"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/keeper_of_the_light"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_keeper_of_the_light"
+            }
+        }
+    }
+
+    // 召唤变体精灵
+    "ability_custom_call_summon_morphling"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/morphling"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_morphling"
+            }
+        }
+    }
+
+    // 召唤风暴之灵
+    "ability_custom_call_summon_storm_spirit"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/storm_spirit"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_storm_spirit"
+            }
+        }
+    }
+
+    // 召唤帕吉宝宝
+    "ability_custom_call_summon_pudge"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/pudge"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_pudge"
+            }
+        }
+    }
+
+    // 召唤蝙蝠骑士宝宝
+    "ability_custom_call_summon_batrider"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/batrider"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_batrider"
+            }
+        }
+    }
+
+    // 召唤哈斯卡宝宝
+    "ability_custom_call_summon_huskar"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/huskar"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_huskar"
+            }
+        }
+    }
+
+    // 召唤炼金术师宝宝
+    "ability_custom_call_summon_alchemist"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/alchemist"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_alchemist"
+            }
+        }
+    }
+
+    // 召唤斯温宝宝
+    "ability_custom_call_summon_sven"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/sven"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_sven"
+            }
+        }
+    }
+
+    // 召唤裂魂人宝宝
+    "ability_custom_call_summon_spirit_breaker"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/spirit_breaker"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_spirit_breaker"
+            }
+        }
+    }
+
+    // 召唤力丸宝宝
+    "ability_custom_call_summon_riki"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/riki"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_riki"
+            }
+        }
+    }
+
+    // 召唤剧毒术士宝宝
+    "ability_custom_call_summon_venomancer"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/venomancer"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_venomancer"
+            }
+        }
+    }
+
+    // 召唤剃刀宝宝
+    "ability_custom_call_summon_razor"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/razor"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_razor"
+            }
+        }
+    }
+
+    // 召唤露娜宝宝
+    "ability_custom_call_summon_luna"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/luna"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_luna"
+            }
+        }
+    }
+
+    // 召唤美杜莎宝宝
+    "ability_custom_call_summon_medusa"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/medusa"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_medusa"
+            }
+        }
+    }
+
+    // 召唤戴泽宝宝
+    "ability_custom_call_summon_dazzle"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/dazzle"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_dazzle"
+            }
+        }
+    }
+
+    // 召唤神谕宝宝
+    "ability_custom_call_summon_oracle"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/oracle"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_oracle"
+            }
+        }
+    }
+
+    // 召唤敌法师宝宝
+    "ability_custom_call_summon_antimage"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/antimage"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+        "IsRare"                    "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_antimage"
+            }
+        }
+    }
+
+    // 昆卡
+    "ability_custom_call_summon_kunkka"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/kunkka"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_kunkka"
+            }
+        }
+    }
+
+    // 半人马酋长
+    "ability_custom_call_summon_centaur"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/centaur"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_centaur"
+            }
+        }
+    }
+
+    // 树精卫士
+    "ability_custom_call_summon_treant"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/treant"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_treant"
+            }
+        }
+    }
+
+    // 沙王
+    "ability_custom_call_summon_sand_king"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/sand_king"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_sand_king"
+            }
+        }
+    }
+
+    // 潮汐
+    "ability_custom_call_summon_tidehunter"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/tidehunter"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_tidehunter"
+            }
+        }
+    }
+
+    // 幻影刺客
+    "ability_custom_call_summon_phantom_assassin"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/phantom_assassin"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_phantom_assassin"
+            }
+        }
+    }
+
+    // 卓尔游侠
+    "ability_custom_call_summon_drow_ranger"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/drow_ranger"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_drow_ranger"
+            }
+        }
+    }
+
+    // 冥界亚龙
+    "ability_custom_call_summon_viper"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/viper"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_viper"
+            }
+        }
+    }
+
+    // 熊战士
+    "ability_custom_call_summon_ursa"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/ursa"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "1"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_ursa"
+            }
+        }
+    }
+
+    // 编织者
+    "ability_custom_call_summon_weaver"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "custom_game/pets/weaver"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "CardType"                  "summon"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "1"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"            "abilities/custom/ability_custom_summon_call_hero.lua"
+                "Function"              "CallHero"
+                "unit_name"             "npc_dota_hero_weaver"
+            }
+        }
+    }
+
+    // 辟邪剑谱
+    "ability_custom_bixiejianpu"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_bixiejianpu.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_bixiejianpu"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "cast_type"                 "3"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crit_chance"               "25"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crit_mult"                 "180"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "duration"                  "20"
+            }
+        }
+
+        "precache"
+        {
+            "particle"         "particles/units/heroes/hero_juggernaut/juggernaut_crit_tgt.vpcf"
+            "particle"         "particles/units/heroes/hero_juggernaut/jugg_crit_blur.vpcf"
+        }
+    }
+
+    // 葵花宝典
+    "ability_custom_kuihuabaodian"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_kuihuabaodian.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_kuihuabaodian"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crit_chance"               "25"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crit_mult"                 "300"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "duration"                  "30"
+            }
+        }
+    }
+
+    // 化功大法
+    "ability_custom_huagongdafa"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_huagongdafa.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_huagongdafa"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "debuff_duration"            "40"
+            }
+        }
+
+        "precache"
+        {
+            "particle"         "particles/units/heroes/hero_slark/slark_essence_shift.vpcf"
+        }
+    }
+
+    // 北冥神功
+    "ability_custom_beimingshengong"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_beimingshengong.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_huagongdafa"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "debuff_duration"            "40"
+            }
+        }
+
+        "precache"
+        {
+            "particle"         "particles/units/heroes/hero_slark/slark_essence_shift.vpcf"
+        }
+    }
+
+    // 补刀斧
+    "ability_custom_quelling_blade"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_quelling_blade.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_quelling_blade"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        // "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "1"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "1"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crit_mult"                     "120"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "30"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "chance"                        "5"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "kill_trigger"                  "25"
+            }
+        }
+    }
+
+    // 料敌先机
+    "ability_custom_forecast"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_forecast.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_forecast"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        "IsObsoleted"               "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "1"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "1"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "bonus_vision"                  "1500"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "10"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "bonus_magic_find"              "10"
+            }  
+        }
+    }
+
+    // 奥秘
+    "ability_custom_secret"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_secret.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_secret"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "1"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "5"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "no_injury_duartion"            "2"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "debuff_duartion"               "40"
+            }
+        }
+    }
+
+    // 探险达人
+    "ability_custom_exploration_talent"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_exploration_talent.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_exploration_talent"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+        "AbilityCastPoint"          "0"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "1"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "2"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "bonus_magic_find"              "30"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "30"
+            }
+        }
+    }
+
+    // 末日
+    "ability_custom_doom"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_doom.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_doom"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"      "SPELL_DISPELLABLE_YES_STRONG"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "3"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "3"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "damage"                        "50"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "6"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+            "particle"          "particles/units/heroes/hero_doom_bringer/doom_bringer_doom.vpcf"
+        }
+    }
+
+    // 时间结界
+    "ability_custom_chronosphere"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_chronosphere.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_chronosphere"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "cast_type"                     "3"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "crystal_cost"                  "7"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "radius"                        "300"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "2.5"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+            "particle"          "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+        }
+    }
+
+    // 胡家刀法
+    "ability_custom_hujiadaofa"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_hujiadaofa.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_hujiadaofa"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "wave_distance"              "1200"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "move_speed_slow"            "75"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "pull_distance"              "150"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                     "210"
+            }
+            "07"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "wave_radius"                "200"
+            }
+            "08"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "slow_duration"              "0.9"
+            }
+            "09"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pull_duration"              "0.2"
+            }
+        }
+    
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+            "particle"          "particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
+            "particle"          "particles/units/heroes/hero_magnataur/magnataur_shockwave_hit.vpcf"
+        }
+    }
+
+    // 死亡一指
+    "ability_custom_finger_of_death"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_finger_of_death.lua"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityTextureName"        "lion_finger_of_death"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "8"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "800"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "2"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "5"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage_rate"                "15"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "base_damage"                "200"
+            }
+        }
+    
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+            "particle"          "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+        }
+    }
+
+    // 两仪四象
+    "ability_custom_liangyisixiang"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_liangyisixiang.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_taijibagua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "incoming_damage"            "-2.5"
+            }
+        }
+    }
+
+    // 太极八卦
+    "ability_custom_taijibagua"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_taijibagua.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_taijibagua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "incoming_damage"            "-2.5"
+            }
+        }
+    }
+
+    // 仁王/遇强则强
+    "ability_custom_renwang"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_renwang.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_renwang"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "20"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage_rate"                "5"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "base_damage"                "50"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts"
+            "particle"          "particles/econ/items/nyx_assassin/nyx_ti9_immortal/nyx_ti9_carapace.vpcf"
+        }
+    }
+
+    // 制衡
+    "ability_custom_zhiheng"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_zhiheng.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_renwang"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "20"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage_rate"                "10"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "base_damage"                "50"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts"
+            "particle"          "particles/econ/items/nyx_assassin/nyx_ti9_immortal/nyx_ti9_carapace.vpcf"
+        }
+    }
+
+    // 宝宝护甲
+    "ability_custom_pet_armor_up"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_pet_armor_up.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_pet_armor_up"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_armor"            "0.5"
+            }
+        }
+        "precache"
+        {
+            "particle"          "particles/econ/events/ti10/aghanim_aura_ti10/agh_aura_ti10.vpcf"
+        }
+    }
+
+    // 护身甲盾
+    "ability_custom_pet_bulwark"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_pet_bulwark.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_pet_armor_up"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "25"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_armor"            "0.9"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_damage_reduction"       "50"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/econ/events/ti10/aghanim_aura_ti10/agh_aura_ti10.vpcf"
+        }
+    }
+
+
+    // 原生之力
+    "ability_custom_yuanshengzhili"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_yuanshengzhili.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_yuanshengzhili"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage_rate"                "250"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "height"                     "350"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+            "particle"          "particles/econ/items/tuskarr/tusk_ti9_immortal/tusk_ti9_golden_walruspunch_start_water.vpcf"
+        }
+    }
+
+    // 无影脚
+    "ability_custom_wuyingjiao"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_wuyingjiao.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_yuanshengzhili"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage_rate"                "350"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "height"                     "350"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "slow_duration"              "5"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "slow_percentage"            "50"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+            "particle"          "particles/econ/items/tuskarr/tusk_ti9_immortal/tusk_ti9_golden_walruspunch_start_water.vpcf"
+        }
+    }
+
+    //风步
+    "ability_custom_windrun"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_windrun.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_lingboweibu"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "chance"                     "40"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_agi"                  "30"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/units/heroes/hero_windrunner/windrunner_windrun.vpcf"
+            "particle"          "particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf"
+        }
+    }
+
+    //凌波微步
+    "ability_custom_lingboweibu"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_lingboweibu.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_lingboweibu"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "chance"                     "40"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_agi"                  "60"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_movement_speed_pct"   "40"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/units/heroes/hero_windrunner/windrunner_windrun.vpcf"
+            "particle"          "particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
+        }
+    }
+
+    //加速轮回
+    "ability_custom_jiasulunhui"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_jiasulunhui.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_jiasulunhui"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "5"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "cooldown_reduction"         "15"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/units/heroes/hero_lone_druid/lone_druid_rabid_buff_speed_ring.vpcf"
+        }
+    }
+
+    //统御
+    "ability_custom_tongyu"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_tongyu.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_jiasulunhui"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "5"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "cooldown_reduction"         "15"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_duration"             "5"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/units/heroes/hero_lone_druid/lone_druid_rabid_buff_speed_ring.vpcf"
+        }
+    }
+
+    //护甲腐蚀
+    "ability_custom_hujiafushi"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_hujiafushi.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_slardar_amplify_damage"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "armor_reduction"            "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "debuff_duration"            "5"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/econ/items/enigma/ti9_cache_enigma_lord_armor/ti9_cache_enigma_lord_armor_ambient_edge.vpcf"
+        }
+    }
+
+    //魔王降临
+    "ability_custom_mowangjiangling"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_mowangjiangling.lua"
+        "AbilityTextureName"        "slardar_amplify_damage"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "armor_reduction"            "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "debuff_duration"            "15"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "radius"                     "600"
+            }
+            "07"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "aura_armor_reduction"       "7"
+            }
+        }
+
+        "precache"
+        {
+            "particle"          "particles/econ/items/enigma/ti9_cache_enigma_lord_armor/ti9_cache_enigma_lord_armor_ambient_edge.vpcf"
+        }
+    }
+
+    //狂暴宝宝
+    "ability_custom_crazy_pet"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_crazy_pet.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_crazy_pet"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "15"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_attack_speed"     "150"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"                  
+        }
+    }
+
+    //吞噬宝宝
+    "ability_custom_devour_pet"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_devour_pet.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_devour_pet"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "25"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_health"           "25"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_attack_speed"     "20"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_attack_damage"    "5"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts" 
+            "particle"          "particles/units/heroes/hero_doom_bringer/doom_bringer_devour.vpcf"               
+        }
+    }
+
+    //魔化宝宝  
+    "ability_custom_metamorphosis_pet"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_metamorphosis_pet.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_crazy_pet"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "MaxLevel"                  "1"
+        "IsHidden"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "6"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "pet_bonus_attack_speed"     "200"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts" 
+            "particle"          "particles/units/heroes/hero_doom_bringer/doom_bringer_devour.vpcf"               
+        }
+    }
+
+    //防御矩阵
+    "ability_custom_defense_matrix"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_defense_matrix.lua"
+        "AbilityTextureName"        "tinker_defense_matrix"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "block_damage"               "100"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "45"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_status_resistance"    "50"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts" 
+            "particle"          "particles/units/heroes/hero_tinker/tinker_defense_matrix.vpcf"       
+        }
+    }
+
+    //无光之盾
+    "ability_custom_aphotic_shield"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_aphotic_shield.lua"
+        "AbilityTextureName"        "abaddon_aphotic_shield"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "block_damage"               "500"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts" 
+            "particle"          "particles/units/heroes/hero_abaddon/abaddon_aphotic_shield.vpcf"       
+        }
+    }
+
+    //魔力闪光
+    "ability_custom_magic_flash"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_magic_flash.lua"
+        "AbilityTextureName"        "obsidian_destroyer_arcane_orb"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "AbilityCastRange"          "1000"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "2"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "mana_damage_multiple"        "40"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts" 
+            "particle"          "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_arcane_orb.vpcf"       
+            "particle"          "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_arcane_orb_hit.vpcf" 
+        }
+    }
+
+    //智力超群
+    "ability_custom_superior_intelligence"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_superior_intelligence.lua"
+        "AbilityTextureName"        "obsidian_destroyer_sanity_eclipse"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "AbilityCastRange"          "700"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "2"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "5"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "int_damage_multiple"        "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "radius"                     "700"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts" 
+            "particle"          "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_sanity_eclipse_area.vpcf"       
+            "particle"          "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_sanity_eclipse_damage.vpcf" 
+        }
+    }
+
+    //水晶爆炸
+    "ability_custom_crystal_explosion"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_crystal_explosion.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_crystal_explosion"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel"                  "1"
+        // "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "crystal_damage_multiple"    "50"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_multiple"             "5"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts" 
+            "particle"          "particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_cowlofice.vpcf"       
+        }
+    }
+
+    //法力增强
+    "ability_custom_spell_amplify"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_spell_amplify.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_rubick_null_field"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }
+        }
+
+        "precache"
+        { 
+            "particle"          "particles/avalon_assets/portal/portal_teleport_07_d.vpcf"
+        }
+    }
+
+    //魔法护盾
+    "ability_custom_mana_shield"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_mana_shield.lua"
+        "AbilityTextureName"        "medusa_mana_shield"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "block_damage_rate"          "70"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "block_damage_per_mana"       "6.0"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_int"                   "3"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "attacked_by_hero"              "1"
+            }
+        }
+
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+            "particle"          "particles/units/heroes/hero_medusa/medusa_mana_shield_impact.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts" 
+        }
+    }
+
+    //魔法偷取
+    "ability_custom_mana_drain"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_mana_drain.lua"
+        "AbilityTextureName"        "lion_mana_drain"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "mana_per_sec"               "200"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "move_speed_slow"            "35"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "max_distance"               "1000"
+            }
+        }
+
+        "precache"
+        { 
+            "particle"          "particles/econ/items/lion/lion_demon_drain/lion_spell_mana_drain_demon.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts" 
+        }
+    }
+
+    // 进击的巨人
+    "ability_custom_attacking_giants"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_attacking_giants.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_attacking_giants"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "9"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "stun_duration"              "2.5"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage_str_multiple"        "2"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "radius"                     "400"
+            }
+            "07"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "model_scale"                "60"
+            }
+            "08"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_str"                  "100"
+            }
+            "09"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_move_speed"           "60"
+            }
+        }
+
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_mars/mars_shield_bash_crit.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_mars.vsndevts" 
+        }
+    }
+
+    // 坚韧
+    "ability_custom_tenacity"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_tenacity.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_tenacity"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "5"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_armor"                "0.8"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "15"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/dev/library/base_ranged_attack_detail.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts" 
+        }
+    }
+
+    // 熔岩护盾
+    "ability_custom_lava_shield"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_lava_shield.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_lava_shield"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "block_damage"               "600"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bounce_damage"              "250"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/items/clinkz/clinkz_ti9_immortal/clinkz_ti9_summon_end_lava.vpcf"
+            "particle"          "particles/units/heroes/hero_phoenix/phoenix_supernova_egg_lava.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts" 
+        }
+    }
+
+    // 点石成金
+    "ability_custom_hand_of_midas"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_hand_of_midas.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_hand_of_midas"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "AbilityCastRange"          "500"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        "IsRare"                    "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_gold_multipler"       "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_exp_multipler"        "3"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "except_ancients"            "1"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/items2_fx/hand_of_midas.vpcf"
+            "soundfile"         "soundevents/game_sounds_items.vsndevts" 
+        }
+    }
+
+    // 树眼
+    "ability_custom_eyes_in_the_forest"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_eyes_in_the_forest.lua"
+        "AbilityTextureName"        "treant_eyes_in_the_forest"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_TREE"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        "IsObsoleted"               "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "6"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "vision"                     "1500"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_treant/treant_eyesintheforest.vpcf"
+            "soundfile"         "soundevents/game_sounds_items.vsndevts" 
+        }
+    }
+
+    // 血怒
+    "ability_custom_bloodrage"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_bloodrage.lua"
+        "AbilityTextureName"        "bloodseeker_bloodrage"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "max_health_damage_pct"      "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "15"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_bloodseeker/bloodseeker_bloodrage.vpcf"
+            "particle"          "particles/status_fx/status_effect_bloodrage.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts" 
+        }
+    }
+
+    // 混乱攻击
+    "ability_custom_chaos_attack"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_chaos_attack.lua"
+        "AbilityTextureName"        "medusa_split_shot"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "14"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "target_count"               "6"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_attack_speed"         "3"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_bloodseeker/bloodseeker_bloodrage.vpcf"
+            "particle"          "particles/status_fx/status_effect_bloodrage.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts" 
+        }
+    }
+
+    // 暗影之舞
+    "ability_custom_shadow_dance"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_shadow_dance.lua"
+        "AbilityTextureName"        "slark_shadow_dance"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "8"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_movement_speed_pct"   "24"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_health_regen_pct"     "4"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "1.0"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "trigger_health_pct"         "40"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/status_fx/status_effect_slark_shadow_dance.vpcf"
+            "particle"          "particles/units/heroes/hero_slark/slark_shadow_dance_dummy.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_slark.vsndevts" 
+        }
+    }
+
+    // 寻宝达人
+    "ability_custom_treasure_hunter"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_treasure_hunter.lua"
+        "AbilityTextureName"        "alchemist_goblins_greed"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "chance"                     "50"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "45"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/status_fx/status_effect_slark_shadow_dance.vpcf"
+            "particle"          "particles/units/heroes/hero_slark/slark_shadow_dance_dummy.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_slark.vsndevts"
+        }
+    }
+
+    // 我是药神
+    "ability_custom_medicine_god"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_medicine_god.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_medicine_god"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "40"
+        "AbilityCastRange"          "1000"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "chance"                     "0"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/status_fx/status_effect_slark_shadow_dance.vpcf"
+            "particle"          "particles/units/heroes/hero_slark/slark_shadow_dance_dummy.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_slark.vsndevts" 
+        }
+    }
+
+    // 陷阱大师
+    "ability_custom_trap_master"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_trap_master.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_trap_master"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage_multipler"           "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "30"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/items/abaddon/abaddon_alliance/abaddon_aphotic_shield_alliance_explosion.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts" 
+        }
+    }
+
+    // 正义潜能
+    "ability_custom_justice_potential"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_justice_potential.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_justice_potential"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "20"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "5"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "consume_health_pct"           "5"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_health_regen_pct"     "8"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_movement_speed_pct"   "30"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "8"
+            }
+            "07"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_damage"               "5"
+            }
+            "08"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "trigger_health_percent"    "100"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/items/abaddon/abaddon_alliance/abaddon_aphotic_shield_alliance_explosion.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts" 
+        }
+    }
+
+    // 怒意狂击
+    "ability_custom_fury_swipes"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_fury_swipes.lua"
+        "AbilityTextureName"        "ursa_fury_swipes"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                      "48"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "20"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "reset_duration"             "20"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_ursa/ursa_fury_swipes_debuff.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts" 
+        }
+    } 
+
+    // 无敌斩
+    "ability_custom_omni_slash"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_omni_slash.lua"
+        "AbilityTextureName"        "juggernaut_omni_slash"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "3"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_damage"               "50"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "1.0"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_attack_speed"         "40"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_juggernaut/juggernaut_omni_slash_tgt.vpcf"
+            "particle"          "particles/units/heroes/hero_juggernaut/juggernaut_omni_slash_trail.vpcf"
+            "particle"          "particles/units/heroes/hero_juggernaut/juggernaut_omni_dash.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+        }
+    }
+
+    // 驰骋千里
+    "ability_custom_thousands_of_miles"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_thousands_of_miles.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_thousands_of_miles"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "move_speed_pct"             "20"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "30"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_move_speed"            "1"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/items2_fx/teleport_start_c.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts" 
+        }
+    }
+
+    // 养精蓄锐
+    "ability_custom_recuperate"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_recuperate.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_recuperate"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "health_regen_pct"           "4"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "30"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "mana_regen_pct"             "4"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/items/oracle/oracle_ti10_immortal/oracle_ti10_immortal_purifyingflames.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts" 
+        }
+    }
+
+    // 一拳超人
+    "ability_custom_one_punch"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_one_punch.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_one_punch"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "5"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "move_speed_pct"             "1"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "20"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_dark_seer/dark_seer_normal_punch_rays1.vpcf"
+            "particle"          "particles/econ/items/ancient_apparition/aa_blast_ti_5/ancient_apparition_ice_blast_sphere_final_explosion_smoke_ti5.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts" 
+        }
+    }
+
+    //精华变迁
+    "ability_custom_essence_aura"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_essence_aura.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_obsidian_destroyer_essence_aura"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "16"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        "IsRare"                    "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "health_per_mana"            "5"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "10"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_max_mana"             "30"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/items5_fx/essence_ring.vpcf"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts" 
+        }
+    }
+
+    //闭关修炼
+    "ability_custom_practice_in_seclusion"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_practice_in_seclusion.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_practice_in_seclusion"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_damage"               "0.8"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_attack_speed"         "0.8"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "25"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/addons_gameplay/morokai_orb_glow_energy.vpcf"
+        }
+    }
+
+    //撕裂伤口
+    "ability_custom_ghoul_frenzy"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_ghoul_frenzy.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_ghoul_frenzy"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "trigger_health_pct"         "80"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "extra_damage_pct"           "10"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "20"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_lone_druid/lone_druid_battle_cry_overhead.vpcf"
+        }
+    }
+
+    //霜冻之箭
+    "ability_custom_frost_arrows"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_frost_arrows.lua"
+        "AbilityTextureName"        "drow_ranger_frost_arrows"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "reduce_pct"                 "12"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                     "100"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "max_stack"                  "7"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "debuff_duration"            "5"
+            }
+            "07"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "20"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/status_fx/status_effect_frost_lich.vpcf"
+        }
+    }
+
+    //残废
+    "ability_custom_maimed"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_maimed.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_maimed"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "14"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "radius"                     "800"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "move_speed_slow"            "40"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage_reduce_pct"          "40"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "15"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_leshrac/leshrac_scepter_nihilism_caster.vpcf"
+            "particle"          "particles/econ/items/lifestealer/ls_ti9_immortal/ls_ti9_open_wounds_swoop_parent.vpcf"
+        }
+    }
+
+    //战鼓
+    "ability_custom_drum_of_endurance"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_drum_of_endurance.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_drum_of_endurance"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "radius"                     "1200"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "move_speed_pct"             "15"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_attack_speed"         "45"
+            }
+            "06"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "15"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/items_fx/drum_of_endurance_buff.vpcf"
+        }
+    }
+
+    //等级炮
+    "ability_custom_level_cannon"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_level_cannon.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_level_cannon"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "AbilityCastRange"          "700"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel"                  "1"
+        "ForSell"                   "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "2"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "6"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "radius"                     "800"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                     "200"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "stun_duration"              "2.0"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_doom_bringer/doom_bringer_lvl_death.vpcf"
+        }
+    }
+
+    //收集
+    "ability_custom_collect_boost"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_collect_boost.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_collect_boost"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_exp"                  "100"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_gold"                 "50"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/items_fx/drum_of_endurance_buff.vpcf"
+        }
+    }
+
+    //连环猎杀
+    "ability_custom_track"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_track.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_track"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_vision"               "500"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_damage_pct"           "30"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "bonus_damage_pct_per_stack"    "8"
+            }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "duration"                      "30"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/items/sniper/sniper_fall20_immortal/sniper_fall20_immortal_crosshair_bullseye.vpcf"
+        }
+    }
+
+    //群星风暴
+    "ability_custom_starstorm"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_starstorm.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_starstorm"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "16"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "5"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "radius"                     "800"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                     "120"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "15"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_mirana/mirana_starfall_attack.vpcf"
+            "particle"          "particles/units/heroes/hero_mirana/mirana_moonlight_owner.vpcf"
+        }
+    }
+
+    //法外狂徒
+    "ability_custom_outlaw_maniac"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_outlaw_maniac.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_outlaw_maniac"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "40"
+        "MaxLevel"                  "1"
+        "IsObsoleted"               "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "4"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "60"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_damage_pct"           "20"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_magic_find"           "20"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_mirana/mirana_starfall_attack.vpcf"
+            "particle"          "particles/units/heroes/hero_mirana/mirana_moonlight_owner.vpcf"
+        }
+    }
+
+    "ability_custom_stole"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_stole.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_stole"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "16"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "20"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "chance"                     "20"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_magic_find"           "40"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_rubick/rubick_spell_steal.vpcf"
+        }
+    }
+
+    //疯狂生长
+    "ability_custom_overgrowth"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_overgrowth.lua"
+        "AbilityTextureName"        "treant_overgrowth"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "16"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "3"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                     "50"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_treant/treant_overgrowth_cast.vpcf"
+        }
+    }
+
+    //复利
+    "ability_custom_covetous"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_covetous.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_covetous"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_gold_pct"             "25"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "limit"                      "1000"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_alchemist/alchemist_lasthit_msg_gold.vpcf"
+        }
+    }
+
+    "ability_custom_scattered_wealth"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_scattered_wealth.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_scattered_wealth"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "10"
+            }   
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_attack"               "4"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_spell_amp"            "1"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "bonus_attack_speed"         "5"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_alchemist/alchemist_lasthit_msg_gold.vpcf"
+        }
+    }
+
+    "ability_custom_trap_pig"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_trap_pig.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_trap_pig"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "10"
+        "MaxLevel"                  "1"
+        "IsObsoleted"               "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "1"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_death.vpcf"
+            "particle"          "particles/units/heroes/hero_gyrocopter/gyro_guided_missile.vpcf"
+            "particle"          "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_target.vpcf"
+            "particle"          "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+        }
+    }
+
+    "ability_custom_exorcism"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_exorcism.lua"
+        "AbilityTextureName"        "death_prophet_exorcism"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        "IsObsoleted"               "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "8"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "duration"                   "50"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "max_ghost"                  "10"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "damage"                     "80"
+            }
+        }
+        "precache"
+        { 
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts"
+        }
+    }
+
+    "ability_custom_bkb"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_bkb.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_bkb"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "8"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "3.5"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "trigger_health_pct"         "50"
+            }
+        }
+    }
+
+    //刻印
+    "ability_custom_engraving"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_engraving.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_engraving"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "30"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+        }
+    }
+
+    //生命诅咒
+    "ability_custom_damnation"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_damnation.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_damnation"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "16"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "2"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_magic_damage"         "200"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_spell_amp"            "15"
+            }
+        }
+    } 
+
+    //反击
+    "ability_custom_counter"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_counter.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_counter"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "4"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "chance"                     "17"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage"                     "200"
+            }
+        }
+    }
+
+    "ability_custom_anger"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_anger.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_anger"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "28"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "1"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "bonus_attack_speed_per_anger"  "1"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "damage"                     "100"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/events/spring_2021/radiance_owner_spring_2021.vpcf"
+        }
+    }
+
+    "ability_custom_weakness_breaker"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/custom/ability_custom_weakness_breaker.lua"
+        "AbilityTextureName"        "custom_game/ability_custom_weakness_breaker"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"           "24"
+        "AbilityCastPoint"          "0"
+        "AbilityCastRange"          "800"
+        "MaxLevel"                  "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "cast_type"                  "2"
+            }
+            "02"
+            {
+                "var_type"                   "FIELD_INTEGER"
+                "crystal_cost"               "3"
+            }
+            "03"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "duration"                   "30"
+            }
+            "04"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "bonus_damage_pct"           "20"
+            }
+            "05"
+            {
+                "var_type"                   "FIELD_FLOAT"
+                "slow_movement_speed_pct"    "50"
+            }
+        }
+        "precache"
+        { 
+            "particle"          "particles/econ/items/sniper/sniper_fall20_immortal/sniper_fall20_immortal_crosshair_bullseye.vpcf"
+        }
+    }
+}
