@@ -693,35 +693,3 @@ function GameManager:GetPalaceOccupyingTeam()
 
     return nil, #teams > 1
 end
-
-function GameManager:TestCards(cards)
-    for playerId, info in pairs(GameRules.XW.PlayerList) do
-        if IsAlive(info.Hero) then
-            local groupIndex = CardGroupSystem:PlayerCreateCardGroup(playerId)
-            for _, v in pairs(cards) do
-                CardGroupSystem:PlayerAddCardToGroup(playerId, groupIndex, v)
-            end
-            CardGroupSystem:PlayerSelectCardGroup(playerId, groupIndex)
-            for i = 8, 11 do
-                local ability = info.Hero:GetAbilityByIndex(i)
-                if(ability ~= nil and ability:GetLevel() > 0) then
-                    ability:SetActivated(false)
-                    if(ability:IsCooldownReady() == false) then
-                        ability:EndCooldown()
-                    end
-                end
-            end
-            -- CardGroupSystem:PlayerDrawCard(playerId)
-            -- CardGroupSystem:InitPlayerCards(playerId)
-
-            for i = 8, 11 do
-                local chkAbility = info.Hero:GetAbilityByIndex(i)
-                if chkAbility ~= nil and string.find(chkAbility:GetName(), "xxwar_empty_ability_") ~= nil then
-                    CardGroupSystem:PlayerFoldCard(playerId, chkAbility:GetName())
-                    CardGroupSystem:PlayerDrawCard(playerId)
-                    break
-                end
-            end
-        end
-    end
-end

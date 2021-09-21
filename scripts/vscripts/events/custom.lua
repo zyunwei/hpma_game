@@ -1,26 +1,3 @@
-CustomEvents('xxwar_cast_jump', function(e, data)
-	if data == nil or data.PlayerID == nil then return end
-	local player = PlayerResource:GetPlayer(data.PlayerID)
-	if IsNull(player) then return end
-
-	local hero = player:GetAssignedHero()
-	if IsNull(hero) then return end
-
-	if hero:IsSilenced() or hero:IsRooted() or hero:IsStunned() or data.pos == nil then
-		return
-	end
-
-	local cursorPos = Vector(data.pos["0"], data.pos["1"], data.pos["2"])
-	if cursorPos == vec3_invalid then
-		return
-	end
-
-	local ab = hero:FindAbilityByName("ability_xxwar_jump")
-	if NotNull(ab) and ab:IsCooldownReady() and ab:IsFullyCastable() then
-		hero:CastAbilityOnPosition(cursorPos, ab, hero:GetPlayerID())
-	end
-end)
-
 CustomEvents('xxwar_cast_pickup', function(e, data)
 	if data == nil or data.PlayerID == nil then return end
 	local player = PlayerResource:GetPlayer(data.PlayerID)

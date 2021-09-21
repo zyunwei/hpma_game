@@ -121,7 +121,7 @@ function PlayerInfo:PickHero(hero)
     local ability = hero:GetAbilityByIndex(6)
     if ability ~= nil then
         hero:RemoveAbilityByHandle(ability)
-        hero:SetAbility("ability_xxwar_jump")
+        hero:SetAbility("ability_xxwar_move")
     end
 
     for i = 18, 31 do

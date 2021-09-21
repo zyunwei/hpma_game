@@ -67,16 +67,24 @@ function Filter:ExecuteOrderFilter( params )
 		return false
 	end
 
+	if params.order_type == 1 then
+		-- DOTA_UNIT_ORDER_MOVE_TO_POSITION
+		local moveAb = hero:FindAbilityByName("ability_xxwar_move")
+		if NotNull(moveAb) then
+			if moveAb:GetCurrentAbilityCharges() > 0 then
+				moveAb:SetCurrentAbilityCharges(moveAb:GetCurrentAbilityCharges() - 1)
+				return true
+			else
+				return false
+			end
+		end
+
+		return false
+	end
+
 	if params.order_type == 2 then
 		-- DOTA_UNIT_ORDER_MOVE_TO_TARGET
-	    if IsNull(hero) or IsNull(target) then
-	        return false
-	    end
-
-	    local unitName = target:GetName()
-	    if unitName == "outpost_1" or unitName == "outpost_2" or unitName == "outpost_3" or unitName == "outpost_4" or unitName == "outpost_center" then
-	    	params.order_type = DOTA_UNIT_ORDER_ATTACK_TARGET
-	    end
+		return false
 	end
 
     if params.order_type == 4 then

@@ -20,15 +20,17 @@
 		"AbilityCastAnimation"		"ACT_DOTA_GENERIC_CHANNEL_1"
 	}
 
-	// 跳跃技能
-	"ability_xxwar_jump"
+	// 移动技能
+	"ability_xxwar_move"
 	{
 		"BaseClass"					"ability_lua"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityTextureName"		"custom_game/ability_xxwar_jump"
-		"ScriptFile"				"abilities/ability_xxwar_jump.lua"
+		"ScriptFile"				"abilities/ability_xxwar_move.lua"
 		"MaxLevel"					"1"
-		"AbilityCooldown"			"3.0"
+		"AbilityCooldown"			"0"
+		"AbilityCharges"			"30"
+		"AbilityChargeRestoreTime"	"5"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 
