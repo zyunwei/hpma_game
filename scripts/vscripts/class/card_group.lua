@@ -112,14 +112,14 @@ function public:DrawCard(isFinal)
     if isFinal == nil then
         isFinal = false
     end
-    if self.__candidateCardIndexs:empty() then
-        local list = table.shuffle(self.__foldCardIndexs)
-        self.__candidateCardIndexs:clear()
-        for _, v in pairs(list) do
-            self.__candidateCardIndexs:push_back(v)
-        end
-        self.__foldCardIndexs = {}
-    end
+    -- if self.__candidateCardIndexs:empty() then
+    --     local list = table.shuffle(self.__foldCardIndexs)
+    --     self.__candidateCardIndexs:clear()
+    --     for _, v in pairs(list) do
+    --         self.__candidateCardIndexs:push_back(v)
+    --     end
+    --     self.__foldCardIndexs = {}
+    -- end
 
     local sameCards = {}
     local drawCardIndex = -1
@@ -152,6 +152,21 @@ function public:DrawCard(isFinal)
         return self:DrawCard(true)
     end
     return nil
+end
+
+function public:PeekCard()
+    if self.__candidateCardIndexs:empty() then
+        local list = table.shuffle(self.__foldCardIndexs)
+        self.__candidateCardIndexs:clear()
+        for _, v in pairs(list) do
+            self.__candidateCardIndexs:push_back(v)
+        end
+        self.__foldCardIndexs = {}
+    end
+
+    local pendingList = self.__candidateCardIndexs:to_list()
+    local card = self.__cards[pendingList[1]]
+    return card.AbilityName
 end
 
 function public:FoldCard(abilityName)

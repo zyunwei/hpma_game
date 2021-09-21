@@ -286,7 +286,15 @@ function CDOTA_BaseNPC:UpdateMinorAbilityState()
     for _, ability in pairs(abilities) do
         if NotNull(ability) and ability:IsActivated() == false and ability:IsCooldownReady() then
             CardGroupSystem:PlayerFoldCard(playerId, ability:GetName())
+
+            local ability = self:GetAbilityByIndex(5)
+            if ability ~= nil then
+                self:RemoveAbilityByHandle(ability)
+                self:CheckAbilitySlots()
+            end
+
             CardGroupSystem:PlayerDrawCard(playerId)
+            CardGroupSystem:PeekCard(playerId)
         end
     end
 end

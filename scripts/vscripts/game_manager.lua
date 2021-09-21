@@ -203,12 +203,12 @@ function GameManager:OnThink()
                 playerCount = playerCount + 1
             end
 
-            if playerInfo.IsBot and IsAlive(playerInfo.Hero) then
-                local target = playerInfo.Hero:GetNearestEnemyForAI(-1, true, 100)
-                if IsAlive(target) and GridNav:CanFindPath(playerInfo.Hero:GetAbsOrigin(), target:GetAbsOrigin()) then
-                    playerInfo.Hero:MoveToPositionAggressive(target:GetAbsOrigin())
-                end
-            end
+            -- if playerInfo.IsBot and IsAlive(playerInfo.Hero) then
+            --     local target = playerInfo.Hero:GetNearestEnemyForAI(-1, true, 100)
+            --     if IsAlive(target) and GridNav:CanFindPath(playerInfo.Hero:GetAbsOrigin(), target:GetAbsOrigin()) then
+            --         playerInfo.Hero:MoveToPositionAggressive(target:GetAbsOrigin())
+            --     end
+            -- end
 
             if IsNull(playerInfo.Hero) == false and playerInfo.IsAlive then
                 table.insert(playerLevelList, {playerId = playerId, level = playerInfo.Hero:GetLevel()})

@@ -148,6 +148,8 @@ function public:InitPlayerCards(playerId)
     for i = 1, handCardSize do
         self:PlayerDrawCard(playerId)
     end
+
+    self:PeekCard(playerId)
     self:UpdatePlayerCardGroupState(playerId)
 end
 
@@ -196,6 +198,28 @@ function public:PlayerDrawCard(playerId)
     end
 
     return isSuccess
+end
+
+function public:PeekCard(playerId)
+    if playerId == nil then return nil end
+    local cardGroup = self.__playerUsingCardGroup[playerId]
+    if cardGroup == nil then
+        return nil
+    end
+
+    local playerInfo = GameRules.XW:GetPlayerInfo(playerId)
+    if playerInfo == nil or playerInfo.IsEmpty or IsNull(playerInfo.Hero) then
+        return nil
+    end
+
+    local ability = playerInfo.Hero:GetAbilityByIndex(5)
+    local preAbilityName = cardGroup:PeekCard()
+    if ability ~= nil then
+        playerInfo.Hero:RemoveAbilityByHandle(ability)
+        playerInfo.Hero:SetAbility(preAbilityName)
+    end
+
+    return preAbilityName
 end
 
 function public:PlayerFoldCard(playerId, abilityName)
