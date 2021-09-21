@@ -295,27 +295,27 @@ function GameManager:OnThink()
         end
     end
 
-    if gameTime ~= 0 and gameTime % GameRules.XW.CompensateTickTime == 0 and not GameRules:IsGamePaused() then
-        local gold = CurrenciesCtrl:GetSortedAllPlayerGold()
-        for rank, v in ipairs(gold) do
-            local config = COMPENSATE[rank]
-            local hero = EntIndexToHScript(v.heroIndex)
-            if NotNull(hero) and config then
-                for i = 1, config.count do
-                    local item = GetRandomItemQuality({config.quality}, (config.kind == ITEM_KIND_CONSUMABLE))
-                    if item then
-                        hero:AddOwnerItemByName(item)
-                    end
-                end
-                hero:ShowCustomMessage({
-                    type="message-box", 
-                    role="xxwar_system_notification",
-                    styles={color="#36B8FF"},
-                    list={{text={"xxwar_compensate"}, args={}}},
-                })
-            end
-        end
-    end
+    -- if gameTime ~= 0 and gameTime % GameRules.XW.CompensateTickTime == 0 and not GameRules:IsGamePaused() then
+    --     local gold = CurrenciesCtrl:GetSortedAllPlayerGold()
+    --     for rank, v in ipairs(gold) do
+    --         local config = COMPENSATE[rank]
+    --         local hero = EntIndexToHScript(v.heroIndex)
+    --         if NotNull(hero) and config then
+    --             for i = 1, config.count do
+    --                 local item = GetRandomItemQuality({config.quality}, (config.kind == ITEM_KIND_CONSUMABLE))
+    --                 if item then
+    --                     hero:AddOwnerItemByName(item)
+    --                 end
+    --             end
+    --             hero:ShowCustomMessage({
+    --                 type="message-box", 
+    --                 role="xxwar_system_notification",
+    --                 styles={color="#36B8FF"},
+    --                 list={{text={"xxwar_compensate"}, args={}}},
+    --             })
+    --         end
+    --     end
+    -- end
 
     -- if gameTime ~= 0 and gameTime % 120 == 0 and not GameRules:IsGamePaused() then
     --     for _, playerInfo in pairs(GameRules.XW.PlayerList) do
