@@ -69,6 +69,11 @@ function Filter:ExecuteOrderFilter( params )
 
 	if params.order_type == 1 then
 		-- DOTA_UNIT_ORDER_MOVE_TO_POSITION
+		local pos = Vector(params.position_x, params.position_y, params.position_z)
+		if hero:IsValidPosition(pos) == false then
+			return false
+		end
+
 		local moveAb = hero:FindAbilityByName("ability_xxwar_move")
 		if NotNull(moveAb) then
 			if moveAb:GetCurrentAbilityCharges() > 0 then

@@ -71,7 +71,8 @@ function PlayerInfo:New(o)
             get_new_card_count = 0,
             use_pet_to_win_count = 0,
         },
-        LastPlayFightMusicTime = -15
+        LastPlayFightMusicTime = -15,
+        BattleSide = 0,
     }
     setmetatable(o, self)
     self.__index = self

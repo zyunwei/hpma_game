@@ -390,3 +390,74 @@ function CDOTA_BaseNPC_Hero:AddOwnerItemByName(itemName)
         hero:AddItem(targetNewItem)
     end
 end
+
+function CDOTA_BaseNPC_Hero:CheckPosition()
+    local playerId = self:GetPlayerID()
+    local playerInfo = GameRules.XW:GetPlayerInfo(playerId)
+    if playerInfo == nil then return end
+
+    local position = self:GetAbsOrigin()
+    if self:IsValidPosition(position) == false then
+        local newPos = self:GetAdjustPosition(position)
+        if(position ~= newPos) then
+            FindClearSpaceForUnit(self, newPos, true)
+        end
+    end
+end
+
+function CDOTA_BaseNPC_Hero:IsValidPosition(pos)
+    if pos == nil or pos == vec3_invalid then
+        return false
+    end
+
+    local playerId = self:GetPlayerID()
+    local playerInfo = GameRules.XW:GetPlayerInfo(playerId)
+    if playerInfo == nil then return true end
+
+    if pos.y == nil or pos.x == nil or pos.y < -1350 or pos.y > 1050 or pos.x > 1050 or pos.x < -1050 then
+        return false
+    end
+
+    if playerInfo.BattleSide > 0 and pos.y < -128 then
+        return false
+    end
+
+    if playerInfo.BattleSide < 0 and pos.y > -128 then
+        return false
+    end
+
+    return true
+end
+
+function CDOTA_BaseNPC_Hero:GetAdjustPosition(pos)
+    local playerId = self:GetPlayerID()
+    local playerInfo = GameRules.XW:GetPlayerInfo(playerId)
+    if playerInfo == nil then return pos end
+
+    local newPos = Vector(pos.x, pos.y, pos.z)
+    if(pos.x > 1050) then
+        newPos.x = 1050
+    end
+
+    if(pos.x < -1050) then
+        newPos.x = -1050
+    end
+
+    if(pos.y > 1050) then
+        newPos.y = 1050
+    end
+
+    if(pos.y < -1350) then
+        newPos.y = -1350
+    end
+
+    if(pos.y > 0 and playerInfo.BattleSide < -128) then
+        newPos.y = -128
+    end
+
+    if(pos.y < 0 and playerInfo.BattleSide > -128) then
+        newPos.y = -128
+    end
+
+    return newPos
+end

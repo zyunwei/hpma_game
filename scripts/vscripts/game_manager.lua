@@ -50,6 +50,11 @@ function GameManager:ResetPlayerPosition(playerId)
         for _, v in pairs(GameManager.StartPosList[playerInfo.TeamId]) do
             if v.state == 0 then
                 v.state = 1
+                if v.pos.y > -128 then
+                    playerInfo.BattleSide = 1
+                else
+                    playerInfo.BattleSide = -1
+                end
                 FindClearSpaceForUnit(playerInfo.Hero, v.pos, true)
                 playerInfo.Hero:RemoveModifierByName("modifier_out_of_game")
                 PlayerResource:SetCameraTarget(playerId, playerInfo.Hero)
@@ -211,6 +216,7 @@ function GameManager:OnThink()
             -- end
 
             if IsNull(playerInfo.Hero) == false and playerInfo.IsAlive then
+                playerInfo.Hero:CheckPosition()
                 table.insert(playerLevelList, {playerId = playerId, level = playerInfo.Hero:GetLevel()})
                 CustomNetTables:SetTableValue("CustomAttributes",  
                     "StatisticalAttributes_" .. tostring(playerInfo.Hero:GetEntityIndex()), 
