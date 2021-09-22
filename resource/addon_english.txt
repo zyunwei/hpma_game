@@ -653,6 +653,7 @@
         "xxwar_log"                                                             "通知"
         "xxwar_weaken_attribute"                                                "效果已削弱"
         "xxwar_gameover"                                                        "游戏已结束，无法复活"
+        "xxwar_msg_move_point_not_enough"                                       "移动充能不足"
 
         "xxwar_event_message"                                                   "活动通知"
         "xxwar_save_item_notification"                                          "存档属性"
@@ -687,9 +688,9 @@
         "xxwar_get"                                                             "获得了"
         "xxwar_pet_say_born"                                                    "感谢主人召唤我！"
         "xxwar_pet_say_respawn"                                                 "我又复活啦！"
-        "xxwar_pet_say_killed"                                                  "我先撤了，一会再来！"
+        "xxwar_pet_say_killed"                                                  "为我报仇！"
         "xxwar_pet_say_item_thanks"                                             "有这个我变得更强了！"
-        "xxwar_pet_say_rescue"                                                  "快来救我！"
+        "xxwar_pet_say_rescue"                                                  "入土为安！"
 
         //新手引导
         "xxwar_guide_jump_title"                                                "跳跃"

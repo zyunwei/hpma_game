@@ -89,17 +89,17 @@ function public:SummonHero(caster, duration, unitName)
     -- local spawn_particle_fx = ParticleManager:CreateParticle(spawn_particle, PATTACH_ABSORIGIN, caster)
     -- ParticleManager:SetParticleControl( spawn_particle_fx, 0, spawn_point )
     local unit = self:GetPlayerPet(playerId, unit_name)
-    if NotNull(unit) and unit:IsAlive() then
-        local killModifier = unit:FindModifierByName("modifier_kill")
-        if NotNull(killModifier) then
-            unit:AddNewModifier(caster, nil, "modifier_kill", { duration = duration + killModifier:GetRemainingTime()})
-            unit:SetHealth(unit:GetMaxHealth())
-            unit:SetMana(unit:GetMaxMana())
-            unit:EndAbilitiesCooldown()
-            unit:EndItemsCooldown()
-            return unit
-        end
-    end
+    -- if NotNull(unit) and unit:IsAlive() then
+    --     local killModifier = unit:FindModifierByName("modifier_kill")
+    --     if NotNull(killModifier) then
+    --         unit:AddNewModifier(caster, nil, "modifier_kill", { duration = duration + killModifier:GetRemainingTime()})
+    --         unit:SetHealth(unit:GetMaxHealth())
+    --         unit:SetMana(unit:GetMaxMana())
+    --         unit:EndAbilitiesCooldown()
+    --         unit:EndItemsCooldown()
+    --         return unit
+    --     end
+    -- end
 
     if IsNull(unit) then
         unit = CreateUnitByName(unit_name, spawn_point, true, caster, caster, caster:GetTeamNumber())
@@ -151,7 +151,7 @@ function public:SummonHero(caster, duration, unitName)
         unit:AddNewModifier(caster, nil, "modifier_pet_armor_up", {})
     end
 
-    unit:AddNewModifier(caster, nil, "modifier_kill", { duration = duration })
+    -- unit:AddNewModifier(caster, nil, "modifier_kill", { duration = duration })
     
     unit:SetContextThink("OnHeroThink", function() return SummonAI:OnHeroThink(unit) end, 1)
     self:OnPlayerCallHero(playerId, unit)

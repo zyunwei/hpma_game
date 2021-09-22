@@ -238,6 +238,11 @@ function CDOTA_BaseNPC:RemoveAbilityByName(abilityName, removeSecondary)
             if chkAbility.OnFold ~= nil then
                 chkAbility:OnFold()
             end
+
+            -- if string.find(abilityName, "ability_custom_call_summon_") == 1 then
+            --     CardGroupSystem:RemoveCard(playerId, abilityName)
+            -- end
+
             -- print(self:GetAbilityPoints())
             -- print(chkAbility:GetLevel())
             self:SetAbilityPoints(self:GetAbilityPoints() + chkAbility:GetLevel())

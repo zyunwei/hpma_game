@@ -310,6 +310,16 @@ function public:ReplaceCard(playerId, oldCardName, newCardName, replaceHandCards
     self:UpdatePlayerCardGroupState(playerId)
 end
 
+function public:RemoveCard(playerId, cardName)
+    local cardGroup = self.__playerUsingCardGroup[playerId]
+    if cardGroup == nil then
+        return
+    end
+
+    cardGroup:RemoveCardFromGroupByName(cardName, true)
+    self:UpdatePlayerCardGroupState(playerId)
+end
+
 function public:CheckPlayerHasCard(playerId, cardName)
     local cardGroup = self.__playerUsingCardGroup[playerId]
     if cardGroup == nil then

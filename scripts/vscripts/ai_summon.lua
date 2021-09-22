@@ -5,7 +5,7 @@ if SummonAI == nil then SummonAI = class({}) end
 SUMMON_CMD_LIST = {"ATTACK_TARGET", "USE_ABILITY", "USE_ITEM", "MOVE_TO_POSITION"}
 SUMMON_UNIT_FILTER = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_NO_INVIS
 
-SummonAI.CONTROL_RADIUS = 800
+SummonAI.CONTROL_RADIUS = 1500
 
 SummonAI.PriorityCastNoTargetAbility = {
     "dragon_knight_elder_dragon_form",
@@ -411,12 +411,12 @@ function SummonAI:EvaluateCommand(hero, cmdName)
                 return 5, ownerAttackTarget
             end
 
-            local toggleAiAbility = owner:FindAbilityByName("ability_xxwar_toggle_ai")
-            if IsNull(toggleAiAbility) == false then
-                if toggleAiAbility:GetToggleState() == false then
-                    return 0, nil
-                end
-            end
+            -- local toggleAiAbility = owner:FindAbilityByName("ability_xxwar_toggle_ai")
+            -- if IsNull(toggleAiAbility) == false then
+            --     if toggleAiAbility:GetToggleState() == false then
+            --         return 0, nil
+            --     end
+            -- end
         end
 
         if (owner:GetAbsOrigin() - hero:GetAbsOrigin()):Length2D() > SummonAI.CONTROL_RADIUS then

@@ -1,5 +1,6 @@
 function CallHero(keys)
     if IsServer() == false then return end
+
     local caster = keys.caster
     if IsNull(caster) then
         return
@@ -18,5 +19,11 @@ function CallHero(keys)
             bonus_attackspeed = petModifier:GetPetBonusAttackSpeed()
         })
         petModifier:Destroy()
+    end
+
+    if NotNull(keys.ability) then
+        if string.find(keys.ability:GetName(), "ability_custom_call_summon_") == 1 then
+            CardGroupSystem:RemoveCard(caster:GetPlayerID(), keys.ability:GetName())
+        end
     end
 end

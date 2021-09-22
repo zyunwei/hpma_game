@@ -80,6 +80,7 @@ function Filter:ExecuteOrderFilter( params )
 				moveAb:SetCurrentAbilityCharges(moveAb:GetCurrentAbilityCharges() - 1)
 				return true
 			else
+				hero:ShowCustomMessage({type="bottom",msg="#xxwar_msg_move_point_not_enough",class="error"})
 				return false
 			end
 		end
