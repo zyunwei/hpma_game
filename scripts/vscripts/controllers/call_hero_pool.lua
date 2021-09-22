@@ -117,17 +117,22 @@ function public:SummonHero(caster, duration, unitName)
             end
         end
         unit:AddExperience(PetExpCtrl:GetTotalExp(), 0, false, false)
-        -- local heroLevel = caster:GetLevel()
-        -- if heroLevel > 1 then
-        --     if unit.CreatureLevelUp ~= nil then
-        --         unit:CreatureLevelUp(heroLevel - 1)
-        --     elseif unit.IsHero ~= nil and unit:IsHero() then
-        --         for i = 1, heroLevel do
-        --             unit:HeroLevelUp(false)
-        --             unit:AutoUpgradeAbility(true)
-        --         end
-        --     end
-        -- end
+        local heroLevel = caster:GetLevel()
+        if heroLevel > 1 then
+            if unit.CreatureLevelUp ~= nil then
+                unit:CreatureLevelUp(heroLevel - 1)
+            elseif unit.IsHero ~= nil and unit:IsHero() then
+                for i = 1, heroLevel do
+                    unit:HeroLevelUp(false)
+                    unit:AutoUpgradeAbility(true)
+                end
+            end
+        end
+
+        for i = 1, 3 do
+            PlayerInfo:AddRandomItemForPet(playerId, false)
+        end
+
         PetTalentCtrl:SaveTalent(unit)
     elseif unit:IsAlive() == false then
         PlayerInfo:PetSay(playerId, unit, "#xxwar_pet_say_respawn")
