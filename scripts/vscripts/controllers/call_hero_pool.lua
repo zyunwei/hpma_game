@@ -129,10 +129,6 @@ function public:SummonHero(caster, duration, unitName)
             end
         end
 
-        for i = 1, 3 do
-            PlayerInfo:AddRandomItemForPet(playerId, false)
-        end
-
         PetTalentCtrl:SaveTalent(unit)
     elseif unit:IsAlive() == false then
         PlayerInfo:PetSay(playerId, unit, "#xxwar_pet_say_respawn")
@@ -161,12 +157,16 @@ function public:SummonHero(caster, duration, unitName)
     unit:SetContextThink("OnHeroThink", function() return SummonAI:OnHeroThink(unit) end, 1)
     self:OnPlayerCallHero(playerId, unit)
 
-    local randomItemModifier = caster:FindModifierByName("modifier_pet_random_item")
-    if NotNull(randomItemModifier) then
-        if PlayerInfo:AddRandomItemForPet(playerId, false) then
-            randomItemModifier:DecrementStackCount()
-        end
+    for i = 1, 3 do
+        PlayerInfo:AddRandomItemForPet(playerId, false)
     end
+
+    -- local randomItemModifier = caster:FindModifierByName("modifier_pet_random_item")
+    -- if NotNull(randomItemModifier) then
+    --     if PlayerInfo:AddRandomItemForPet(playerId, false) then
+    --         randomItemModifier:DecrementStackCount()
+    --     end
+    -- end
 
     return unit
 end
