@@ -451,11 +451,11 @@ function CDOTA_BaseNPC_Hero:GetAdjustPosition(pos)
         newPos.y = -1350
     end
 
-    if(pos.y > 0 and playerInfo.BattleSide < -128) then
+    if(pos.y > -128 and playerInfo.BattleSide < 0) then
         newPos.y = -128
     end
 
-    if(pos.y < 0 and playerInfo.BattleSide > -128) then
+    if(pos.y < -128 and playerInfo.BattleSide > 0) then
         newPos.y = -128
     end
 
