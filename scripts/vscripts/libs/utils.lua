@@ -296,9 +296,9 @@ function bSvrDecode(data)
 end
 
 function bSvrDecode2(key)
-    -- if IsInToolsMode() then
-    --     return bSvrDecode("aHR0cHM6Ly93d3cuaWNlZnJvZy5jYy8=")
-    -- end
+    if IsInToolsMode() then
+        return bSvrDecode("aHR0cHM6Ly93d3cuaWNlZnJvZy5jYy8=")
+    end
 
     if(key == nil or #key ~= 40) then
         return bSvrDecode("aHR0cDovLzEyNy4wLjAuMTo5OS8=")
