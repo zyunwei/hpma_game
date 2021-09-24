@@ -633,7 +633,7 @@ function GameManager:SetPlayerInitDatas()
 
             -- if playerInfo.IsBot then
                 playerInfo.Hero:SetCustomAttribute("max_crystal", "max_crystal", 10)
-                playerInfo.Hero:SetCustomAttribute("crystal_regen", "crystal_regen", 1.0)
+                playerInfo.Hero:SetCustomAttribute("crystal_regen", "crystal_regen", 0.5)
                 -- playerInfo.Hero:AddItemByName("item_clothes_0105")
                 -- playerInfo.Hero:AddItemByName("item_gloves_0105")
                 -- playerInfo.Hero:AddItemByName("item_hat_0105")

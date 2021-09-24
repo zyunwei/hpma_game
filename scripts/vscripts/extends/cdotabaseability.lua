@@ -141,6 +141,19 @@ function CDOTABaseAbility:CheckPhaseStart()
     return true
 end
 
+function CDOTABaseAbility:CheckPhaseStartWithMessage()
+    local canCast = self:CheckPhaseStart()
+    if not canCast then
+        local caster = self:GetCaster()
+        if NotNull(caster) then
+            caster:ShowCustomMessage({type="bottom", msg="#xxwar_msg_not_enough_crystal", class="error"})
+        end
+        return false
+    end
+
+    return true
+end
+
 function CDOTABaseAbility:CheckSpellStart()
     local caster = self:GetCaster()
     if IsNull(caster) then return end
