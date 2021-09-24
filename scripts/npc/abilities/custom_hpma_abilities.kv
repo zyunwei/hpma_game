@@ -22,6 +22,50 @@
         }
     }
 
+    // 嗅嗅
+    "ability_custom_xiuxiu"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/hpma/ability_custom_xiuxiu.lua"
+        "AbilityTextureName"        "custom_game/others/ability_shushan_xuanbinggongxinfa"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityCooldown"           "5"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "2"
+            }
+        }
+    }
+
+    // 小蜘蛛群
+    "ability_custom_spider"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "abilities/hpma/ability_custom_spider.lua"
+        "AbilityTextureName"        "custom_game/others/ability_hsj_humei03"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityCooldown"           "5"
+        "AbilityCastPoint"          "0"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "3"
+            }
+        }
+    }
+
     // 裂地穿刺
     "ability_custom_lion_impale"
     {
@@ -273,63 +317,6 @@
         {
             "soundfile"         "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts"
             "particle"          "particles/units/heroes/hero_treant/treant_bramble_root.vpcf"
-        }
-    }
-
-    // 狂战士之吼
-    "ability_custom_berserkers_call"
-    {
-        "BaseClass"                 "ability_lua"
-        "AbilityTextureName"        "axe_berserkers_call"
-        "ScriptFile"                "abilities/custom/ability_custom_berserkers_call.lua"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-        "AbilityCooldown"           "5"
-        "AbilityCastPoint"          "0"
-        "MaxLevel"                  "1"
-        "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-        "AbilityCastRange"          "500"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "cast_type"                     "4"
-            }
-            "02"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "crystal_cost"                  "1"
-            }
-            "03"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "radius"                        "500"
-            }
-            "04"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "duration"                      "4"
-            }
-            "05"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "bonus_armor"                   "20"
-            }
-            // "06"
-            // {
-            //     "var_type"                      "FIELD_INTEGER"
-            //     "attacked_by_hero"              "1"
-            // }
-        }
-
-        "precache"
-        {
-            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
-            "particle"          "particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
-            "particle"          "particles/status_fx/status_effect_beserkers_call.vpcf"
-            "particle"          "particles/econ/items/axe/axe_helm_shoutmask/axe_beserkers_call_owner_shoutmask.vpcf"
-            "particle"          "particles/status_fx/status_effect_gods_strength.vpcf"
         }
     }
 

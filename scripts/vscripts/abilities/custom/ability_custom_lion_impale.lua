@@ -20,7 +20,7 @@ function ability_custom_lion_impale:CastAbilityTarget(target)
 	caster:EmitSound(sound_cast)
 
 	local spike_speed = 1600
-	local travel_distance = 1000 + caster:GetCastRangeBonus()
+	local travel_distance = 1600 + caster:GetCastRangeBonus()
 	local spikes_radius = self:GetSpecialValueFor("width")
 	local direction = (target:GetAbsOrigin() - caster:GetAbsOrigin()):Normalized()
 	local spikes_projectile = { Ability = self,

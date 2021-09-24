@@ -5,7 +5,7 @@ if HPMASummonAI == nil then HPMASummonAI = class({}) end
 SUMMON_CMD_LIST = {"ATTACK_TARGET", "USE_ABILITY", "USE_ITEM", "MOVE_TO_POSITION"}
 SUMMON_UNIT_FILTER = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_NO_INVIS
 
-HPMASummonAI.CONTROL_RADIUS = 1500
+HPMASummonAI.CONTROL_RADIUS = 2000
 
 HPMASummonAI.PriorityCastNoTargetAbility = {
     "dragon_knight_elder_dragon_form",
@@ -393,6 +393,10 @@ function HPMASummonAI:EvaluateCommand(hero, cmdName)
         if(hero:IsStunned() or hero:IsFrozen()) then
             return 0, nil
         end
+
+        if hero:HasAttackCapability() == false then
+            return 0, nil
+        end
         
         if(hero:IsIdle() == false) then
             if(hero:AttackReady() == false or hero:IsAttacking()) then
@@ -419,7 +423,7 @@ function HPMASummonAI:EvaluateCommand(hero, cmdName)
             -- end
         end
 
-        if (owner:GetAbsOrigin() - hero:GetAbsOrigin()):Length2D() > HPMASummonAI.CONTROL_RADIUS then
+        if (owner:GetAbsOrigin() - hero:GetAbsOrigin()):Length2D() > HPMASummonAI.CONTROL_RADIUS and hero:HasAttackCapability() == false then
             return 0, nil
         end
 

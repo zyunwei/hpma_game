@@ -22,7 +22,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_berserkers_call",
+            name = "ability_custom_lihuo",
             count = 1
         },
         {
@@ -66,7 +66,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_berserkers_call",
+            name = "ability_custom_lihuo",
             count = 1
         },
         {
@@ -110,7 +110,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_berserkers_call",
+            name = "ability_custom_lihuo",
             count = 1
         },
         {
@@ -154,7 +154,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_berserkers_call",
+            name = "ability_custom_lihuo",
             count = 1
         },
         {
@@ -198,7 +198,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_berserkers_call",
+            name = "ability_custom_lihuo",
             count = 1
         },
         {
@@ -242,7 +242,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_berserkers_call",
+            name = "ability_custom_lihuo",
             count = 1
         },
         {

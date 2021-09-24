@@ -115,8 +115,21 @@
 		}
 	}
 
-
-
-
-
+	"weaver_the_swarm"
+	{
+		"AbilityManaCost"				"0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"7"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"attack_rate"		"2.3"
+			}
+		}
+	}
 }
