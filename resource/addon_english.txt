@@ -2159,5 +2159,9 @@
         "DOTA_Tooltip_modifier_ability_custom_weakness_breaker_Description"                     "弱点"
         "DOTA_Tooltip_modifier_weekness_slow"                                                   "弱点"
         "DOTA_Tooltip_modifier_weekness_slow_Description"                                       "减速"
+
+        "DOTA_Tooltip_Ability_ability_custom_lihuo"                                             "厉火"
+        "DOTA_Tooltip_Ability_ability_custom_lihuo_Description"                                 "召唤影魔，每有一个单位被击败，增加3点攻击力和30点血量，击败12个单位时获得分裂箭技能。"
+        "DOTA_Tooltip_Ability_ability_custom_lihuo_crystal_cost"                                "消耗仙术："
     }
 }

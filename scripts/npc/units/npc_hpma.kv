@@ -1,0 +1,67 @@
+"DOTAHeroes"
+{
+	"npc_hpma_lihuo"
+	{
+		"Name"									"厉火"
+		"BountyGoldMin"							"0"
+		"BountyGoldMax"							"0"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/shadow_fiend/shadow_fiend.vmdl"
+		"ModelScale"							"1.0"
+		"SoundSet"								"Hero_Nevermore"
+		"GameSoundsFile"						"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+		"VoiceFile"								"soundevents/voscripts/game_sounds_vo_nevermore.vsndevts"
+		"Ability1"								"nevermore_necromastery"
+		"MovementSpeed"							"15"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"565"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"0"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"3.0"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"175"
+			"faster"	"275"
+			"fastest"	"360"
+		}
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"500"
+		"ProjectileModel"						"particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"
+		"ProjectileSpeed"						"1200"
+		"AttackAcquisitionRange"				"800"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"particle_folder"						"particles/units/heroes/hero_nevermore"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+
+		"AttackDamageMin"			"21"			// Damage range min.
+		"AttackDamageMax"			"21"			// Damage range max.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"			"0"			// Magical protection.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"0"			// Gold earned min.
+		"BountyGoldMax"				"0"			// Gold earned max.
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "387" }
+	            "2" { "ItemDef" "486" }
+	            "3" { "ItemDef" "509" }
+	            "4" { "ItemDef" "488" }
+	        }
+		}
+	}
+}

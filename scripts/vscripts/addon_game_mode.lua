@@ -5,6 +5,7 @@ require "player_info"
 require "game_manager"
 require "ai_boss"
 require "ai_summon"
+require "ai_hpma_summon"
 
 XXW = XXW or class({})
 

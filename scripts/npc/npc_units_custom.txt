@@ -4,6 +4,7 @@
 #base "units/npc_collections.kv"
 #base "units/npc_animals.kv"
 #base "units/npc_boss.kv"
+#base "units/npc_hpma.kv"
 
 "DOTAUnits"
 {
