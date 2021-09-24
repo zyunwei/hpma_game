@@ -20,7 +20,7 @@ if GameManager == nil then
             [DOTA_TEAM_CUSTOM_8] = {},
         },
         AllHeroNames = {
-            "juggernaut", "legion_commander", "lina", "slark", "spectre", "templar_assassin"
+            "lina", "templar_assassin"
         }
     }
 end
@@ -50,7 +50,7 @@ function GameManager:ResetPlayerPosition(playerId)
         for _, v in pairs(GameManager.StartPosList[playerInfo.TeamId]) do
             if v.state == 0 then
                 v.state = 1
-                if v.pos.y > -128 then
+                if v.pos.x > 0 then
                     playerInfo.BattleSide = 1
                 else
                     playerInfo.BattleSide = -1

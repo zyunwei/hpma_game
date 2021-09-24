@@ -81,8 +81,7 @@ end
 
 if PrecacheHeroList == nil or MainAbilitiesPool == nil then
     PrecacheHeroList = {
-        "npc_dota_hero_legion_commander", "npc_dota_hero_spectre", "npc_dota_hero_slark", "npc_dota_hero_antimage",
-        "npc_dota_hero_juggernaut", "npc_dota_hero_lina", "npc_dota_hero_templar_assassin", "npc_dota_hero_sand_king"}
+        "npc_dota_hero_lina", "npc_dota_hero_templar_assassin", "npc_dota_hero_sand_king"}
     MainAbilitiesPool = {}
 
     local all_ability_table = LoadKeyValues("scripts/kv/main_abilities.kv")
