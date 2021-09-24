@@ -10,7 +10,7 @@ function public:init()
     end
     self.__initialized = true
     self.__allAbilities = {}
-    local abilityTable = LoadKeyValues("scripts/npc/abilities/custom_minor_abilities.kv")
+    local abilityTable = LoadKeyValues("scripts/npc/abilities/custom_hpma_abilities.kv")
     for abilityName, v in pairs(abilityTable) do
         if v.IsObsoleted ~= 1 then
             local crystalCost = 0

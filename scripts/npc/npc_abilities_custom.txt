@@ -1,7 +1,7 @@
 #base "abilities/custom_item_spell_system.kv"
 #base "abilities/custom_spell_items.kv"
 #base "abilities/custom_boss.kv"
-#base "abilities/custom_minor_abilities.kv"
+#base "abilities/custom_hpma_abilities.kv"
 
 // Dota Heroes File
 "DOTAAbilities"

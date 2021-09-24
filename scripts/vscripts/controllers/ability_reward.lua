@@ -17,7 +17,7 @@ function public:init()
 end
 
 function public:LoadCandidateAbilities()
-    local ability_table = LoadKeyValues("scripts/npc/abilities/custom_minor_abilities.kv")
+    local ability_table = LoadKeyValues("scripts/npc/abilities/custom_hpma_abilities.kv")
     for abilityName, config in pairs(ability_table) do
         if not config.IsHidden then
             table.insert(self.MinorAbilities, {

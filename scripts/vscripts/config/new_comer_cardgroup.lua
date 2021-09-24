@@ -1,106 +1,28 @@
 NEW_COMER_CARDGROUP = {
-    ["npc_dota_hero_legion_commander"] = 
+    ["npc_dota_hero_legion_commander"] =
     {
         {
-            name = "ability_custom_quelling_blade",
+            name = "ability_custom_lion_impale",
             count = 1
         },
         {
-            name = "ability_custom_call_summon_sand_king",
+            name = "ability_custom_voodoo",
             count = 1
         },
         {
-            name = "ability_custom_call_summon_viper",
+            name = "ability_custom_breathe_fire",
             count = 1
         },
         {
-            name = "ability_custom_call_summon_huskar",
+            name = "ability_custom_split_earth",
             count = 1
         },
         {
-            name = "ability_custom_renwang",
+            name = "ability_custom_root_attack",
             count = 1
         },
         {
-            name = "ability_custom_collect_boost",
-            count = 1
-        },
-        {
-            name = "ability_custom_justice_potential",
-            count = 1
-        },
-        {
-            name = "ability_custom_overgrowth",
-            count = 1
-        },
-
-        {
-            name = "ability_custom_maimed",
-            count = 1
-        },
-        {
-            name = "ability_custom_shuriken",
-            count = 1
-        },
-    },
-
-    ["npc_dota_hero_spectre"] = 
-    {
-        {
-            name = "ability_custom_quelling_blade",
-            count = 1
-        },
-        {
-            name = "ability_custom_call_summon_sand_king",
-            count = 1
-        },
-        {
-            name = "ability_custom_call_summon_viper",
-            count = 1
-        },
-        {
-            name = "ability_custom_call_summon_huskar",
-            count = 1
-        },
-        {
-            name = "ability_custom_renwang",
-            count = 1
-        },
-        {
-            name = "ability_custom_collect_boost",
-            count = 1
-        },
-        {
-            name = "ability_custom_justice_potential",
-            count = 1
-        },
-        {
-            name = "ability_custom_overgrowth",
-            count = 1
-        },
-
-        {
-            name = "ability_custom_maimed",
-            count = 1
-        },
-        {
-            name = "ability_custom_shuriken",
-            count = 1
-        },
-    },
-
-    ["npc_dota_hero_slark"] = 
-    {
-        {
-            name = "ability_custom_quelling_blade",
-            count = 1
-        },
-        {
-            name = "ability_custom_hujiafushi",
-            count = 1
-        },
-        {
-            name = "ability_custom_one_punch",
+            name = "ability_custom_berserkers_call",
             count = 1
         },
         {
@@ -108,28 +30,103 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_renwang",
+            name = "ability_custom_spiked_carapace",
             count = 1
         },
         {
-            name = "ability_custom_secret",
+            name = "ability_custom_call_summon_omniknight",
             count = 1
         },
         {
-            name = "ability_custom_shuriken",
+            name = "ability_custom_call_summon_magnataur",
             count = 1
         },
-        {
-            name = "ability_custom_bkb",
-            count = 1
-        },
+    },
 
+    ["npc_dota_hero_spectre"] =
+    {
         {
-            name = "ability_custom_fury_swipes",
+            name = "ability_custom_lion_impale",
             count = 1
         },
         {
-            name = "ability_custom_battle_trance",
+            name = "ability_custom_voodoo",
+            count = 1
+        },
+        {
+            name = "ability_custom_breathe_fire",
+            count = 1
+        },
+        {
+            name = "ability_custom_split_earth",
+            count = 1
+        },
+        {
+            name = "ability_custom_root_attack",
+            count = 1
+        },
+        {
+            name = "ability_custom_berserkers_call",
+            count = 1
+        },
+        {
+            name = "ability_custom_refraction",
+            count = 1
+        },
+        {
+            name = "ability_custom_spiked_carapace",
+            count = 1
+        },
+        {
+            name = "ability_custom_call_summon_omniknight",
+            count = 1
+        },
+        {
+            name = "ability_custom_call_summon_magnataur",
+            count = 1
+        },
+    },
+
+    ["npc_dota_hero_slark"] =
+    {
+        {
+            name = "ability_custom_lion_impale",
+            count = 1
+        },
+        {
+            name = "ability_custom_voodoo",
+            count = 1
+        },
+        {
+            name = "ability_custom_breathe_fire",
+            count = 1
+        },
+        {
+            name = "ability_custom_split_earth",
+            count = 1
+        },
+        {
+            name = "ability_custom_root_attack",
+            count = 1
+        },
+        {
+            name = "ability_custom_berserkers_call",
+            count = 1
+        },
+        {
+            name = "ability_custom_refraction",
+            count = 1
+        },
+        {
+            name = "ability_custom_spiked_carapace",
+            count = 1
+        },
+        {
+            name = "ability_custom_call_summon_omniknight",
+            count = 1
+        },
+        {
+            name = "ability_custom_call_summon_magnataur",
             count = 1
         },
     },
@@ -137,15 +134,27 @@ NEW_COMER_CARDGROUP = {
     ["npc_dota_hero_juggernaut"] =
     {
         {
-            name = "ability_custom_quelling_blade",
+            name = "ability_custom_lion_impale",
             count = 1
         },
         {
-            name = "ability_custom_hujiafushi",
+            name = "ability_custom_voodoo",
             count = 1
         },
         {
-            name = "ability_custom_one_punch",
+            name = "ability_custom_breathe_fire",
+            count = 1
+        },
+        {
+            name = "ability_custom_split_earth",
+            count = 1
+        },
+        {
+            name = "ability_custom_root_attack",
+            count = 1
+        },
+        {
+            name = "ability_custom_berserkers_call",
             count = 1
         },
         {
@@ -153,118 +162,105 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_renwang",
+            name = "ability_custom_spiked_carapace",
             count = 1
         },
         {
-            name = "ability_custom_secret",
+            name = "ability_custom_call_summon_omniknight",
             count = 1
         },
         {
-            name = "ability_custom_shuriken",
-            count = 1
-        },
-        {
-            name = "ability_custom_bkb",
-            count = 1
-        },
-        {
-            name = "ability_custom_fury_swipes",
-            count = 1
-        },
-        {
-            name = "ability_custom_battle_trance",
+            name = "ability_custom_call_summon_magnataur",
             count = 1
         },
     },
 
-    ["npc_dota_hero_lina"] = 
+    ["npc_dota_hero_lina"] =
     {
         {
-            name = "ability_custom_quelling_blade",
+            name = "ability_custom_lion_impale",
             count = 1
         },
         {
-            name = "ability_custom_concussive_shot",
+            name = "ability_custom_voodoo",
             count = 1
         },
         {
-            name = "ability_custom_starstorm",
+            name = "ability_custom_breathe_fire",
             count = 1
         },
         {
-            name = "ability_custom_level_cannon",
+            name = "ability_custom_split_earth",
             count = 1
         },
         {
-            name = "ability_custom_superior_intelligence",
+            name = "ability_custom_root_attack",
             count = 1
         },
         {
-            name = "ability_custom_magic_flash",
+            name = "ability_custom_berserkers_call",
             count = 1
         },
         {
-            name = "ability_custom_finger_of_death",
+            name = "ability_custom_refraction",
             count = 1
         },
         {
-            name = "ability_custom_engraving",
-            count = 1
-        },
-
-        {
-            name = "ability_custom_secret",
+            name = "ability_custom_spiked_carapace",
             count = 1
         },
         {
-            name = "ability_custom_medicine_god",
+            name = "ability_custom_call_summon_omniknight",
+            count = 1
+        },
+        {
+            name = "ability_custom_call_summon_magnataur",
             count = 1
         },
     },
 
-    ["npc_dota_hero_templar_assassin"] = 
+    ["npc_dota_hero_templar_assassin"] =
     {
         {
-            name = "ability_custom_quelling_blade",
+            name = "ability_custom_lion_impale",
             count = 1
         },
         {
-            name = "ability_custom_concussive_shot",
+            name = "ability_custom_voodoo",
             count = 1
         },
         {
-            name = "ability_custom_starstorm",
+            name = "ability_custom_breathe_fire",
             count = 1
         },
         {
-            name = "ability_custom_level_cannon",
+            name = "ability_custom_split_earth",
             count = 1
         },
         {
-            name = "ability_custom_superior_intelligence",
+            name = "ability_custom_root_attack",
             count = 1
         },
         {
-            name = "ability_custom_magic_flash",
+            name = "ability_custom_berserkers_call",
             count = 1
         },
         {
-            name = "ability_custom_finger_of_death",
+            name = "ability_custom_refraction",
             count = 1
         },
         {
-            name = "ability_custom_engraving",
+            name = "ability_custom_spiked_carapace",
             count = 1
         },
+        {
+            name = "ability_custom_call_summon_omniknight",
+            count = 1
+        },
+        {
+            name = "ability_custom_call_summon_magnataur",
+            count = 1
+        },
+    }}
 
-        {
-            name = "ability_custom_secret",
-            count = 1
-        },
-        {
-            name = "ability_custom_medicine_god",
-            count = 1
-        },
-    }
-}
+   
