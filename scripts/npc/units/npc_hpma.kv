@@ -127,4 +127,153 @@
 	        }
 		}
 	}
+
+	"npc_hpma_ghost_book"
+	{
+		"Name"									"妖怪书"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/spirit_breaker/spirit_breaker.vmdl"
+		"ModelScale"							"1.0"
+		"Ability1"								"spirit_breaker_charge_of_darkness"
+		"MovementSpeed"							"15"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"82"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"100"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"2"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"100"
+		"AttackAcquisitionRange"				"100"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+		"AttackDamageMin"						"10"
+		"AttackDamageMax"						"10"
+		"ArmorPhysical"							"0"
+		"MagicalResistance"						"0"
+		"Creature"
+		{
+			"AttachWearables" // Default npc_dota_hero_spirit_breaker
+			{
+				"1" { "ItemDef" "112" } // Spirit Breaker's Shoulder Armor
+				"2" { "ItemDef" "115" } // Spirit Breaker's Bracers
+				"3" { "ItemDef" "106" } // Spirit Breaker's Head
+				"4" { "ItemDef" "116" } // Spirit Breaker's Belt
+				"5" { "ItemDef" "114" } // Spirit Breaker's Tail
+				"6" { "ItemDef" "111" } // Spirit Breaker's Horns
+				"7" { "ItemDef" "113" } // Spirit Breaker's Mace
+			}
+		}
+	}
+
+	"npc_hpma_cat"
+	{
+		"Name"									"灵猫"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl"
+		"ModelScale"							"1.0"
+		"MovementSpeed"							"20"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"206"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"0"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"1.6"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"100"
+		"AttackAcquisitionRange"				"100"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+		"AttackDamageMin"						"21"
+		"AttackDamageMax"						"21"
+		"ArmorPhysical"							"0"
+		"MagicalResistance"						"0"
+	}
+
+	"npc_hpma_cat_small"
+	{
+		"Name"									"灵猫"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/lycan/summon_wolves.vmdl"
+		"ModelScale"							"1.0"
+		"MovementSpeed"							"20"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"206"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"0"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"1.6"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"100"
+		"AttackAcquisitionRange"				"100"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+		"AttackDamageMin"						"21"
+		"AttackDamageMax"						"21"
+		"ArmorPhysical"							"0"
+		"MagicalResistance"						"0"
+	}
+
+	"npc_hpma_sniper"
+	{
+		"Name"									"矮人"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/sniper/sniper.vmdl"
+		"ModelScale"							"1.0"
+		"MovementSpeed"							"10"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"82"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"0"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"2"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"800"
+		"AttackAcquisitionRange"				"1000"
+		
+		"ProjectileModel"						"particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
+		"ProjectileSpeed"						"3000"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+		"AttackDamageMin"						"23"
+		"AttackDamageMax"						"23"
+		"ArmorPhysical"							"0"
+		"MagicalResistance"						"0"
+		"Creature"
+		{
+			"AttachWearables" // Default npc_dota_hero_sniper
+			{
+				"1" { "ItemDef" "281" } // Sniper's Weapon
+				"2" { "ItemDef" "282" } // Sniper's Cape
+				"3" { "ItemDef" "283" } // Sniper's Head Gear
+				"4" { "ItemDef" "284" } // Sniper's Shoulder Armor
+				"5" { "ItemDef" "285" } // Sniper's Bracers
+			}
+		}
+	}
+
 }

@@ -25,7 +25,7 @@ GameRules:SetHeroRespawnEnabled(false)
 GameRules:SetSameHeroSelectionEnabled(true)
 
 -- 设置选择英雄时间
-GameRules:SetHeroSelectionTime(120)
+GameRules:SetHeroSelectionTime(20)
 
 -- 选英雄惩罚时间
 GameRules:SetHeroSelectPenaltyTime(1)
