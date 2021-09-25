@@ -232,6 +232,16 @@ end
 function GameEvents:OnNPCSpawned( unit, entindex )
 	if unit:IsHero() then
 		AttributesCtrl(unit)
+	else
+		local unitName = unit:GetUnitName()
+		if string.find(unitName, "npc_dota_lycan_wolf") == 1 then
+			unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
+			
+			-- local enemy = unit:GetNearestEnemyForAI(1500, true, 100)
+			-- if NotNull(enemy) then
+			-- 	unit:MoveToPositionAggressive(enemy:GetAbsOrigin())
+			-- end
+		end
 	end
 end
 
