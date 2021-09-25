@@ -127,4 +127,48 @@
 	        }
 		}
 	}
+
+	"npc_hpma_lycan"
+	{
+		"Name"									"灵猫"
+		"BaseClass"								"npc_dota_creature"
+		"Model"									"models/heroes/lycan/lycan.vmdl"
+		"ModelScale"							"1.0"
+		// "Ability1"								"lycan_summon_wolves"
+		"MovementSpeed"							"150"
+		"MovementTurnRate"						"0.5"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"StatusHealth"							"206"
+		"StatusHealthRegen"						"0"
+		"StatusMana"							"0"
+		"StatusManaRegen"						"0"
+		"AttackRate"							"1.6"
+		"AttackAnimationPoint"					"0.500000"
+		"AttackCapabilities"					"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackRange"							"150"
+		"BoundsHullName"						"DOTA_HULL_SIZE_REGULAR"
+		"BoundsHullRadius"						"100"
+		"HasInventory"							"0"
+		"ConsideredHero"						"1"
+		"RingRadius"							"100"
+		"Level"									"1"
+		"AttackDamageMin"						"21"
+		"AttackDamageMax"						"21"
+		"ArmorPhysical"							"0"
+		"MagicalResistance"						"0"
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	            "1" { "ItemDef" "8660" } // Lycan's Head Accessory
+	            "2" { "ItemDef" "208" } // Lycan's Armor
+	            "3" { "ItemDef" "209" } // Lycan's Fur
+	            "4" { "ItemDef" "206" } // Lycan's Blades
+	            "5" { "ItemDef" "8649" } // Lycan's Shapeshift
+	            "6" { "ItemDef" "8369" } // Lycan's Wolves
+	            "7" { "ItemDef" "210" } // Lycan's Belt
+	            "8" { "ItemDef" "207" } // Lycan's Head
+	        }
+		}
+	}
 }
