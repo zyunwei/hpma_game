@@ -1,5 +1,50 @@
 "DOTAAbilities"
 {
+    // 撕裂大地
+    "ability_custom_split_earth"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "leshrac_split_earth"
+        "ScriptFile"                "abilities/hpma/ability_custom_split_earth.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "5"
+        "AbilityCastPoint"          "0.2"
+        "AbilityCastRange"          "2000"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "4"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "3.5"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "radius"                    "300"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage"                    "250"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+            "particle"          "particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+        }
+    }
+
     // 厉火
     "ability_custom_lihuo"
     {
@@ -120,7 +165,7 @@
         "AbilityCooldown"           "5"
         "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "AbilityCastRange"          "800"
+        "AbilityCastRange"          "2000"
         "AbilityCastPoint"          "0"
         "MaxLevel"                  "1"
 
@@ -142,7 +187,6 @@
         "AbilityTextureName"        "custom_game/others/ability_hsj_luodu04"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityCooldown"           "5"
-        "AbilityCastRange"          "800"
         "AbilityCastPoint"          "0"
         "MaxLevel"                  "1"
 
@@ -163,7 +207,7 @@
         "AbilityTextureName"        "custom_game/others/ability_hsj_moluo02"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT "
         "AbilityCooldown"           "5"
-        "AbilityCastRange"          "800"
+        "AbilityCastRange"          "2000"
         "MaxLevel"                  "1"
 
         "AbilitySpecial"
@@ -194,51 +238,6 @@
                 "var_type"                  "FIELD_INTEGER"
                 "crystal_cost"              "3"
             }
-        }
-    }
-
-    // 妖术
-    "ability_custom_voodoo"
-    {
-        "BaseClass"                 "ability_lua"
-        "ScriptFile"                "abilities/custom/ability_custom_voodoo.lua"
-        "AbilityTextureName"        "lion_voodoo"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
-        "SpellDispellableType"      "SPELL_DISPELLABLE_YES_STRONG"
-        "AbilityCooldown"           "5"
-        "AbilityCastPoint"          "0"
-        "AbilityCastRange"          "700"
-        "MaxLevel"                  "1"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                   "FIELD_INTEGER"
-                "cast_type"                  "3"
-            }
-            "02"
-            {
-                "var_type"                   "FIELD_INTEGER"
-                "crystal_cost"               "2"
-            }
-            "03"
-            {
-                "var_type"                   "FIELD_FLOAT"
-                "voodoo_duration"            "4.0"
-            }
-            "04"
-            {
-                "var_type"                   "FIELD_FLOAT"
-                "move_speed"                 "100"
-            }
-        }
-
-        "precache"
-        {
-            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
-            "particle"          "particles/units/heroes/hero_lion/lion_spell_voodoo.vpcf"
         }
     }
 

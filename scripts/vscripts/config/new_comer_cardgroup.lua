@@ -37,7 +37,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_voodoo",
+            name = "ability_custom_split_earth",
             count = 1
         },
     },
@@ -80,7 +80,7 @@ NEW_COMER_CARDGROUP = {
             count = 1
         },
         {
-            name = "ability_custom_voodoo",
+            name = "ability_custom_split_earth",
             count = 1
         },
     }

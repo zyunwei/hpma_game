@@ -1508,10 +1508,6 @@
         "DOTA_Tooltip_modifier_ability_custom_life_line"                                        "战意高涨"
         "DOTA_Tooltip_modifier_ability_custom_life_line_Description"                            "提升攻击速度和吸血。"
 
-        "DOTA_Tooltip_Ability_ability_custom_split_earth"                                       "撕裂大地"
-        "DOTA_Tooltip_Ability_ability_custom_split_earth_Description"                           "攻击触发撕裂大地，眩晕攻击目标%radius%码范围内的敌人%duration%秒，并造%damage%魔法伤害。"
-        "DOTA_Tooltip_Ability_ability_custom_split_earth_crystal_cost"                          "消耗仙术："
-
         "DOTA_Tooltip_Ability_ability_custom_concussive_shot"                                   "震荡光弹"
         "DOTA_Tooltip_Ability_ability_custom_concussive_shot_Description"                       "对附近%search_radius%码范围内敌方单位释放震荡光弹，造成%damage_int%倍智力值的魔法伤害。"
         "DOTA_Tooltip_Ability_ability_custom_concussive_shot_crystal_cost"                      "消耗仙术："
@@ -2160,6 +2156,14 @@
         "DOTA_Tooltip_modifier_weekness_slow"                                                   "弱点"
         "DOTA_Tooltip_modifier_weekness_slow_Description"                                       "减速"
 
+        // ------------
+        // 哈利波特技能
+        // ------------
+
+        "DOTA_Tooltip_Ability_ability_custom_split_earth"                                       "撕裂大地"
+        "DOTA_Tooltip_Ability_ability_custom_split_earth_Description"                           "释放撕裂大地，眩晕攻击目标%radius%码范围内的敌人%duration%秒，并造%damage%魔法伤害。"
+        "DOTA_Tooltip_Ability_ability_custom_split_earth_crystal_cost"                          "消耗仙术："
+
         "DOTA_Tooltip_Ability_ability_custom_lihuo"                                             "厉火"
         "DOTA_Tooltip_Ability_ability_custom_lihuo_Description"                                 "召唤影魔，每有一个单位被击败，增加3点攻击力和30点血量，击败12个单位时获得分裂箭技能。"
         "DOTA_Tooltip_Ability_ability_custom_lihuo_crystal_cost"                                "消耗仙术："
@@ -2175,7 +2179,6 @@
         "DOTA_Tooltip_Ability_ability_custom_ghost_book"                                        "三本妖怪书"
         "DOTA_Tooltip_Ability_ability_custom_ghost_book_Description"                            "召唤三只裂魂人，向点击地点冲刺，"
         "DOTA_Tooltip_Ability_ability_custom_ghost_book_crystal_cost"                           "消耗仙术："
-
 
         "DOTA_Tooltip_Ability_ability_custom_cloud"                                             "气象咒"
         "DOTA_Tooltip_Ability_ability_custom_cloud_Description"                                 "持续9.5秒内攻击范围内敌方单位并造成沉默，每0.5秒造成20伤害，半径250，沉默持续时间3.5秒"
