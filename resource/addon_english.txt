@@ -2173,7 +2173,7 @@
         "DOTA_Tooltip_Ability_ability_custom_xiuxiu_crystal_cost"                               "消耗仙术："
         
         "DOTA_Tooltip_Ability_ability_custom_spider"                                            "小蜘蛛群"
-        "DOTA_Tooltip_Ability_ability_custom_spider_Description"                                "编织者放出12只编织者幼虫，攻击敌人。"
+        "DOTA_Tooltip_Ability_ability_custom_spider_Description"                                "编织者放出6只编织者幼虫，攻击敌人。"
         "DOTA_Tooltip_Ability_ability_custom_spider_crystal_cost"                               "消耗仙术："
 
         "DOTA_Tooltip_Ability_ability_custom_ghost_book"                                        "三本妖怪书"

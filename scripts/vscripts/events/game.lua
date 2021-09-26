@@ -190,8 +190,8 @@ function GameEvents:OnPickHero(playerIndex, heroIndex)
 	    hero:SetCustomAttribute("crystal_regen", "crystal_regen", 0.2)
 	    hero:SetCustomAttribute("crystal", "crystal", 1)
 
-	    hero:SetCustomAttribute("crit_chance", "crit_chance_base", 5) -- 基础暴击概率
-	    hero:SetCustomAttribute("crit_mult", "crit_mult_base", 150) -- 基础暴击伤害
+	    hero:SetCustomAttribute("crit_chance", "crit_chance_base", 0) -- 基础暴击概率
+	    hero:SetCustomAttribute("crit_mult", "crit_mult_base", 100) -- 基础暴击伤害
 	    
 		GameManager:CheckGameStart()
     end
@@ -269,7 +269,7 @@ function GameEvents:OnPlayerLevelUp( player, hero, level )
 		playerInfo.Hero:SetCustomAttribute("max_crystal", "max_crystal", newRealm)
 		playerInfo.Hero:SetCustomAttribute("crystal", "crystal", newRealm)
 		playerInfo.Hero:ModifyCustomAttribute("crystal_regen", "crystal_regen", 0.1)
-		playerInfo.Hero:ModifyCustomAttribute("status_resistance", "realm", 2)
+		-- playerInfo.Hero:ModifyCustomAttribute("status_resistance", "realm", 2)
 		CreateParticle(ParticleRes.LEVEL_UP, PATTACH_ABSORIGIN_FOLLOW, playerInfo.Hero, 5)
 	    EmitSoundOn(SoundRes.LEVEL_UP, playerInfo.Hero)
 	end

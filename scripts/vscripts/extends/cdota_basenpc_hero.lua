@@ -401,6 +401,7 @@ function CDOTA_BaseNPC_Hero:CheckPosition()
         local newPos = self:GetAdjustPosition(position)
         if(position ~= newPos) then
             FindClearSpaceForUnit(self, newPos, true)
+            self:Hold()
         end
     end
 end

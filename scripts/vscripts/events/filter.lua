@@ -71,7 +71,7 @@ function Filter:ExecuteOrderFilter( params )
 		return false
 	end
 
-	if params.order_type == 1 or params.order_type == 2 or params.order_type == 3 then
+	if params.order_type == 1 or params.order_type == 3 then
 		local pos = Vector(params.position_x, params.position_y, params.position_z)
 		if hero.IsValidPosition ~= nil and hero:IsValidPosition(pos) == false then
 			local newPos = hero:GetAdjustPosition(pos)
@@ -79,6 +79,11 @@ function Filter:ExecuteOrderFilter( params )
 			params.position_y = newPos.y
 			params.position_z = newPos.z
 		end
+	end
+
+	if params.order_type == 2 then
+		-- DOTA_UNIT_ORDER_MOVE_TO_TARGET
+		return false
 	end
 
 	if params.order_type == 1 then
@@ -114,10 +119,6 @@ function Filter:ExecuteOrderFilter( params )
 	    		return false
             end
 	    end
-
-		if hero.IsValidPosition ~= nil and hero:IsValidPosition(target:GetAbsOrigin()) == false then
-			return false
-		end
 
 	    local abilityCollection = hero:FindAbilityByName("ability_xxwar_collection")
 	    if abilityCollection ~= nil and target.HasAbility ~= nil then
