@@ -16,7 +16,7 @@ function ability_custom_cat:OnSpellStart()
         local spawn_point = CallHeroPool:FindValidPathPoint(caster:GetAbsOrigin(), 100, 300)
         local unit = CreateUnitByName("npc_hpma_cat", spawn_point, true, caster, caster, caster:GetTeamNumber())
         unit:SetOwner(caster)
-        unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
+        -- unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
 		unit:AddNewModifier(caster, nil, "modifier_custom_cat", {})
 	end
 end
@@ -45,7 +45,7 @@ function modifier_custom_cat:OnIntervalThink()
 			local spawn_point = CallHeroPool:FindValidPathPoint(parent:GetAbsOrigin(), 100, 300)
         	local unit = CreateUnitByName("npc_hpma_cat_small", spawn_point, true, caster, caster, caster:GetTeamNumber())
 			unit:SetOwner(caster)
-			unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
+			-- unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
 		end
 		self:Destroy()
 	end

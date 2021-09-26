@@ -15,7 +15,7 @@ function ability_custom_ghost_book:OnSpellStart()
             local spawn_point = CallHeroPool:FindValidPathPoint(caster:GetAbsOrigin(), 100, 300)
             local unit = CreateUnitByName("npc_hpma_ghost_book", spawn_point, true, caster, caster, caster:GetTeamNumber())
             unit:SetOwner(caster)
-            unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
+            -- unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
         end
 	end
 end

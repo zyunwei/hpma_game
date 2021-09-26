@@ -66,6 +66,33 @@
         }
     }
 
+    // 孵化蜘蛛
+    "ability_custom_broodmother"
+    {
+        "BaseClass"                 "ability_lua"
+        "AbilityTextureName"        "broodmother_spawn_spiderlings"
+        "ScriptFile"                "abilities/hpma/ability_custom_broodmother.lua"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"           "5"
+        "AbilityCastPoint"          "0.2"
+        "MaxLevel"                  "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "5"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
+            "particle"          "particles/units/heroes/hero_broodmother/broodmother_spiderlings_spawn.vpcf"
+        }
+    }
+
     // 厉火
     "ability_custom_lihuo"
     {

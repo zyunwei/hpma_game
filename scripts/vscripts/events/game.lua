@@ -234,7 +234,7 @@ function GameEvents:OnNPCSpawned( unit, entindex )
 		AttributesCtrl(unit)
 	else
 		local unitName = unit:GetUnitName()
-		if string.find(unitName, "npc_hpma_hawk") == 1 then
+		if string.find(unitName, "npc_hpma_") == 1 then
 			unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
 			
 			-- local enemy = unit:GetNearestEnemyForAI(1500, true, 100)
