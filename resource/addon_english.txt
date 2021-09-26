@@ -2199,5 +2199,9 @@
         "DOTA_Tooltip_Ability_ability_custom_sniper"                                            "矮人"
         "DOTA_Tooltip_Ability_ability_custom_sniper_Description"                                "召唤火枪手进行普攻（射程远）"
         "DOTA_Tooltip_Ability_ability_custom_sniper_crystal_cost"                               "消耗仙术："
+
+        "DOTA_Tooltip_Ability_ability_custom_hawk"                                              "康沃尔郡的小精灵"
+        "DOTA_Tooltip_Ability_ability_custom_hawk_Description"                                  "召唤三只兽王战鹰。"
+        "DOTA_Tooltip_Ability_ability_custom_hawk_crystal_cost"                                 "消耗仙术："
     }
 }
