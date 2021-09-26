@@ -122,8 +122,8 @@ if GameRules.XW == nil then
     GameRules.XW.MaxPlayerCount = 2
 
     GameRules.XW.TeamColor = {
-        [DOTA_TEAM_CUSTOM_1] = {0, 120, 60},
-        [DOTA_TEAM_CUSTOM_2] = {220, 220, 50},
+        [DOTA_TEAM_CUSTOM_1] = {255, 50, 50},
+        [DOTA_TEAM_CUSTOM_2] = {50, 50, 255},
         [DOTA_TEAM_CUSTOM_3] = {110, 70, 180},
         [DOTA_TEAM_CUSTOM_4] = {0, 110, 210},
         [DOTA_TEAM_CUSTOM_5] = {245, 143, 152},

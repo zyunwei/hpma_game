@@ -44,6 +44,10 @@ function Filter:DamageFilter( keys )
 		end
 	end
 
+	if NotNull(victim) then
+		SendOverheadEventMessage(nil, OVERHEAD_ALERT_DAMAGE, victim, damage, nil)
+	end
+
 	return true
 end
 

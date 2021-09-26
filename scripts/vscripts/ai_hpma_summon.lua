@@ -627,6 +627,10 @@ function HPMASummonAI:EvaluateCommand(hero, cmdName)
             return 0, nil
         end
 
+        if hero:HasAttackCapability() == true then
+            return 0, nil
+        end
+
         local owner = hero:GetOwner()
         if IsNull(owner) == false then
             local ownerAttackTarget = owner:GetAttackTarget()
