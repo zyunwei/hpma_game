@@ -27,6 +27,7 @@ function modifier_custom_cloud:CheckState()
 	return {
         [MODIFIER_STATE_UNTARGETABLE]       = true,
         [MODIFIER_STATE_UNSELECTABLE]       = true,
+        [MODIFIER_STATE_NO_HEALTH_BAR]      = true,
 	}
 end
 
@@ -79,6 +80,7 @@ function modifier_custom_cloud:OnIntervalThink()
 end
 
 function modifier_custom_cloud:OnRemoved()
+    if not IsServer() then return end
     ParticleManager:DestroyParticle(self.zuus_nimbus_particle, false)
     self:GetParent():ForceKill(false)
 end
