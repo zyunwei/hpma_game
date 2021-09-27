@@ -316,21 +316,21 @@ function GameEvents:OnEntityKilled( attacker, victim, ability, damagebits )
     		if playerInfo ~= nil and playerInfo.IsAlive == true and playerInfo.Hero == victim then
 				playerInfo.IsAlive = false
 				--玩家死亡发放奖励
-				local itemName = GetRandomItemQuality({3}, false)
-				if itemName ~= nil then
-					victim:AddOwnerItemByName(itemName)
-				end
+				-- local itemName = GetRandomItemQuality({3}, false)
+				-- if itemName ~= nil then
+				-- 	victim:AddOwnerItemByName(itemName)
+				-- end
 
-				victim:ModifyCustomAttribute("str", "respawn", 10)
-				victim:ModifyCustomAttribute("agi", "respawn", 10)
-				victim:ModifyCustomAttribute("int", "respawn", 10)
+				-- victim:ModifyCustomAttribute("str", "respawn", 10)
+				-- victim:ModifyCustomAttribute("agi", "respawn", 10)
+				-- victim:ModifyCustomAttribute("int", "respawn", 10)
 
-				victim:ShowCustomMessage({
-					type="message-box", 
-					role="xxwar_system_notification",
-					styles={color="#36B8FF"},
-					list={{text={"xxwar_death_bonus"}, args={}}},
-				})
+				-- victim:ShowCustomMessage({
+				-- 	type="message-box", 
+				-- 	role="xxwar_system_notification",
+				-- 	styles={color="#36B8FF"},
+				-- 	list={{text={"xxwar_death_bonus"}, args={}}},
+				-- })
 
 				local aliveTeamCount = GameManager:GetAliveTeamCount()
 				if lastAliveTeamCount ~= aliveTeamCount then
