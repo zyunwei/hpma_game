@@ -99,53 +99,53 @@ function public:ShowAbilityRewardForPlayer(playerId, index)
 end
 
 function public:OnEntityKilled(attacker, victim)
-    if IsNull(attacker) or IsNull(victim) then
-        return
-    end
+    -- if IsNull(attacker) or IsNull(victim) then
+    --     return
+    -- end
     
-    local unitName = victim:GetUnitName()
-    local victimPos = victim:GetAbsOrigin()
-    local isDropMainAbility = false
-    if BOSS_ITEMS and BOSS_ITEMS[unitName] then
+    -- local unitName = victim:GetUnitName()
+    -- local victimPos = victim:GetAbsOrigin()
+    -- local isDropMainAbility = false
+    -- if BOSS_ITEMS and BOSS_ITEMS[unitName] then
 
-    elseif Drop_Ability and Drop_Ability[unitName] then
-        local randomValue = math.random()
-        isDropMainAbility = randomValue < Drop_Ability[unitName]
-    end
-    if isDropMainAbility == false then
-        return
-    end
-    local target = nil
-    if attacker.IsHero == nil or attacker:IsHero() == false then
-        if attacker.GetOwner then
-            target = attacker:GetOwner()
-        end
-    else
-        target = attacker
-    end
-    if target == nil or target.GetPlayerID == nil then
-        return
-    end
+    -- elseif Drop_Ability and Drop_Ability[unitName] then
+    --     local randomValue = math.random()
+    --     isDropMainAbility = randomValue < Drop_Ability[unitName]
+    -- end
+    -- if isDropMainAbility == false then
+    --     return
+    -- end
+    -- local target = nil
+    -- if attacker.IsHero == nil or attacker:IsHero() == false then
+    --     if attacker.GetOwner then
+    --         target = attacker:GetOwner()
+    --     end
+    -- else
+    --     target = attacker
+    -- end
+    -- if target == nil or target.GetPlayerID == nil then
+    --     return
+    -- end
 
-    local playerId = target:GetPlayerID()
-    if isDropMainAbility then
-        -- 掉落宝宝物品
-        if PlayerInfo:AddRandomItemForPet(playerId, true) then
-            DropperCtrl:DropItem("item_consumable_0001", victimPos, nil)
-        end
+    -- local playerId = target:GetPlayerID()
+    -- if isDropMainAbility then
+    --     -- 掉落宝宝物品
+    --     if PlayerInfo:AddRandomItemForPet(playerId, true) then
+    --         DropperCtrl:DropItem("item_consumable_0001", victimPos, nil)
+    --     end
 
-        -- 掉落心法书
-        if RollPercentage(25) then
-            if PlayerInfo:GetXinFaToBeUpgrade(playerId) ~= nil then
-                DropperCtrl:DropItem("item_consumable_0003", victimPos, nil)
-                return
-            end
-        end
+    --     -- 掉落心法书
+    --     if RollPercentage(25) then
+    --         if PlayerInfo:GetXinFaToBeUpgrade(playerId) ~= nil then
+    --             DropperCtrl:DropItem("item_consumable_0003", victimPos, nil)
+    --             return
+    --         end
+    --     end
 
-        -- if RollPercentage(35) then
-        --     DropperCtrl:DropItem("item_consumable_ability", victimPos)
-        -- end
-    end
+    --     -- if RollPercentage(35) then
+    --     --     DropperCtrl:DropItem("item_consumable_ability", victimPos)
+    --     -- end
+    -- end
 end
 
 function public:OnSelectAbility(playerId, index)

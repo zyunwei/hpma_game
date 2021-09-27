@@ -122,7 +122,7 @@ function public:SummonHero(caster, duration, unitName)
             if unit.CreatureLevelUp ~= nil then
                 unit:CreatureLevelUp(heroLevel - 1)
             elseif unit.IsHero ~= nil and unit:IsHero() then
-                for i = 1, heroLevel do
+                for i = 1, 9 do
                     unit:HeroLevelUp(false)
                     unit:AutoUpgradeAbility(true)
                 end
@@ -157,9 +157,9 @@ function public:SummonHero(caster, duration, unitName)
     unit:SetContextThink("OnHeroThink", function() return SummonAI:OnHeroThink(unit) end, 1)
     self:OnPlayerCallHero(playerId, unit)
 
-    for i = 1, 3 do
-        PlayerInfo:AddRandomItemForPet(playerId, false)
-    end
+    -- for i = 1, 3 do
+    --     PlayerInfo:AddRandomItemForPet(playerId, false)
+    -- end
 
     -- local randomItemModifier = caster:FindModifierByName("modifier_pet_random_item")
     -- if NotNull(randomItemModifier) then
