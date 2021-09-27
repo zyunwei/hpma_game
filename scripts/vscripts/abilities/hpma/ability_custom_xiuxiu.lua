@@ -14,6 +14,11 @@ function ability_custom_xiuxiu:OnSpellStart()
 		local spawn_point = CallHeroPool:FindValidPathPoint(caster:GetAbsOrigin(), 100, 300)
 		unit = CreateUnitByName("npc_hpma_xiuxiu", spawn_point, true, caster, caster, caster:GetTeamNumber())
 	    unit:SetOwner(caster)
+
+	    local playerInfo = GameRules.XW:GetPlayerInfo(caster:GetPlayerID())
+	    if playerInfo ~= nil then
+	    	playerInfo.XiuXiuEntity = unit
+	    end
 		-- unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
 	end
 end

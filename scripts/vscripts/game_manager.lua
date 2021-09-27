@@ -223,10 +223,10 @@ function GameManager:OnThink()
                     playerInfo.Hero:StatisticalAttributes())
 
                 if GameRules:IsGamePaused() == false then
-                    playerInfo.Hero:GiveGold(1)
-                    if gameTime ~= 0 and gameTime % GameRules.XW.PlayerBonusExpTickTime == 0 then 
-                        playerInfo.Hero:AddExperience(gameTime * 0.5, 0, false, false)
-                    end
+                    -- playerInfo.Hero:GiveGold(1)
+                    -- if gameTime ~= 0 and gameTime % GameRules.XW.PlayerBonusExpTickTime == 0 then 
+                    --     playerInfo.Hero:AddExperience(gameTime * 0.5, 0, false, false)
+                    -- end
                     local crystal = playerInfo.Hero:GetCustomAttribute("crystal")
                     local maxCrystal = playerInfo.Hero:GetCustomAttribute("max_crystal")
                     local crystalRegen = playerInfo.Hero:GetCustomAttribute("crystal_regen")
@@ -235,6 +235,10 @@ function GameManager:OnThink()
                         playerInfo.Hero:ModifyCustomAttribute("crystal", "crystal", crystalRegen)
                     else
                         playerInfo.Hero:SetCustomAttribute("crystal", "crystal", maxCrystal)
+                    end
+
+                    if IsAlive(playerInfo.XiuXiuEntity) then
+                        playerInfo.Hero:ModifyCustomAttribute("crystal", "crystal", 0.1)
                     end
                 end
             end

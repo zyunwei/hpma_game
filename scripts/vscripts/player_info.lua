@@ -73,6 +73,7 @@ function PlayerInfo:New(o)
         },
         LastPlayFightMusicTime = -15,
         BattleSide = 0,
+        XiuXiuEntity = nil,
     }
     setmetatable(o, self)
     self.__index = self
