@@ -22,6 +22,23 @@ function GetRadBetweenTwoVec2D(a,b)
 	return math.atan2(y,x)
 end
 
+function CalculateDistance(ent1, ent2)
+    local pos1 = ent1
+    local pos2 = ent2
+    if ent1.GetAbsOrigin then pos1 = ent1:GetAbsOrigin() end
+    if ent2.GetAbsOrigin then pos2 = ent2:GetAbsOrigin() end
+    local distance = (pos1 - pos2):Length2D()
+    return distance
+end
+
+function RotateVector2D(v,angle,bIsDegree)
+    if bIsDegree then angle = math.rad(angle) end
+    local xp = v.x * math.cos(angle) - v.y * math.sin(angle)
+    local yp = v.x * math.sin(angle) + v.y * math.cos(angle)
+
+    return Vector(xp,yp,v.z):Normalized()
+end
+
 function GetAttributeByAttributeType(caster, attributeType)
     if attributeType == 0 then
         return caster:GetStrength()

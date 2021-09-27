@@ -1,5 +1,105 @@
 "DOTAAbilities"
 {
+    // 清水如泉
+    "ability_custom_fire_slave"
+    {
+        "BaseClass"                     "ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "FightRecapLevel"               "1"
+        "AbilityTextureName"            "lina_dragon_slave"
+        "ScriptFile"                    "abilities/hpma/ability_custom_fire_slave"
+        "MaxLevel"                      "1"
+        "AbilityCastRange"              "1075"
+        "AbilityCastPoint"              "0.2"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        "AbilityCooldown"               "5"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "crystal_cost"              "5"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "primary_damage"            "90"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "secondary_damage"          "100"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "secondary_amount"          "5"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "speed"                     "1200"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "width_initial"             "275"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "width_end"                 "200"
+            }
+            "08"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "primary_distance"          "1075"
+            }
+            "09"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "secondary_distance"        "1075"
+            }
+            "10"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "split_delay"               "0.7"
+            }
+            "11"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "secondary_width_initial"   "75"
+            }
+            "12"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "secondary_width_end"       "125"
+            }
+            "13"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "cdr_hero"                  "1.0"
+            }
+            "14"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "cdr_units"                 "0.25"
+            }
+        }
+
+        "precache"
+        {
+            "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+            "particle"                  "particles/units/heroes/hero_lina/lina_spell_dragon_slave.vpcf"
+            "particle"                  "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_loadout.vpcf"
+        }
+    }
+
     // 撕裂大地
     "ability_custom_split_earth"
     {

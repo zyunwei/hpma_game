@@ -2207,5 +2207,9 @@
         "DOTA_Tooltip_Ability_ability_custom_broodmother"                                       "孵化蜘蛛"
         "DOTA_Tooltip_Ability_ability_custom_broodmother_Description"                           "召唤育母蜘蛛，每隔5秒对800范围内的敌人使用孵化蜘蛛，造成40伤害并在5秒感染时间内击杀目标将孵化出一只小蜘蛛。"
         "DOTA_Tooltip_Ability_ability_custom_broodmother_crystal_cost"                          "消耗仙术："
+
+        "DOTA_Tooltip_Ability_ability_custom_fire_slave"                                        "清水如泉"
+        "DOTA_Tooltip_Ability_ability_custom_fire_slave_Description"                            "向前释放火焰，对一条直线的敌人造成%primary_damage%点伤害，之后每%split_delay%秒释放一次，共释放%secondary_amount%次，每次伤害%secondary_damage%，释放期间英雄可移动。"
+        "DOTA_Tooltip_Ability_ability_custom_fire_slave_crystal_cost"                           "消耗仙术："
     }
 }
