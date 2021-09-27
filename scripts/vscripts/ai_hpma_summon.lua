@@ -421,10 +421,10 @@ function HPMASummonAI:EvaluateCommand(hero, cmdName)
             --         return 0, nil
             --     end
             -- end
-        end
 
-        if (owner:GetAbsOrigin() - hero:GetAbsOrigin()):Length2D() > HPMASummonAI.CONTROL_RADIUS and hero:HasAttackCapability() == false then
-            return 0, nil
+            if (owner:GetAbsOrigin() - hero:GetAbsOrigin()):Length2D() > HPMASummonAI.CONTROL_RADIUS and hero:HasAttackCapability() == false then
+                return 0, nil
+            end
         end
 
         local attackTarget = hero:GetAttackTarget()
