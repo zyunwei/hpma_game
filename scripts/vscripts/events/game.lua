@@ -234,7 +234,8 @@ function GameEvents:OnNPCSpawned( unit, entindex )
 		AttributesCtrl(unit)
 	else
 		local unitName = unit:GetUnitName()
-		if string.find(unitName, "npc_hpma_") == 1 then
+		local moveUnits = {"npc_dota_broodmother_spiderite", "npc_dota_broodmother_spiderling"}
+		if string.find(unitName, "npc_hpma_") == 1 or table.contains(moveUnits, unitName) then
 			unit:SetContextThink("OnHeroThink", function() return HPMASummonAI:OnHeroThink(unit) end, 1)
 			
 			-- local enemy = unit:GetNearestEnemyForAI(1500, true, 100)

@@ -562,4 +562,20 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 	}
+
+    "npc_dota_broodmother_spiderling"
+    {
+        "AttackDamageMin"           "15"
+        "AttackDamageMax"           "15"
+        "StatusHealth"              "100"
+        "StatusHealthRegen"         "0.0"
+    }
+
+    "npc_dota_broodmother_spiderite"
+    {
+        "AttackDamageMin"           "10"
+        "AttackDamageMax"           "10"
+        "StatusHealth"              "50"
+        "StatusHealthRegen"         "0.0"
+    }
 }
