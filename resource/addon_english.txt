@@ -2215,5 +2215,11 @@
         "DOTA_Tooltip_Ability_ability_custom_shadow_word"                                       "白鲜香精"
         "DOTA_Tooltip_Ability_ability_custom_shadow_word_Description"                           "在%radius%范围内释放%duration%次，每秒治疗友方单位，伤害敌方单位，每次%tick_value%点伤害/治疗。"
         "DOTA_Tooltip_Ability_ability_custom_shadow_word_crystal_cost"                          "消耗仙术："
+
+        "DOTA_Tooltip_Ability_custom_ability_necromastery"                                      "厉火"
+        "DOTA_Tooltip_Ability_custom_ability_necromastery_Description"                          "场上每有一个单位死亡增加体型、攻击力和生命值，最多12层。"
+
+        "DOTA_Tooltip_modifier_custom_ability_necromastery"                                     "厉火"
+        "DOTA_Tooltip_modifier_custom_ability_necromastery_Description"                         "场上每有一个单位死亡增加体型、攻击力和生命值，最多12层。"
     }
 }
