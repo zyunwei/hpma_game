@@ -49,9 +49,9 @@ end
 
 function modifier_custom_cloud:OnIntervalThink()
     local nearby_enemy_units = FindUnitsInRadius(
-        self:GetCaster():GetTeamNumber(), 
-        self:GetParent():GetAbsOrigin(), 
-        nil, 
+        self:GetCaster():GetTeamNumber(),
+        self:GetParent():GetAbsOrigin(),
+        nil,
         self.cloud_radius, 
         DOTA_UNIT_TARGET_TEAM_ENEMY, 
         DOTA_UNIT_TARGET_ALL,

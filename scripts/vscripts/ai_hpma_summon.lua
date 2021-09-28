@@ -982,6 +982,13 @@ function HPMASummonAI:GetSpellData(hSpell)
         return nil
     end
 
+    if(abilityName == "spirit_breaker_charge_of_darkness") then 
+        local hTarget = HPMASummonAI:FindTargetPlayer(hero:GetTeamNumber())
+        if(hTarget ~= nil and HPMASummonAI:IsAlive(hTarget)) then
+            return {ability = hSpell, type = "unit_target", target = hTarget}
+        end
+    end
+
     if(abilityName == "storm_spirit_ball_lightning") then
         if(hero:HasModifier("modifier_storm_spirit_ball_lightning")) then
             return nil
@@ -1936,4 +1943,16 @@ function HPMASummonAI:HasEnemyNearby(hero, range)
         end
     end
     return enemyCount > 0
+end
+
+function HPMASummonAI:FindTargetPlayer(teamNumber)
+    local target = nil 
+    for _, playerInfo in pairs(GameRules.XW.PlayerList) do
+        local hero = playerInfo.Hero 
+        if NotNull(hero) and hero:GetTeamNumber() ~= teamNumber then
+            target = hero
+            break
+        end
+    end
+    return target
 end
